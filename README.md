@@ -21,6 +21,19 @@ the default package managers plus `www.klayout.org`. Environment variables: `PDK
 
 The script logs each step with its time in `/foss/setup.log` and ends with `SETUP_DONE <seconds>`.
 
+## Which script when
+
+| task | Setup script | extra |
+|---|---|---|
+| specification, schematic (Xschem, ngspice), layout, DRC/LVS/PEX | `setup-cloud.sh` | none |
+| mixed-signal integration (Icarus, cocotb, Yosys, Verilator) | `setup-cloud.sh` + `setup-digital.sh` appended | none |
+
+`setup-digital.sh` takes about 25 s (tested: Icarus 12.0, Yosys 0.33, Verilator 5.020, cocotb 2.1.0, distro versions, not the
+IIC-OSIC-TOOLS pins). LibreLane/OpenROAD are not included: harden digital blocks in the local container.
+
+Minimal-overhead session: paste the script(s) into the **Setup script** field of one environment per row above; select the
+design repo (and only that repo) when starting the session. Public repos need no selection to be read, only to be pushed.
+
 ## Contents
 
 | path | |
