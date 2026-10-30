@@ -1,0 +1,20 @@
+# Prebuilt by a Claude Code cloud session on 2026-10-30, Ubuntu 24.04.5 LTS x86_64
+# gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0; cargo 1.97.0 (c980f4866 2026-06-30)
+# Pins: IIC-OSIC-TOOLS 2026.10 (sudelbuecher/cloud_environment.md, branch sudel_buecher of tatzelbrumm/sg13cmos5l_cm_ip__single2diff2single)
+xschem https://github.com/StefanSchippers/xschem d76e6cc74fdfa5de573a8ba14124ef00c611a9b6 3.4.7-666-gd76e6cc7
+magic https://github.com/RTimothyEdwards/magic bed8d4ff84333767aa923d469d339cd05c56a00a 8.3.685
+netgen https://github.com/RTimothyEdwards/netgen abe6117e21dd143b82461043572b673a6cea2f87 1.5.324
+ngspice https://github.com/danchitnis/ngspice-sf-mirror a80f6e3e95d51534905b1f23410a951802666656 ngspice-47
+OpenVAF https://github.com/arpadbuermen/OpenVAF dd05b5e2f97fcc8256a1dbf7144755a1ad3bf90a _osdi_0.5_20260820-26-gdd05b5e
+iic https://github.com/iic-jku/IIC-OSIC-TOOLS 68d3f07e6eeb9ded2cf79d4db9ca9d574862db02 2026.10
+ihp-open-pdk https://github.com/iic-jku/IHP-Open-PDK df4c5054ee8ca481c3eb873687274f28cdb50b1e   (OSDI models in osdi/ihp-sg13cmos5l-df4c5054ee8ca481c3eb873687274f28cdb50b1e)
+# setup.log of the build (seconds from start; the script was cut off at ~295 s, OSDI compiled afterwards in the session):
+APT_OK 38s
+PIP_OK 73s
+SAK_OK 73s
+PDK_OK 79s
+NETGEN_OK 83s
+MAGIC_OK 106s
+XSCHEM_OK 112s
+OPENVAF_OK 170s
+NGSPICE_OK 289s
