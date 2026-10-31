@@ -19,7 +19,7 @@ t0=$(date +%s); ok() { echo "$1_OK $(( $(date +%s) - t0 ))s" >> $L; }
     xz-utils tcl tk tcl8.6 tk8.6 libtcl8.6 libtk8.6 libcairo2 libpixman-1-0 libpng16-16t64 libfreetype6 libfontconfig1 \
     libx11-6 libxext6 libxrender1 libxpm4 libxaw7 libxmu6 libxt6t64 libxft2 libxss1 libsm6 libice6 libxcb1 \
     libxcb-shm0 libxcb-render0 libgl1 libglx0 libglvnd0 libopengl0 libglu1-mesa libjpeg-turbo8 libreadline8t64 \
-    libtinfo6 libfftw3-double3 libgomp1 libllvm18 libedit2 libxml2 libicu74 libffi8 libzstd1 \
+    libtinfo6 libfftw3-double3 libgomp1 libllvm18 libedit2 libxml2 libicu74 libffi8 libzstd1 python3-tk \
     && ok APT ) >> $L 2>&1 &
 ( pip install -q --break-system-packages klayout==0.30.12 klayout-pex==0.6.8 && ok PIP ) >> $L 2>&1 &
 # the prebuilt tools: only tools/ is downloaded, not the sources
@@ -43,6 +43,10 @@ else
   ( cd $F/pdks/ihp-sg13cmos5l/libs.tech/verilog-a && PATH=$F/tools/openvaf/bin:$PATH \
       ./openvaf-compile-va.sh --compile-model-generic && ok OSDI_COMPILED ) >> $L 2>&1
 fi
+# CACE 2.11.0 (the 2026.10 pin) under python3.12: python3 is 3.13 here, Ubuntu has no Tk for it, and CACE imports
+# tkinter even on the command line. --ignore-installed blinker: pip can't remove Debian's blinker 1.7.0.
+( python3.12 -m pip install -q --break-system-packages --ignore-installed blinker cace==2.11.0 && cace --version \
+  && ok CACE ) >> $L 2>&1
 # kpex 0.6.8 takes ihp-sg13cmos5l; the Chipalooza template Makefile passes ihp_sg13cmos5l
 K=$(command -v kpex) && [ ! -e $K.pip ] && mv $K $K.pip \
   && printf '#!/bin/bash\nexec %s.pip "${@/ihp_sg13cmos5l/ihp-sg13cmos5l}"\n' $K > $K && chmod +x $K

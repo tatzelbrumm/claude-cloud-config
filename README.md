@@ -19,7 +19,8 @@ session title, then **Edit cloud environment**, then **Setup script**; save with
 the default package managers plus `www.klayout.org`. Environment variables: `PDK_ROOT=/foss/pdks`,
 `PDK=ihp-sg13cmos5l`. In a session, `source .designinit` of a Chipalooza project sets the rest.
 
-The script logs each step with its time in `/foss/setup.log` and ends with `SETUP_DONE <seconds>`.
+The script logs each step with its time in `/foss/setup.log` (`APT_OK`, `PIP_OK`, `TOOLS_OK`, `PDK_OK`, `OSDI_OK`,
+`CACE_OK`) and ends with `SETUP_DONE <seconds>`.
 
 ## Which script when
 
@@ -53,6 +54,7 @@ design repo (and only that repo) when starting the session. Public repos need no
 | OpenVAF | `dd05b5e2` (`mb-experimental`, `openvaf-r`) |
 | `sak-*` scripts | IIC-OSIC-TOOLS tag 2026.10 |
 | KLayout, klayout-pex | 0.30.12, 0.6.8 (installed by the setup script, not in the archive) |
+| CACE | 2.11.0, under `python3.12` with Ubuntu's `python3-tk` (installed by the setup script; `python3` is 3.13, which has no Tk) |
 | IHP-Open-PDK (iic-jku fork) | `df4c5054` (cloned by the setup script; the archive's OSDI models match it) |
 
 ## Where it runs
