@@ -29,11 +29,13 @@ t0=$(date +%s); ok() { echo "$1_OK $(( $(date +%s) - t0 ))s" >> $L; }
 ( git clone -q --filter=blob:none --no-checkout https://github.com/iic-jku/IHP-Open-PDK $F/pdks/IHP-Open-PDK \
   && cd $F/pdks/IHP-Open-PDK \
   && git sparse-checkout set --no-cone /ihp-sg13cmos5l/ /ihp-sg13g2/libs.tech/klayout/python/ \
+       /ihp-sg13g2/libs.tech/klayout/tech/ \
        /ihp-sg13g2/libs.tech/xschem/ /ihp-sg13g2/libs.tech/ngspice/ /ihp-sg13g2/libs.tech/verilog-a/ \
   && git checkout -q $PDK_REV \
   && git submodule update -q --init --depth 1 ihp-sg13g2/libs.tech/klayout/python/pycell4klayout-api \
        ihp-sg13g2/libs.tech/klayout/python/pypreprocessor \
-  && ln -sfn $F/pdks/IHP-Open-PDK/ihp-sg13cmos5l $F/pdks/ihp-sg13cmos5l && ok PDK ) >> $L 2>&1 &
+  && ln -sfn $F/pdks/IHP-Open-PDK/ihp-sg13cmos5l $F/pdks/ihp-sg13cmos5l && ok PDK \
+  && echo "PDK_DANGLING_LINKS $(find $F/pdks/ihp-sg13cmos5l/libs.tech/klayout -xtype l | wc -l) (1 = README.md)" ) >> $L 2>&1 &
 wait
 # OSDI models: copy the prebuilt ones for PDK_REV; for another PDK commit compile them (about 20 s)
 O=$F/pdks/ihp-sg13cmos5l/libs.tech/ngspice/osdi; mkdir -p $O

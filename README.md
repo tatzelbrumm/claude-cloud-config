@@ -20,7 +20,11 @@ the default package managers plus `www.klayout.org`. Environment variables: `PDK
 `PDK=ihp-sg13cmos5l`. In a session, `source .designinit` of a Chipalooza project sets the rest.
 
 The script logs each step with its time in `/foss/setup.log` (`APT_OK`, `PIP_OK`, `TOOLS_OK`, `PDK_OK`, `OSDI_OK`,
-`CACE_OK`) and ends with `SETUP_DONE <seconds>`.
+`CACE_OK`) and ends with `SETUP_DONE <seconds>`. `PDK_DANGLING_LINKS` counts the dangling links under
+`ihp-sg13cmos5l/libs.tech/klayout`; it must be 1 (`README.md`). Most of that directory links into `ihp-sg13g2/`, so the
+PDK's sparse checkout includes `ihp-sg13g2/libs.tech/klayout/tech/`. Without it (before 2026-11-03), IHP's main DRC
+deck and 45 LVS decks were dangling links, and `run_drc.py` printed "Passed" while every table raised an exception
+(found by cloud session C2).
 
 ## Which script when
 
