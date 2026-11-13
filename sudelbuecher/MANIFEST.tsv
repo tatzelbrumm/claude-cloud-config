@@ -1,0 +1,5 @@
+# MANIFEST of sudelbuecher/logs/ — provenance of the tee'd run logs.
+# git stores no mtimes; original_mtime is the mtime of the log file when it was copied here (container clock, UTC).
+#
+file	branch	original_mtime	bytes	originating_commit	commit_date	command
+multi-pdk/setup-cloud_2026-11-13.log	multi-pdk	2026-11-13 02:16	4153	ed7881d	2026-11-13 02:16	bash ./setup-cloud.sh  (full run of the generated ihp-sg13cmos5l setup script in an Ubuntu 24.04 sandbox, 2 CPUs; klayout.org blocked, so KLAYOUT_DEB_FAILED; script file as committed in ed7881d)
