@@ -5,8 +5,9 @@ SPDX-License-Identifier: Apache-2.0
 # claude-cloud-config
 
 A prebuilt open-source analog EDA toolchain, pinned to the **IIC-OSIC-TOOLS 2026.10** versions, and a setup
-script for **Claude Code cloud sessions**. Made for Chipalooza 2026 designs in IHP **sg13cmos5l**, so that cloud
-results come from the same tool versions as the IIC-OSIC-TOOLS container.
+setup scripts for **Claude Code cloud sessions**. Made for Chipalooza 2026 designs in IHP **sg13cmos5l**, so that
+cloud results come from the same tool versions as the IIC-OSIC-TOOLS container. The same tools are also set up with
+**sky130A** and **gf180mcuD** (one PDK per cloud environment; see "Which script when" for what has been tested).
 
 Why prebuilt: a Claude Code cloud environment is cached only if its setup script finishes in about five minutes.
 Compiling ngspice alone takes almost that long, so a compiling setup script is never cached and gets cut off.
@@ -14,36 +15,65 @@ This setup script only downloads and unpacks.
 
 ## Use
 
-Paste `setup-cloud.sh` into the cloud environment's **Setup script** (claude.ai/code: the caret after the
-session title, then **Edit cloud environment**, then **Setup script**; save with **Save changes**). Network access:
-the default package managers plus `www.klayout.org`. Environment variables: `PDK_ROOT=/foss/pdks`,
-`PDK=ihp-sg13cmos5l`. In a session, `source .designinit` of a Chipalooza project sets the rest.
+Paste the setup script of your PDK (table below) into the cloud environment's **Setup script** (claude.ai/code: the
+caret after the session title, then **Edit cloud environment**, then **Setup script**; save with **Save changes**).
+Network access: the default package managers plus `www.klayout.org`; for sky130A and gf180mcuD also the hosts that
+ciel downloads from (`fossi-foundation.github.io`, and the host of the tarballs it lists; the log shows
+`PDK_FAILED` if one is blocked). Environment variables: `PDK_ROOT=/foss/pdks` and `PDK=<PDK>`; gf180mcuD also
+`GF_PDK_OPTION=D` and `STD_CELL_LIBRARY=gf180mcu_fd_sc_mcu7t5v0`. In a session, `source .designinit` of a Chipalooza
+project sets the rest.
 
-The script logs each step with its time in `/foss/setup.log` (`APT_OK`, `PIP_OK`, `TOOLS_OK`, `PDK_OK`, `OSDI_OK`,
-`CACE_OK`) and ends with `SETUP_DONE <seconds>`. `PDK_DANGLING_LINKS` counts the dangling links under
-`ihp-sg13cmos5l/libs.tech/klayout`; it must be 1 (`README.md`). Most of that directory links into `ihp-sg13g2/`, so the
-PDK's sparse checkout includes `ihp-sg13g2/libs.tech/klayout/tech/`. Without it (before 2026-11-03), IHP's main DRC
-deck and 45 LVS decks were dangling links, and `run_drc.py` printed "Passed" while every table raised an exception
-(found by cloud session C2).
+The script logs each step with its time in `/foss/setup.log` (`APT_OK`, `PIP_OK`, `TOOLS_OK`, `PDK_OK`, `OSDI_OK`
+(ihp only), `CACE_OK`) and ends with `SETUP_DONE <PDK> <seconds>`. `PDK_DANGLING_LINKS` counts dangling links. For
+ihp-sg13cmos5l there are two counts, both expected to be 1:
+- under `libs.tech/klayout` (`README.md`). Most of that directory links into `ihp-sg13g2/`, so the PDK's sparse
+  checkout includes `ihp-sg13g2/libs.tech/klayout/tech/`. Without it (before 2026-11-03), IHP's main DRC deck and 45
+  LVS decks were dangling links, and `run_drc.py` printed "Passed" while every table raised an exception (found by
+  cloud session C2).
+- under `libs.ref`: `sg13cmos5l_sram` links to `ihp-sg13g2/libs.ref/sg13g2_sram` (44 MB, fetched with `WITH_SRAM=1`,
+  then the count is 0). The 84 stdcell schematics of `sg13cmos5l_stdcell` link into `ihp-sg13g2/libs.ref/sg13g2_stdcell/sch`
+  (1.2 MB), which the sparse checkout includes since 2026-11-13; before that they dangled. The IO pad library
+  `sg13cmos5l_io` consists of real files.
+
+For sky130A and gf180mcuD the count is over the whole PDK (`find -L`) and expected to be 0.
 
 ## Which script when
 
-| task | Setup script | extra |
+| PDK | analog flow | with the digital tools |
 |---|---|---|
-| specification, schematic (Xschem, ngspice), layout, DRC/LVS/PEX | `setup-cloud.sh` | none |
-| mixed-signal integration (Icarus, cocotb, Yosys, Verilator) | `setup-cloud.sh` + `setup-digital.sh` appended | none |
+| ihp-sg13cmos5l | `setup-cloud.sh` (the name from before there were three PDKs) | `setup-cloud-digital.sh` |
+| sky130A | `setup-sky130A.sh` | `./make-setup.sh sky130A digital` |
+| gf180mcuD | `setup-gf180mcuD.sh` | `./make-setup.sh gf180mcuD digital` |
 
-`setup-digital.sh` takes about 25 s (tested: Icarus 12.0, Yosys 0.33, Verilator 5.020, cocotb 2.1.0, distro versions, not the
-IIC-OSIC-TOOLS pins). LibreLane/OpenROAD are not included: harden digital blocks in the local container.
+**Tested:** `setup-cloud.sh` end to end (2026-11-13, an Ubuntu 24.04 sandbox with 2 CPUs: 32 s, without KLayout,
+which the sandbox could not download). **Not tested:** the ciel download of `setup-sky130A.sh` and
+`setup-gf180mcuD.sh`: the session that wrote them could not reach ciel's release index. Their control flow (variant
+removal, the xschem and KLayout fixes) was run against a fake `ciel` and a fake PDK tree only. The first real run
+shows in `/foss/setup.log` how long the PDK takes; if the five-minute limit is hit, set `CIEL_LIB_OPTS` in the PDK's
+part (see there) to fetch fewer libraries. The sky130A and gf180mcuD scripts install what IIC-OSIC-TOOLS 2026.10
+installs (open_pdks commit `1689ac3f`), with its xschem/KLayout-tech fixes; not ported: Liberty gzip, Magic bindkeys,
+the gdsfactory patches of the KLayout PyCells.
 
-Minimal-overhead session: paste the script(s) into the **Setup script** field of one environment per row above; select the
-design repo (and only that repo) when starting the session. Public repos need no selection to be read, only to be pushed.
+`make-setup.sh` builds the setup scripts from `parts/` (`header.sh`, one `pdk-<PDK>.sh`, optionally `digital.sh`, then
+`main.sh`, concatenated in exactly this order; `main.sh` ends with `exit 0`, so it must come last). Edit the parts, run
+`./make-setup.sh all`, commit both. The digital part takes about 25 s (tested: Icarus 12.0, Yosys 0.33, Verilator
+5.020, cocotb 2.1.0, distro versions, not the IIC-OSIC-TOOLS pins). LibreLane/OpenROAD are not included: harden digital
+blocks in the local container. The old `setup-digital.sh`, appended after `setup-cloud.sh` in one pasted script, would
+not have run: `setup-cloud.sh` ends with `exit 0`. It is kept unchanged for reference; use the generated `-digital`
+script instead.
+
+Minimal-overhead session: paste the script into the **Setup script** field of one environment per row above; select
+the design repo (and only that repo) when starting the session. Public repos need no selection to be read, only to be
+pushed.
 
 ## Contents
 
 | path | |
 |---|---|
-| `setup-cloud.sh` | the setup script |
+| `setup-cloud.sh`, `setup-sky130A.sh`, `setup-gf180mcuD.sh` | the setup scripts, generated by `make-setup.sh` from `parts/` |
+| `setup-cloud-digital.sh` | `setup-cloud.sh` with the digital tools (generated) |
+| `parts/`, `make-setup.sh` | the sources of the setup scripts (see "Which script when") |
+| `setup-digital.sh` | the old add-on, kept unchanged; superseded by `parts/digital.sh` |
 | `tools/foss-tools-iic2026.10-ubuntu24.04-x86_64.tar.xz` | unpacks to `/foss/tools`: xschem, magic, netgen, ngspice, OpenVAF (`openvaf-r`), the IIC-OSIC-TOOLS `sak-*` scripts, and the IHP OSDI models compiled for one PDK commit |
 | `tools/BUILDINFO` | the exact source commits, compiler, date (also inside the archive) |
 | `sources/sources-iic2026.10.tar.xz` | the sources of those commits (`git archive`), plus OpenVAF's `Cargo.lock` after `cargo update` |
