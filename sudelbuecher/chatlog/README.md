@@ -17,3 +17,8 @@ One link and one sentence per log. Rules and tools: `CLAUDE.md` at the root of t
   linked computer, or an export of the chat plus a `build_chatlog.py` that reads it.
   The decisions and findings of that session are summarized (not verbatim) in
   `../notes/2026-11-13_multi_pdk_cloud_setup.md`.
+  The same session continued until 2026-11-19 (Opus 5.5 from 2026-11-19 01:24 Berlin): GF180 harness padframe,
+  timestamp mismatches, Magic 8.3.693, hand-off. Still no raw transcript. Its part up to 2026-11-18 exists as a log built
+  from nine text copies of the app chat (not a transcript export), in `gf180_cm_ip__single2diff2single`, branch
+  `sudel_buecher`, `sudelbuecher/chatlog/2026-11-13_sonnet_cloud_config_and_gf180_pad_work.md`. Summary of the rest:
+  `../notes/2026-11-19_gf180_harness_handoff.md`.
