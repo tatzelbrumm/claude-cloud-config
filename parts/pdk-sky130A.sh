@@ -14,7 +14,7 @@ CIEL_LIB_OPTS=${CIEL_LIB_OPTS:-}
 
 pdk_fetch() {
   pip install -q --break-system-packages --ignore-installed ciel \
-    && ciel enable --pdk-root $F/pdks --pdk-family sky130 $CIEL_LIB_OPTS $OPEN_PDKS_COMMIT \
+    && ciel_enable sky130 $OPEN_PDKS_COMMIT $CIEL_LIB_OPTS \
     || { echo "PDK_FAILED ciel enable"; return 1; }
   # sky130B is not wanted (IIC-OSIC-TOOLS removes it too)
   rm -rf $F/pdks/ciel/sky130/versions/*/sky130B $F/pdks/sky130B

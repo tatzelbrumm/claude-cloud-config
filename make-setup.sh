@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 # Builds a Setup script for a Claude Code cloud environment by concatenating files from parts/, in this order:
-#   parts/header.sh  parts/pdk-<pdk>.sh  [parts/digital.sh]  parts/main.sh
+#   parts/header.sh  [parts/ciel.sh, ciel PDKs only]  parts/pdk-<pdk>.sh  [parts/digital.sh]  parts/main.sh
 # (main.sh ends with `exit 0`, so it must be last.) The result is one self-contained file to paste into the
 # environment's "Setup script" field.
 #
@@ -18,7 +18,9 @@ build() {   # build <pdk> <digital|""> ; prints the output file name and the par
   [ -f parts/pdk-$pdk.sh ] || { echo "unknown pdk '$pdk'. available:" $PDKS >&2; exit 1; }
   out=setup-$pdk.sh
   [ "$pdk" = ihp-sg13cmos5l ] && out=setup-cloud.sh        # the name this script had before there were three PDKs
-  parts="parts/header.sh parts/pdk-$pdk.sh"
+  parts="parts/header.sh"
+  grep -q ciel_enable parts/pdk-$pdk.sh && parts="$parts parts/ciel.sh"       # helper of the two ciel PDKs
+  parts="$parts parts/pdk-$pdk.sh"
   if [ "$dig" = digital ]; then parts="$parts parts/digital.sh"; out=${out%.sh}-digital.sh; fi
   parts="$parts parts/main.sh"
   cat $parts > $out

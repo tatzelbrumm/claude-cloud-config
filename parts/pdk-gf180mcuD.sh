@@ -44,10 +44,7 @@ YOWASP_YOSYS=${YOWASP_YOSYS:-0.71.0.0.post1285}       # PyPI version of yowasp-y
 
 pdk_fetch() {
   pip install -q --break-system-packages --ignore-installed ciel || { echo "PDK_FAILED pip ciel"; return 1; }
-  ciel enable --pdk-root $F/pdks --pdk-family gf180mcu $CIEL_LIB_OPTS $OPEN_PDKS_COMMIT \
-    || { echo "PDK_RETRY via GitHub API (fossi-foundation.github.io refused?)"
-         ciel enable --data-source github-releases:fossi-foundation/ciel-releases \
-           --pdk-root $F/pdks --pdk-family gf180mcu $CIEL_LIB_OPTS $OPEN_PDKS_COMMIT; } \
+  ciel_enable gf180mcu $OPEN_PDKS_COMMIT $CIEL_LIB_OPTS \
     || { echo "PDK_FAILED ciel enable"; return 1; }
   # variants A, B and C are not wanted (IIC-OSIC-TOOLS removes them too). Keep C: remove `C` from the next two lines.
   rm -rf $F/pdks/ciel/gf180mcu/versions/*/gf180mcu{A,B,C}
