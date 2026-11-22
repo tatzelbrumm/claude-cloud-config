@@ -37,6 +37,8 @@ do not run `make synth-hk` or `make synth-ctrl` (they need LibreLane under nix; 
    report the error text: the user would rather fix access now than lose hours of logs.
 0. Environment. Print: `tail -3 /foss/setup.log`, `grep -c PDK_LIB_MISSING /foss/setup.log` (expect 0),
    `echo $PDK_ROOT $PDK`, `magic --version`, `ls $PDK_ROOT/$PDK/libs.ref`, `nproc; free -g; df -h /var/tmp`.
+   Also state which model you are running as, and your effort setting if you can see it (use your get_session tool if you
+   have one; otherwise say you cannot tell). The user chose these in the start screen, or got the defaults, and wants to know.
    Expect /foss/pdks gf180mcuD, Magic 8.3.706, libraries incl. gf180mcu_ocd_io and gf180mcu_as_sc_mcu7t3v3.
    If the setup log shows PDK_FAILED, stop and say so.
 1. Pad views. Read $SB/notes/2026-11-19_gf180_harness_handoff.md (section
