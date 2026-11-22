@@ -18,6 +18,7 @@ Bootstrap (this session has only the harness checkout; the tools and notes live 
 claude-cloud-config, public, read anonymously):
   git clone --depth 1 -b sudel_buecher https://github.com/tatzelbrumm/claude-cloud-config /var/tmp/sb
   SB=/var/tmp/sb/sudelbuecher        # all "$SB/..." paths below
+  mkdir -p /var/tmp/runs
 
 PUSH PERMISSION (edit by the user; nothing is pushed anywhere else, ever):
 <PUSH: NOT ALLOWED.>
