@@ -8,7 +8,7 @@ Written by the assistant, 2026-11-22. Paste the block below as the first message
 **gf180mcuD** environment whose source repository is the fork `tatzelbrumm/gf180mcu_ocd_chipalooza`, **branch `main`**
 (`78edf00` = upstream `d5ad122` plus a merge; the fork's `minesweeping` branch carries regenerated outputs and modified
 run scripts, so it is not the branch for testing Tim's and Belal's fixes). Model: Sonnet 5.5 for the run; for a failing
-step start a second session (Opus 5.5) with that step's log. Edit the `<PUSH: ...>` line before pasting. The session needs network access to github.com only (already allowed).
+step start a second session (Opus 5.5) with that step's log. Edit the PUSH PERMISSION lines before pasting: keep ONE of the two alternatives. The session needs network access to github.com only (already allowed).
 
 ```
 Goal: build the Chipalooza harness (README steps 4-13) in this environment and bring the complete final GDS to the user.
@@ -19,11 +19,22 @@ claude-cloud-config, public, read anonymously):
   git clone --depth 1 -b sudel_buecher https://github.com/tatzelbrumm/claude-cloud-config /var/tmp/sb
   SB=/var/tmp/sb/sudelbuecher        # all "$SB/..." paths below
 
+PUSH PERMISSION (edit by the user; nothing is pushed anywhere else, ever):
+<PUSH: NOT ALLOWED.>
+<or: PUSH OK. repo: https://github.com/tatzelbrumm/gf180mcu_ocd_chipalooza ; logs branch: chipalooza_logs (normal
+ commits, append only); artifacts branch: chipalooza_artifacts (one parentless commit, force-pushed, GDS chunks and
+ cells.tsv only). No other branch, no other repo, no tags, no changes to main.>
+Call the allowed values PUSH_URL, LOGS_BRANCH, ART_BRANCH below. If PUSH is NOT ALLOWED, say so now and stop: logs would be lost
+when the container is reclaimed, which the user does not accept.
+
 Rules: the harness checkout's working tree stays clean. Write every log to /var/tmp/runs/<step>.log (tee), print only
 its tail, never cat a whole log. Run each long step with nohup in the background and poll the log; the container can be
 reclaimed when idle. Do not edit harness scripts, do not source .designinit (it is for the user's local container),
 do not run `make synth-hk` or `make synth-ctrl` (they need LibreLane under nix; the digital layouts are committed as .mag).
 
+0a. Push test (only if PUSH OK), before anything long: echo "start $(date -u)" > /var/tmp/runs/00_start.log, then
+   $SB/harness_tools/push_logs.sh $PUSH_URL $LOGS_BRANCH /var/tmp/runs "start". If it prints PUSH_LOGS_FAILED, stop and
+   report the error text: the user would rather fix access now than lose hours of logs.
 0. Environment. Print: `tail -3 /foss/setup.log`, `grep -c PDK_LIB_MISSING /foss/setup.log` (expect 0),
    `echo $PDK_ROOT $PDK`, `magic --version`, `ls $PDK_ROOT/$PDK/libs.ref`, `nproc; free -g; df -h /var/tmp`.
    Expect /foss/pdks gf180mcuD, Magic 8.3.706, libraries incl. gf180mcu_ocd_io and gf180mcu_as_sc_mcu7t3v3.
@@ -32,7 +43,9 @@ do not run `make synth-hk` or `make synth-ctrl` (they need LibreLane under nix; 
    "What the toolchain needs", items 1 and "Pad library views"). After `make setup`, check the abutment box of all 17 pads
    in one Magic session (first `instance list abutment <name>` after `getcell` must not be empty). Report the addpath order
    of gf180mcuD.magicrc (is gf180mcu_ocd_io before gf180mcu_fd_io?). Do not change anything.
-2. In this order, one step at a time, with duration and exit code each, stopping at the first failure:
+2. After EVERY step (success or failure) run $SB/harness_tools/push_logs.sh $PUSH_URL $LOGS_BRANCH /var/tmp/runs "<step>".
+   A push failure is reported but does not stop the build.
+   In this order, one step at a time, with duration and exit code each, stopping at the first failure:
    make check; make setup; make config; make padframe; make user-id; make wrappers; make symbols; make gds-slots;
    make gds-prefill; make drc; make gds-final; make drc-final; make extract-sch-top; make extract-top; make lvs-top.
    (README says top-level LVS currently fails on the 5 V / 3 V ground domains: report the failure, do not fix it.)
@@ -41,13 +54,13 @@ do not run `make synth-hk` or `make synth-ctrl` (they need LibreLane under nix; 
    (pip klayout is installed). Also keep the .lyrdb summaries and the netgen comp.out files.
 4. Packaging. Measure first: `xz -9e -T0 -c <final gds> | wc -c`. Then
    $SB/harness_tools/gds_pack.sh <final gds> /var/tmp/pack 90M
-   Push the chunks ONLY if the next line says PUSH OK:
-   <PUSH: not allowed.   or:   PUSH OK: repo <url>, branch chipalooza_artifacts, via PUSH_URL and PUSH_BRANCH>
-   If not allowed, keep /var/tmp/pack and say so.
+   Then push the chunks: PUSH_URL=$PUSH_URL PUSH_BRANCH=$ART_BRANCH $SB/harness_tools/gds_pack.sh <final gds> /var/tmp/pack 90M
+   (run gds_pack.sh once, with these variables set; it force-pushes /var/tmp/pack as one commit). Also copy cells.tsv into
+   /var/tmp/runs and push the logs again.
 5. Report: one table (step, exit code, seconds, first error), the sizes (final GDS, packed, chunks), the pad-view findings
-   of step 1, the path of each log and of cells.tsv. Leave the logs in /var/tmp/runs (the user files them under
-   sudelbuecher/logs/ later). Do not push or commit anything except what step 4 allows. No chat log.
+   of step 1, the path of each log and of cells.tsv. Push the report as /var/tmp/runs/REPORT.md with the last push_logs.sh call, so it
+   is on $LOGS_BRANCH too. Do not push or commit anything except what PUSH PERMISSION allows. No chat log.
 ```
 
-Afterwards, locally: `git fetch --depth 1 origin chipalooza_artifacts`, `sudelbuecher/harness_tools/gds_unpack.sh <dir> <out>`,
+Afterwards, locally: `git fetch tatzelfork chipalooza_logs chipalooza_artifacts` (logs: `git log tatzelfork/chipalooza_logs`, files under run-<time>/), then `git fetch --depth 1 tatzelfork chipalooza_artifacts`, `sudelbuecher/harness_tools/gds_unpack.sh <dir> <out>`,
 `python3 sudelbuecher/harness_tools/cell_hashes.py <out>/<name> mine.tsv`, and compare the tables (README of harness_tools).
