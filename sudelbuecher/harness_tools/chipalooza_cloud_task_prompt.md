@@ -8,7 +8,7 @@ Written by the assistant, 2026-11-22. Paste the block below as the first message
 **gf180mcuD** environment whose source repository is the fork `tatzelbrumm/gf180mcu_ocd_chipalooza`, **branch `main`**
 (`78edf00` = upstream `d5ad122` plus a merge; the fork's `minesweeping` branch carries regenerated outputs and modified
 run scripts, so it is not the branch for testing Tim's and Belal's fixes). Model: Sonnet 5.5 for the run; for a failing
-step start a second session (Opus 5.5) with that step's log. Edit the PUSH PERMISSION lines before pasting: keep ONE of the two alternatives. The session needs network access to github.com only (already allowed).
+step start a second session (Opus 5.5) with that step's log. Paste the block as it is; the push permission is part of it. The session needs network access to github.com only (already allowed).
 
 ```
 Goal: build the Chipalooza harness (README steps 4-13) in this environment and bring the complete final GDS to the user.
@@ -20,20 +20,19 @@ claude-cloud-config, public, read anonymously):
   SB=/var/tmp/sb/sudelbuecher        # all "$SB/..." paths below
   mkdir -p /var/tmp/runs
 
-PUSH PERMISSION (edit by the user; nothing is pushed anywhere else, ever):
-<PUSH: NOT ALLOWED.>
-<or: PUSH OK. repo: https://github.com/tatzelbrumm/gf180mcu_ocd_chipalooza ; logs branch: chipalooza_logs (normal
- commits, append only); artifacts branch: chipalooza_artifacts (one parentless commit, force-pushed, GDS chunks and
- cells.tsv only). No other branch, no other repo, no tags, no changes to main.>
-Call the allowed values PUSH_URL, LOGS_BRANCH, ART_BRANCH below. If PUSH is NOT ALLOWED, say so now and stop: logs would be lost
-when the container is reclaimed, which the user does not accept.
+PUSH PERMISSION (given by the user with this message; nothing else may be pushed, ever):
+PUSH_URL=https://github.com/tatzelbrumm/gf180mcu_ocd_chipalooza
+LOGS_BRANCH=chipalooza_logs   (normal commits, append only, logs and the report)
+ART_BRANCH=chipalooza_artifacts   (one parentless commit, force-pushed, GDS chunks and cells.tsv only)
+No other branch, no other repo, no tags, no changes to main. Logs are pushed from the start and after every step, so
+that nothing depends on this container surviving.
 
 Rules: the harness checkout's working tree stays clean. Write every log to /var/tmp/runs/<step>.log (tee), print only
 its tail, never cat a whole log. Run each long step with nohup in the background and poll the log; the container can be
 reclaimed when idle. Do not edit harness scripts, do not source .designinit (it is for the user's local container),
 do not run `make synth-hk` or `make synth-ctrl` (they need LibreLane under nix; the digital layouts are committed as .mag).
 
-0a. Push test (only if PUSH OK), before anything long: echo "start $(date -u)" > /var/tmp/runs/00_start.log, then
+0a. Push test, before anything long: echo "start $(date -u)" > /var/tmp/runs/00_start.log, then
    $SB/harness_tools/push_logs.sh $PUSH_URL $LOGS_BRANCH /var/tmp/runs "start". If it prints PUSH_LOGS_FAILED, stop and
    report the error text: the user would rather fix access now than lose hours of logs.
 0. Environment. Print: `tail -3 /foss/setup.log`, `grep -c PDK_LIB_MISSING /foss/setup.log` (expect 0),
