@@ -4,7 +4,7 @@ SPDX-License-Identifier: Apache-2.0
 -->
 # Cloud task: build the GF180 Chipalooza harness end to end
 
-Written by the assistant, 2026-11-22. Paste the block below as the first message of a Claude Code cloud session in the
+Written by the assistant, 2026-11-22. Paste the whole file `chipalooza_cloud_task_prompt.txt` (the same text as the block below, nothing else in it) as the first message of a Claude Code cloud session in the
 **gf180mcuD** environment whose source repository is the fork `tatzelbrumm/gf180mcu_ocd_chipalooza`, **branch `main`**
 (`78edf00` = upstream `d5ad122` plus a merge; the fork's `minesweeping` branch carries regenerated outputs and modified
 run scripts, so it is not the branch for testing Tim's and Belal's fixes). Model: Sonnet 5.5 for the run; for a failing
