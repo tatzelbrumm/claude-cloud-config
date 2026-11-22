@@ -8,7 +8,7 @@ One link and one sentence per log. Rules and tools: `CLAUDE.md` at the root of t
 
 - [2026-11-22 Sonnet 5.5, gf180mcuD PDK download fix](2026-11-22_sonnet_gf180_pdk_download_fix.md): why ciel could not
   download the PDK in the cloud environment (index redirect to a dead host, GitHub API 403), the `ciel_enable` fallback
-  in `main`, and the first log made from a raw transcript. Covers the session up to the request for the log.
+  in `main`, planning of the cloud Chipalooza build (transfer of the big GDS, branch and environment checks), and the first log made from a raw transcript. Rebuilt 2026-11-22 23:32 UTC from the whole session so far (18 user turns); rebuild it to extend it.
   Note: `build_chatlog.py` and `verify_chatlog.py` now also handle user messages with attached images (list content
   with `text` blocks); before, such a message was silently skipped by both, so the check said "0 missing" while the
   message was absent. The transcript's trailing records without a `uuid` (title, last-prompt) were cut off first, because
