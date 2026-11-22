@@ -51,8 +51,8 @@ which the sandbox could not download). **Not tested:** the ciel download of `set
 removal, the xschem and KLayout fixes) was run against a fake `ciel` and a fake PDK tree only. The first real run
 shows in `/foss/setup.log` how long the PDK takes; if the five-minute limit is hit, set `CIEL_LIB_OPTS` in the PDK's
 part (see there) to fetch fewer libraries. The sky130A and gf180mcuD scripts install what IIC-OSIC-TOOLS 2026.10
-installs (open_pdks commit `1689ac3f`; gf180mcuD since 2026-11-22 instead PDK `e7a6777` and Magic 8.3.706 built from
-source, which the Chipalooza #3 harness needs, see `parts/pdk-gf180mcuD.sh`), with its xschem/KLayout-tech fixes; not ported: Liberty gzip, Magic bindkeys,
+installs (open_pdks commit `1689ac3f`; gf180mcuD since 2026-11-22 instead PDK `e7a6777`, Magic 8.3.706 and netgen 1.5.332 built
+from source, and YoWASP yosys 0.71 for netgen, which the Chipalooza #3 harness needs, see `parts/pdk-gf180mcuD.sh`), with its xschem/KLayout-tech fixes; not ported: Liberty gzip, Magic bindkeys,
 the gdsfactory patches of the KLayout PyCells.
 
 `make-setup.sh` builds the setup scripts from `parts/` (`header.sh`, one `pdk-<PDK>.sh`, optionally `digital.sh`, then
