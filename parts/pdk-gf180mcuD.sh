@@ -11,10 +11,11 @@
 #    FOSSi, 2026-11-19: `ciel enable --pdk gf180mcu e7a6777d157a9d94c7ac757457b9e4309e9e9000 -l all`). It has
 #    gf180mcu_ocd_io, gf180mcu_ocd_alpha_*, gf180mcu_ocd_ip_sram, gf180mcu_as_sc_mcu7t3v3; 1689ac3 lacks the pad library.
 #  - its Magic tech file says `requires magic-8.3.693`; 8.3.685 refuses to load it.
-#  - Magic 8.3.705 (tag 8.3.705 = cc0360b) has two fixes the harness needs: `is_locked` initialized (1a6e9e5; with
-#    `locking disable` every cell read from disk was "not writeable"), and GDS_FILE resolved relative to the cell
-#    (8.3.690 eeb1052; `make gds-prefill` lost the seal ring and the top cell). Tested on the user's machine: padframe,
-#    wrappers, symbols, gds-slots, user-id, gds-prefill all OK with 8.3.705 + e7a6777.
+#  - Magic: the latest tag, 8.3.706 (1d42dfc, 2026-11-19; extraction fixes on top of 8.3.705). Since 8.3.705 (cc0360b)
+#    it has two fixes the harness needs: `is_locked` initialized (1a6e9e5; with `locking disable` every cell read from
+#    disk was "not writeable"), and GDS_FILE resolved relative to the cell (8.3.690 eeb1052; `make gds-prefill` lost
+#    the seal ring and the top cell). Tested on the user's machine with 8.3.705 + e7a6777: padframe, wrappers,
+#    symbols, gds-slots, user-id, gds-prefill all OK. For a newer Magic set MAGIC_TAG (a tag or branch of the repo).
 #
 # Network: ciel reads its index from https://fossi-foundation.github.io/ciel-releases (not in the Trusted list: use
 # Network access "Custom", check "Also include default list", add fossi-foundation.github.io). The tarballs are GitHub
@@ -27,7 +28,7 @@ OPEN_PDKS_COMMIT=${OPEN_PDKS_COMMIT:-e7a6777d157a9d94c7ac757457b9e4309e9e9000}  
 # Libraries for `ciel enable`: all of them, as Belal did (the harness uses ocd_io, ocd_alpha_*, ocd_ip_sram, as_sc).
 # On the user's machine: 1.1 GB for gf180mcuD. To fetch less: CIEL_LIB_OPTS="-l gf180mcu_fd_pr -l gf180mcu_ocd_io ..."
 CIEL_LIB_OPTS=${CIEL_LIB_OPTS:--l all}
-MAGIC_TAG=${MAGIC_TAG:-8.3.705}                       # git tag of github.com/RTimothyEdwards/magic
+MAGIC_TAG=${MAGIC_TAG:-8.3.706}                       # git tag of github.com/RTimothyEdwards/magic
 
 pdk_fetch() {
   pip install -q --break-system-packages --ignore-installed ciel || { echo "PDK_FAILED pip ciel"; return 1; }
