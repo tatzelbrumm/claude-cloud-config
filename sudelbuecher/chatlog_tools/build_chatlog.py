@@ -137,6 +137,21 @@ for r in live:
             stats['user'] += 1; user_texts.append(s)
             continue
         if isinstance(c, list):
+            # a user message with attachments (images) is a list of image and text blocks; tool results are lists too
+            texts = [re.sub(r'<system-reminder>.*?</system-reminder>', '', b.get('text', ''), flags=re.S).strip()
+                     for b in c if b.get('type') == 'text']
+            texts = [x for x in texts if x]
+            if texts and not r.get('isMeta') and not any(b.get('type') == 'tool_result' for b in c):
+                flush(lines, buf)
+                turn += 1
+                lines += [f'## Turn {turn} ({ts(r)})', '', '**User:**', '']
+                n_img = sum(1 for b in c if b.get('type') == 'image')
+                if n_img:
+                    lines += [f'*[{n_img} image(s) attached to this message; not reproduced here.]*', '']
+                for x in texts:
+                    lines += [x, '']; user_texts.append(x)
+                stats['user'] += 1
+                continue
             for b in c:
                 if b.get('type') == 'tool_result':
                     n = result_note(b)

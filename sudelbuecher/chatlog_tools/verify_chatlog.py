@@ -24,6 +24,12 @@ for r in recs:
             s = re.sub(r'<system-reminder>.*?</system-reminder>', '', c, flags=re.S).strip()
             if s and not s.startswith('<task-notification>'):
                 want.append((on, s))
+        elif isinstance(c, list) and not r.get('isMeta') and not any(b.get('type') == 'tool_result' for b in c):
+            for b in c:     # user message with attachments (images): its text blocks
+                if b.get('type') == 'text':
+                    s = re.sub(r'<system-reminder>.*?</system-reminder>', '', b.get('text', ''), flags=re.S).strip()
+                    if s:
+                        want.append((on, s))
     elif t == 'attachment':
         a = r.get('attachment', {})
         if a.get('type') == 'queued_command' and a.get('commandMode') == 'prompt' and isinstance(a.get('prompt'), str):
