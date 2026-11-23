@@ -54,7 +54,10 @@ and the seconds, and pushes the logs when the step ends.
   libraries incl. gf180mcu_ocd_io and gf180mcu_as_sc_mcu7t3v3. State which model you run as and your effort setting if you
   can see it (get_session tool if you have one; else say you cannot tell). If the setup log shows PDK_FAILED, stop and say so.
 
-1. SETUP AND PAD VIEWS. Run the steps `check` (make check) and `setup` (make setup). Then, in the harness checkout:
+1. CHECK, SUBMODULES AND PAD VIEWS. Run the step `check` (make check; a fresh clone prints "0 stale, 1 not built": validate/lvs/comp.out,
+  that is fine). `make setup` is NOT used: scripts/setup.sh, which it calls, does not exist in the repo. Instead run the step
+  `submodules` (git submodule update --init --depth 1): README step 1 needs the three dependencies/ repositories
+  (public, pinned commits), and a fresh clone has them empty. Then, in the harness checkout:
   . /var/tmp/env.sh; magic -dnull -noconsole -rcfile $PDK_ROOT/$PDK/libs.tech/magic/$PDK.magicrc $SB/harness_tools/pad_abutment_check.tcl 2>&1 | grep ABUT
   Expect `ABUT_SUMMARY pads 17 empty 0` (this passed in the user's environment build on 2026-11-23). An empty box means stale pad views:
   read $SB/notes/2026-11-19_gf180_harness_handoff.md (bullet "Pad library views") and report; do not fix.
