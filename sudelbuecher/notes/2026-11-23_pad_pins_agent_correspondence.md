@@ -4,7 +4,7 @@ SPDX-License-Identifier: Apache-2.0
 -->
 # Correspondence with the pad-pin subagent (2026-11-23)
 
-**Extracted by script from the planning session's raw transcript, verbatim: the brief sent to the agent, its hand-back report, and the planning session's two messages to the harness cloud session about it. The agent's reasoning is not included. The agent's files are in `../harness_tools/fixes/pad_pins/` until they are moved to the harness repository (see `agent_pad_pins_SHA256SUMS`).**
+**Extracted by script from the planning session's raw transcript, verbatim: the brief sent to the agent, its hand-back report, and the planning session's two messages to the harness cloud session about it. The agent's reasoning is not included. The agent's 10 files were MOVED to the harness repository on 2026-11-23 (~03:20 UTC): `tatzelbrumm/gf180mcu_ocd_chipalooza`, branch `chipalooza_artifacts` (commit 4712d59, path `fixes/pad_pins/`, force-replaced by later pushes, paths stay) and branch `sudel_buecher` (`sudelbuecher/harness_tools/fixes/pad_pins/`). All 10 were verified against `agent_pad_pins_SHA256SUMS` (10 OK) by the planning session from fresh clones before its own copies were removed.**
 
 ## 1. Brief sent to the agent (model opus, effort medium, 2026-11-23T01:56 UTC)
 

@@ -110,3 +110,8 @@ regenerated files and the two helper scripts), this note, the planning session's
 The harness build task (cloud session) owns its own step logs, report, chat log, patches, drafts and exports in its own repository (the fork
 `tatzelbrumm/gf180mcu_ocd_chipalooza`, branches `chipalooza_logs`, `chipalooza_artifacts`). The planning session neither files nor copies them. The user's harness records
 live in the design repository's own `sudel_buecher` branch, not in this one. This branch keeps the planning session's own records only.
+
+## Moved 2026-11-23 ~03:20 UTC: the pad pin agent's files
+`harness_tools/fixes/pad_pins/` (10 files) was moved to the harness repository `tatzelbrumm/gf180mcu_ocd_chipalooza` (branches `chipalooza_artifacts`, `fixes/pad_pins/`, and `sudel_buecher`,
+`sudelbuecher/harness_tools/fixes/pad_pins/`), verified byte-identical, then removed here. Kept here: the correspondence with the agent
+(`2026-11-23_pad_pins_agent_correspondence.md`) and the checksum list (`agent_pad_pins_SHA256SUMS`).
