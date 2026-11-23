@@ -9,7 +9,11 @@
 set -euo pipefail
 url=$1; br=$2; dir=$3; label=${4:-update}
 [ -f "$dir/.runid" ] || date -u +%Y%m%dT%H%MZ > "$dir/.runid"
-id=$(cat "$dir/.runid"); t=$(mktemp -d); trap 'rm -rf "$t"' EXIT
+id=$(cat "$dir/.runid")
+# nothing changed since the last successful push (same files, sizes, mtimes): no network traffic at all
+fp=$(cd "$dir" && find . -maxdepth 1 -type f ! -name '.*' -printf '%f %s %T@\n' | sort | sha256sum | cut -c1-40)
+[ "$fp" = "$(cat "$dir/.lastfp" 2>/dev/null)" ] && { echo "nothing new"; exit 0; }
+t=$(mktemp -d); trap 'rm -rf "$t"' EXIT
 if git ls-remote --exit-code --heads "$url" "$br" >/dev/null 2>&1; then
   git clone -q --depth 1 -b "$br" "$url" "$t/r"
 else
@@ -20,7 +24,7 @@ for f in "$dir"/*; do [ -f "$f" ] || continue
   [ "$(stat -c %s "$f")" -le 20971520 ] || { echo "skipped (over 20 MB): $f"; continue; }
   cp "$f" "run-$id/"; done
 git add -A
-git -c user.name=cloud -c user.email=cloud@localhost commit -q -m "logs $label ($id)" || { echo "nothing new"; exit 0; }
+git -c user.name=cloud -c user.email=cloud@localhost commit -q -m "logs $label ($id)" || { echo "$fp" > "$dir/.lastfp"; echo "nothing new"; exit 0; }
 git push -q "$url" "HEAD:$br" 2>&1 || { git pull -q --rebase "$url" "$br" 2>&1 && git push -q "$url" "HEAD:$br" 2>&1; } \
   || { echo "PUSH_LOGS_FAILED"; exit 1; }
-echo "pushed logs ($label) to $br run-$id"
+echo "$fp" > "$dir/.lastfp"; echo "pushed logs ($label) to $br run-$id"

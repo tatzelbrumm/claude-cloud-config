@@ -35,6 +35,9 @@ do not run `make synth-hk` or `make synth-ctrl` (they need LibreLane under nix; 
 0a. Push test, before anything long: echo "start $(date -u)" > /var/tmp/runs/00_start.log, then
    $SB/harness_tools/push_logs.sh $PUSH_URL $LOGS_BRANCH /var/tmp/runs "start". If it prints PUSH_LOGS_FAILED, stop and
    report the error text: the user would rather fix access now than lose hours of logs.
+   Also test the artifacts branch the same way, with a tiny file (force-push of one parentless commit):
+   echo test > /var/tmp/ptest.txt; PUSH_URL=$PUSH_URL PUSH_BRANCH=$ART_BRANCH $SB/harness_tools/gds_pack.sh /var/tmp/ptest.txt /var/tmp/ptest_pack 1M
+   It must print `pushed to`. If either test fails, stop and report the exact error: no long step starts without push access.
    Then start the background pusher, which keeps every log in the repository within two minutes, also during a step that
    runs for hours:  nohup $SB/harness_tools/push_logs_loop.sh $PUSH_URL $LOGS_BRANCH /var/tmp/runs 120 > /var/tmp/push_loop.log 2>&1 &
    (/var/tmp/runs is only the staging directory; the repository is where the logs live.) Check once that
