@@ -105,3 +105,8 @@ cloud session's fixes and drafts): 61 were byte-identical to files in the task's
 in the fork `tatzelbrumm/gf180mcu_ocd_chipalooza`, branches `chipalooza_logs` and `chipalooza_artifacts`, under the task's control. Kept here: the planning session's
 own agent's output `harness_tools/fixes/pad_pins/` as one unit (the task's repository lacks 7 of its files: `verify.log`, the patched LVS log and comparison output, the
 regenerated files and the two helper scripts), this note, the planning session's chat log, `logs/multi-pdk/` and `harness_tools/`.
+
+## Rule recorded 2026-11-23: who owns which records
+The harness build task (cloud session) owns its own step logs, report, chat log, patches, drafts and exports in its own repository (the fork
+`tatzelbrumm/gf180mcu_ocd_chipalooza`, branches `chipalooza_logs`, `chipalooza_artifacts`). The planning session neither files nor copies them. The user's harness records
+live in the design repository's own `sudel_buecher` branch, not in this one. This branch keeps the planning session's own records only.
