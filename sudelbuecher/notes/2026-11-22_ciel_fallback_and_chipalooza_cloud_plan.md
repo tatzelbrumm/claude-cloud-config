@@ -63,7 +63,7 @@ Logs: `../logs/main/chipalooza_cloud_20261123T0029Z/`; its chat log: `../chatlog
   three submodules instead (they are empty in a fresh clone).
 - Pad check passes (17 pads, 0 empty). Steps check ... gds-final, extract-sch-top, extract-top finished (extract-top 1621 s).
 - **Exit codes are not evidence:** the harness scripts end with `exit 0`. `drc-final` logged `Cell name gf180mcu_ocd_chipalooza_final
-  not found` (no .lyrdb), `lvs-top` logged `No file ../netlist/schematic/gf180mcu_ocd.io.spice` (no comp.out), both with rc=0.
+  not found` (no .lyrdb), `lvs-top` logged `No file ../netlist/schematic/gf180mcu_ocd_io.spice` (no comp.out), both with rc=0.
 - Cause of the drc-final failure according to the session: upstream commit `bf1d19b` replaced the Magic compositor with `fill_all.rb`,
   which keeps the top cell name, so `gds-final` no longer renames it. The session wrote a patch, `ISSUE.md` and `PR.md` into
   `fixes/` of branch `chipalooza_artifacts` of the fork (not applied to any build). Not verified by me.
