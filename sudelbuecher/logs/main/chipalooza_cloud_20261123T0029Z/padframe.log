@@ -1,0 +1,414 @@
+./scripts/run_gen_padframe.sh
+running:
+magic -dnull -noconsole -rcfile /foss/pdks/gf180mcuD/libs.tech/magic/gf180mcuD.magicrc
+
+Magic 8.3 revision 706 - Compiled on Mon Nov 23 00:28:24 UTC 2026.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+WARNING: RLIMIT_NOFILE is above 1024 and Tcl_Version<9 this may cause runtime issues [rlim_cur=20000]
+Using NULL graphics device.
+Processing system .magicrc file
+Switching to WIRING tool.
+Switching to NETLIST tool.
+Switching to PICK tool.
+Switching to BOX tool.
+Sourcing design .magicrc for technology gf180mcuD ...
+10 Magic internal units = 1 Lambda
+Input style import: scaleFactor=10, multiplier=2
+The following types are not handled by extraction and will be treated as non-electrical types:
+    obsactive mvobsactive filldiff fillpoly m1hole obsm1 fillm1 obsv1 m2hole obsm2 fillm2 obsv2 m3hole obsm3 fillm3 m4hole obsm4 fillm4 m5hole obsm5 fillm5 glass fillblock lvstext obscomment 
+Scaled tech values by 10 / 1 to match internal grid scaling
+Loading gf180mcuD Device Generator Menu ...
+Using technology "gf180mcuD", version 1.0.588-128-ge7a6777
+Adding path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell gf180mcu_ocd_io__cor read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell gf180mcu_ocd_io__fill10 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+gf180mcu_ocd_io__fill10: 10000 rects
+Cell GF_NI_FILL10_0 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+GF_NI_FILL10_0: 10000 rects
+Cell GF_NI_FILL10_1 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell gf180mcu_ocd_io__fill5 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+gf180mcu_ocd_io__fill5: 10000 rects
+Cell gf180mcu_ocd_io__fill1 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell GF_NI_FILL1_0 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell GF_NI_FILL1_1 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell gf180mcu_ocd_io__bi_24t read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell gf180mcu_ocd_io__in_c read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell GF_NI_IN_C_BASE read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+GF_NI_IN_C_BASE: 10000 rects
+GF_NI_IN_C_BASE: 20000 rects
+Cell 5LM_METAL_RAIL_PAD_60 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell 5LM_METAL_RAIL read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+5LM_METAL_RAIL: 10000 rects
+5LM_METAL_RAIL: 20000 rects
+5LM_METAL_RAIL: 30000 rects
+5LM_METAL_RAIL: 40000 rects
+5LM_METAL_RAIL: 50000 rects
+5LM_METAL_RAIL: 60000 rects
+5LM_METAL_RAIL: 70000 rects
+5LM_METAL_RAIL: 80000 rects
+5LM_METAL_RAIL: 90000 rects
+5LM_METAL_RAIL: 100000 rects
+5LM_METAL_RAIL: 110000 rects
+5LM_METAL_RAIL: 120000 rects
+5LM_METAL_RAIL: 130000 rects
+5LM_METAL_RAIL: 140000 rects
+Cell 4LM_METAL_RAIL read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+4LM_METAL_RAIL: 10000 rects
+4LM_METAL_RAIL: 20000 rects
+4LM_METAL_RAIL: 30000 rects
+4LM_METAL_RAIL: 40000 rects
+4LM_METAL_RAIL: 50000 rects
+4LM_METAL_RAIL: 60000 rects
+4LM_METAL_RAIL: 70000 rects
+4LM_METAL_RAIL: 80000 rects
+4LM_METAL_RAIL: 90000 rects
+4LM_METAL_RAIL: 100000 rects
+4LM_METAL_RAIL: 110000 rects
+Cell 3LM_METAL_RAIL read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell gf180mcu_ocd_io__vdd read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell GF_NI_BI_24T_BASE read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+GF_NI_BI_24T_BASE: 10000 rects
+GF_NI_BI_24T_BASE: 20000 rects
+Cell POWER_RAIL_COR read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+POWER_RAIL_COR: 10000 rects
+POWER_RAIL_COR: 20000 rects
+POWER_RAIL_COR: 30000 rects
+POWER_RAIL_COR: 40000 rects
+POWER_RAIL_COR: 50000 rects
+POWER_RAIL_COR: 60000 rects
+POWER_RAIL_COR: 70000 rects
+POWER_RAIL_COR: 80000 rects
+POWER_RAIL_COR: 90000 rects
+POWER_RAIL_COR: 100000 rects
+POWER_RAIL_COR: 110000 rects
+POWER_RAIL_COR: 120000 rects
+POWER_RAIL_COR: 130000 rects
+POWER_RAIL_COR: 140000 rects
+POWER_RAIL_COR: 150000 rects
+POWER_RAIL_COR: 160000 rects
+POWER_RAIL_COR: 170000 rects
+POWER_RAIL_COR: 180000 rects
+POWER_RAIL_COR: 190000 rects
+POWER_RAIL_COR: 200000 rects
+POWER_RAIL_COR: 210000 rects
+POWER_RAIL_COR: 220000 rects
+POWER_RAIL_COR: 230000 rects
+POWER_RAIL_COR: 240000 rects
+POWER_RAIL_COR: 250000 rects
+POWER_RAIL_COR: 260000 rects
+POWER_RAIL_COR: 270000 rects
+POWER_RAIL_COR: 280000 rects
+POWER_RAIL_COR: 290000 rects
+POWER_RAIL_COR: 300000 rects
+POWER_RAIL_COR: 310000 rects
+POWER_RAIL_COR: 320000 rects
+POWER_RAIL_COR: 330000 rects
+POWER_RAIL_COR: 340000 rects
+POWER_RAIL_COR: 350000 rects
+POWER_RAIL_COR: 360000 rects
+POWER_RAIL_COR: 370000 rects
+POWER_RAIL_COR: 380000 rects
+POWER_RAIL_COR: 390000 rects
+POWER_RAIL_COR: 400000 rects
+POWER_RAIL_COR: 410000 rects
+POWER_RAIL_COR: 420000 rects
+POWER_RAIL_COR: 430000 rects
+POWER_RAIL_COR: 440000 rects
+POWER_RAIL_COR: 450000 rects
+Cell POWER_RAIL_COR_0 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+POWER_RAIL_COR_0: 10000 rects
+POWER_RAIL_COR_0: 20000 rects
+POWER_RAIL_COR_0: 30000 rects
+POWER_RAIL_COR_0: 40000 rects
+POWER_RAIL_COR_0: 50000 rects
+POWER_RAIL_COR_0: 60000 rects
+POWER_RAIL_COR_0: 70000 rects
+POWER_RAIL_COR_0: 80000 rects
+POWER_RAIL_COR_0: 90000 rects
+POWER_RAIL_COR_0: 100000 rects
+POWER_RAIL_COR_0: 110000 rects
+POWER_RAIL_COR_0: 120000 rects
+POWER_RAIL_COR_0: 130000 rects
+POWER_RAIL_COR_0: 140000 rects
+POWER_RAIL_COR_0: 150000 rects
+POWER_RAIL_COR_0: 160000 rects
+POWER_RAIL_COR_0: 170000 rects
+POWER_RAIL_COR_0: 180000 rects
+POWER_RAIL_COR_0: 190000 rects
+POWER_RAIL_COR_0: 200000 rects
+POWER_RAIL_COR_0: 210000 rects
+POWER_RAIL_COR_0: 220000 rects
+POWER_RAIL_COR_0: 230000 rects
+POWER_RAIL_COR_0: 240000 rects
+POWER_RAIL_COR_0: 250000 rects
+POWER_RAIL_COR_0: 260000 rects
+POWER_RAIL_COR_0: 270000 rects
+POWER_RAIL_COR_0: 280000 rects
+POWER_RAIL_COR_0: 290000 rects
+POWER_RAIL_COR_0: 300000 rects
+POWER_RAIL_COR_0: 310000 rects
+POWER_RAIL_COR_0: 320000 rects
+POWER_RAIL_COR_0: 330000 rects
+POWER_RAIL_COR_0: 340000 rects
+POWER_RAIL_COR_0: 350000 rects
+POWER_RAIL_COR_0: 360000 rects
+POWER_RAIL_COR_0: 370000 rects
+POWER_RAIL_COR_0: 380000 rects
+POWER_RAIL_COR_0: 390000 rects
+POWER_RAIL_COR_0: 400000 rects
+POWER_RAIL_COR_0: 410000 rects
+POWER_RAIL_COR_0: 420000 rects
+POWER_RAIL_COR_0: 430000 rects
+POWER_RAIL_COR_0: 440000 rects
+POWER_RAIL_COR_0: 450000 rects
+Cell POWER_RAIL_COR_1 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+POWER_RAIL_COR_1: 10000 rects
+POWER_RAIL_COR_1: 20000 rects
+POWER_RAIL_COR_1: 30000 rects
+Cell gf180mcu_ocd_io__dvdd read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell GF_NI_DVDD_BASE read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+GF_NI_DVDD_BASE: 10000 rects
+GF_NI_DVDD_BASE: 20000 rects
+GF_NI_DVDD_BASE: 30000 rects
+GF_NI_DVDD_BASE: 40000 rects
+GF_NI_DVDD_BASE: 50000 rects
+GF_NI_DVDD_BASE: 60000 rects
+GF_NI_DVDD_BASE: 70000 rects
+GF_NI_DVDD_BASE: 80000 rects
+Cell gf180mcu_ocd_io__brk5 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell GF_NI_VDD_BASE read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+GF_NI_VDD_BASE: 10000 rects
+Cell gf180mcu_ocd_io__asig_5p0 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell GF_NI_ASIG_5P0_BASE read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+GF_NI_ASIG_5P0_BASE: 10000 rects
+GF_NI_ASIG_5P0_BASE: 20000 rects
+GF_NI_ASIG_5P0_BASE: 30000 rects
+GF_NI_ASIG_5P0_BASE: 40000 rects
+GF_NI_ASIG_5P0_BASE: 50000 rects
+GF_NI_ASIG_5P0_BASE: 60000 rects
+GF_NI_ASIG_5P0_BASE: 70000 rects
+GF_NI_ASIG_5P0_BASE: 80000 rects
+Cell gf180mcu_ocd_io__dvss read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell gf180mcu_ocd_io__vss read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell GF_NI_VSS_BASE read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+GF_NI_VSS_BASE: 10000 rects
+Cell GF_NI_DVSS_BASE read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+GF_NI_DVSS_BASE: 10000 rects
+GF_NI_DVSS_BASE: 20000 rects
+GF_NI_DVSS_BASE: 30000 rects
+GF_NI_DVSS_BASE: 40000 rects
+GF_NI_DVSS_BASE: 50000 rects
+GF_NI_DVSS_BASE: 60000 rects
+GF_NI_DVSS_BASE: 70000 rects
+Cell GF_NI_COR_BASE read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell power_via_cor_5 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+power_via_cor_5: 10000 rects
+power_via_cor_5: 20000 rects
+power_via_cor_5: 30000 rects
+power_via_cor_5: 40000 rects
+power_via_cor_5: 50000 rects
+Cell power_via_cor_3 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell moscap_routing read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+moscap_routing: 10000 rects
+moscap_routing: 20000 rects
+moscap_routing: 30000 rects
+moscap_routing: 40000 rects
+moscap_routing: 50000 rects
+moscap_routing: 60000 rects
+moscap_routing: 70000 rects
+moscap_routing: 80000 rects
+moscap_routing: 90000 rects
+moscap_routing: 100000 rects
+moscap_routing: 110000 rects
+moscap_routing: 120000 rects
+moscap_routing: 130000 rects
+moscap_routing: 140000 rects
+moscap_routing: 150000 rects
+Cell moscap_corner read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell moscap_corner_3 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell moscap_corner_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell moscap_corner_1 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell comp018green_esd_clamp_v5p0_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell top_route_1 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell nmos_clamp_20_50_4 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+nmos_clamp_20_50_4: 10000 rects
+nmos_clamp_20_50_4: 20000 rects
+nmos_clamp_20_50_4: 30000 rects
+Cell comp018green_esd_rc_v5p0 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell comp018green_esd_clamp_v5p0_1 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell top_route read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell comp018green_esd_rc_v5p0_1 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell POLY_SUB_FILL_1 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell GF_NI_FILL5_0 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell GF_NI_FILL5_1 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell POLY_SUB_FILL read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell comp018green_esd_cdm read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell comp018green_out_predrv read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell comp018green_out_sigbuf_oe read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell lvlshift_up read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell comp018green_out_sigbuf_a read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell comp018green_sigbuf_1 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell lv_nand read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell lv_inv read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell tie_poly_res2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell comp018green_inpath_cms_smt read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell comp018green_sigbuf read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell comp018green_in_pupd read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell comp018green_in_logic_pupd read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell lv_passgate read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell comp018green_in_drv read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell comp018green_in_cms_smt read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell comp018green_out_paddrv_24T read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell comp018green_out_paddrv_6T_PMOS_GROUP read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell PMOS_metal_stack read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell comp018green_out_drv_pleg_6T_Y read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Scaled magic input cell comp018green_out_drv_pleg_6T_Y geometry by factor of 2
+Cell pmos_6p0_esd read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell comp018green_out_drv_pleg_6T_X read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Scaled magic input cell comp018green_out_drv_pleg_6T_X geometry by factor of 2
+Cell comp018green_out_paddrv_6T_NMOS_GROUP read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell nmos_metal_stack read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell GR_NMOS read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell comp018green_out_drv_nleg_6T read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell Bondpad_5LM read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Bondpad_5LM: 10000 rects
+Bondpad_5LM: 20000 rects
+Bondpad_5LM: 30000 rects
+Bondpad_5LM: 40000 rects
+Cell tie_poly_res read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell comp018green_out_paddrv_16T read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell comp018green_out_paddrv_4T_PMOS_GROUP read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell PMOS_4T_metal_stack read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell comp018green_out_drv_pleg_4T_Y read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Scaled magic input cell comp018green_out_drv_pleg_4T_Y geometry by factor of 2
+Cell pmos_6p0_esd_40 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell comp018green_out_drv_pleg_4T_X read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Scaled magic input cell comp018green_out_drv_pleg_4T_X geometry by factor of 2
+Cell comp018green_out_paddrv_4T_NMOS_GROUP read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell nmos_4T_metal_stack read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell GR_NMOS_4T read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell comp018green_out_drv_nleg_4T read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell comp018green_esd_clamp_v5p0_DVDD read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell nmos_clamp_20_50_4_DVDD read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+nmos_clamp_20_50_4_DVDD: 10000 rects
+nmos_clamp_20_50_4_DVDD: 20000 rects
+nmos_clamp_20_50_4_DVDD: 30000 rects
+Cell comp018green_esd_clamp_v5p0_DVSS read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell nmos_clamp_20_50_4_DVSS read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+nmos_clamp_20_50_4_DVSS: 10000 rects
+nmos_clamp_20_50_4_DVSS: 20000 rects
+nmos_clamp_20_50_4_DVSS: 30000 rects
+Cell GF_NI_BRK5_0 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell GF_NI_BRK5_1 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell POLY_SUB_FILL_3 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+Cell comp018green_esd_hbm read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_io/mag
+comp018green_esd_hbm: 10000 rects
+Cell user_id_textblock read from current working directory
+Cell copyright_block read from current working directory
+Cell caravel_logo read from current working directory
+Cell caravel_motto read from current working directory
+Scaled magic input cell caravel_motto geometry by factor of 2
+Cell open_source couldn't be read
+Cell font_76 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_76 geometry by factor of 2
+Cell font_75 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_75 geometry by factor of 2
+Cell font_74 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_74 geometry by factor of 2
+Cell font_73 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_73 geometry by factor of 2
+Cell font_72 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_72 geometry by factor of 2
+Cell font_70 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_70 geometry by factor of 2
+Cell font_69 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_69 geometry by factor of 2
+Cell font_67 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_67 geometry by factor of 2
+Cell font_66 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_66 geometry by factor of 2
+Cell font_65 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_65 geometry by factor of 2
+Cell font_63 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_63 geometry by factor of 2
+Cell font_61 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_61 geometry by factor of 2
+Cell font_55 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_55 geometry by factor of 2
+Cell font_50 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_50 geometry by factor of 2
+Cell font_47 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_47 geometry by factor of 2
+Cell font_46 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_46 geometry by factor of 2
+Cell font_44 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_44 geometry by factor of 2
+Cell font_43 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_43 geometry by factor of 2
+Cell font_38 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_38 geometry by factor of 2
+Cell font_35 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_35 geometry by factor of 2
+Cell font_32 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_32 geometry by factor of 2
+Cell font_31 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_31 geometry by factor of 2
+Cell font_30 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_30 geometry by factor of 2
+Cell font_29 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_29 geometry by factor of 2
+Cell font_28 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_28 geometry by factor of 2
+Cell font_6F read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_6F geometry by factor of 2
+Cell font_6E read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_6E geometry by factor of 2
+Cell font_6D read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_6D geometry by factor of 2
+Cell font_6C read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_6C geometry by factor of 2
+Cell font_4F read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_4F geometry by factor of 2
+Cell font_4E read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_4E geometry by factor of 2
+Cell font_4D read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_4D geometry by factor of 2
+Cell font_4B read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_4B geometry by factor of 2
+Cell alpha_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_large/mag
+Scaled magic input cell alpha_2 geometry by factor of 12
+Cell alpha_0 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_large/mag
+Scaled magic input cell alpha_0 geometry by factor of 12
+Cell alpha_6 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_large/mag
+Scaled magic input cell alpha_6 geometry by factor of 12
+Cell alpha_1 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_large/mag
+Scaled magic input cell alpha_1 geometry by factor of 12
+Cell alpha_3 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_large/mag
+Scaled magic input cell alpha_3 geometry by factor of 12
+Cell font_68 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_68 geometry by factor of 2
+Cell font_54 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_54 geometry by factor of 2
+Cell font_53 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_53 geometry by factor of 2
+Cell font_49 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_49 geometry by factor of 2
+Cell font_22 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_alpha_small/mag
+Scaled magic input cell font_22 geometry by factor of 2
+Cell gf180mcu_ocd_io__fill10x read from current working directory
+gf180mcu_ocd_io__fill10x: 10000 rects
+Cell GF_NI_FILL10_0short read from current working directory
+GF_NI_FILL10_0short: 10000 rects
+Cell GF_NI_FILL10_1short read from current working directory
+Cell constant_block read from current working directory
+Cell gf180mcu_as_sc_mcu7t3v3__tiel_4 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__tieh_4 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__tap_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__fillcap_4 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__buff_12 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell horz_power_connect read from current working directory
+Scaled magic input cell horz_power_connect geometry by factor of 2
+Cell vert_power_connect read from current working directory
+Cell chipalooza_frame_wrapper read from current working directory
+Done!

@@ -1,0 +1,14 @@
+cd magic && ../scripts/run_gen_filled_final_gds.sh
+Generating fill for gf180mcu_ocd_chipalooza
+Reading layout…
+Starting COMP fill…
+Starting Poly2 fill…
+Starting Metal fill…
+Done!
+md5sum:
+a288e2d9ab463291faa7421a3ff3642a  gf180mcu_ocd_chipalooza_final.gds
+sha1sum:
+684a1939739b6d76316ccb3a64945af19f016898  gf180mcu_ocd_chipalooza_final.gds
+sha256sum:
+1544905221ff69e2d2ad3e41e695da65bb9531203719f5c3d3023445c401c562  gf180mcu_ocd_chipalooza_final.gds
+Done!

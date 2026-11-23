@@ -1,0 +1,16 @@
+cd xschem && ./run_extract_ocd_chipalooza.sh
+Created /root/.xschem dir with template xschemrc
+Using run time directory XSCHEM_SHAREDIR = /foss/tools/xschem/share/xschem
+Sourcing /foss/tools/xschem/share/xschem/xschemrc init file
+Sourcing ./xschemrc init file
+pdk installation: using /foss/pdks
+180MCU_MODELS: /foss/pdks/gf180mcuD/libs.tech/ngspice
+Adding path to Avalon semiconductor library symbols
+XSCHEM_LIBRARY_PATH is :/foss/tools/xschem/share/xschem/xschem_library/devices:/foss/tools/xschem/share/xschem/xschem_library:/home/user/gf180mcu_ocd_chipalooza/xschem:/root/.xschem/xschem_library:/foss/pdks/gf180mcuD/libs.tech/xschem/tests:/foss/pdks/gf180mcuD/libs.tech/xschem:/home/user/gf180mcu_ocd_chipalooza/dependencies/gf180mcu_ocd_ip__analog_switches/xschem:/foss/pdks/ciel/gf180mcu/versions/e7a6777d157a9d94c7ac757457b9e4309e9e9000/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/xschem
+Adding path to Avalon semiconductor library symbols
+XSCHEM_LIBRARY_PATH is :/foss/tools/xschem/share/xschem/xschem_library/devices:/foss/tools/xschem/share/xschem/xschem_library:/home/user/gf180mcu_ocd_chipalooza/xschem:/root/.xschem/xschem_library:/foss/pdks/gf180mcuD/libs.tech/xschem/tests:/foss/pdks/gf180mcuD/libs.tech/xschem:/home/user/gf180mcu_ocd_chipalooza/dependencies/gf180mcu_ocd_ip__analog_switches/xschem:/foss/pdks/ciel/gf180mcu/versions/e7a6777d157a9d94c7ac757457b9e4309e9e9000/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/xschem:/home/user/gf180mcu_ocd_chipalooza/dependencies/gf180mcu_ocd_ip__biasgen/xschem
+Adding path to Avalon semiconductor library symbols
+XSCHEM_LIBRARY_PATH is :/foss/tools/xschem/share/xschem/xschem_library/devices:/foss/tools/xschem/share/xschem/xschem_library:/home/user/gf180mcu_ocd_chipalooza/xschem:/root/.xschem/xschem_library:/foss/pdks/gf180mcuD/libs.tech/xschem/tests:/foss/pdks/gf180mcuD/libs.tech/xschem:/home/user/gf180mcu_ocd_chipalooza/dependencies/gf180mcu_ocd_ip__analog_switches/xschem:/foss/pdks/ciel/gf180mcu/versions/e7a6777d157a9d94c7ac757457b9e4309e9e9000/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/xschem:/home/user/gf180mcu_ocd_chipalooza/dependencies/gf180mcu_ocd_ip__biasgen/xschem:/home/user/gf180mcu_ocd_chipalooza/dependencies/gf180mcu_ocd_ip__por/xschem
+setup_tcp_bespice: success : listening to TCP port: 2022
+
+Done!

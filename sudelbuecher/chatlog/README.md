@@ -8,11 +8,16 @@ One link and one sentence per log. Rules and tools: `CLAUDE.md` at the root of t
 
 - [2026-11-22 Sonnet 5.5, gf180mcuD PDK download fix](2026-11-22_sonnet_gf180_pdk_download_fix.md): why ciel could not
   download the PDK in the cloud environment (index redirect to a dead host, GitHub API 403), the `ciel_enable` fallback
-  in `main`, planning of the cloud Chipalooza build (transfer of the big GDS, branch and environment checks), and the first log made from a raw transcript. Rebuilt through 2026-11-23 00:28 UTC from the whole session so far (33 user turns); rebuild it to extend it.
+  in `main`, planning of the cloud Chipalooza build (transfer of the big GDS, branch and environment checks), and the first log made from a raw transcript. Rebuilt through 2026-11-23 01:07 UTC from the whole session so far (38 user turns); rebuild it to extend it.
   Note: `build_chatlog.py` and `verify_chatlog.py` now also handle user messages with attached images (list content
   with `text` blocks); before, such a message was silently skipped by both, so the check said "0 missing" while the
   message was absent. The transcript's trailing records without a `uuid` (title, last-prompt) were cut off first, because
   the builder starts the live path at the last record.
+
+- [2026-11-23 Sonnet 5.5, Chipalooza cloud build](2026-11-23_sonnet_chipalooza_cloud_build.md): the cloud session that ran the
+  harness build chain in the gf180mcuD environment. Built inside that session by `session_chatlog.sh` from its own transcript
+  and pushed to the fork's `chipalooza_logs` branch (copied here from fork commit `fb074a5`, 01:07 UTC); it covers the session up
+  to its last rebuild, so later turns of that session are not in it. Its step logs: `../logs/main/chipalooza_cloud_20261123T0029Z/`.
 
 ## Pending
 

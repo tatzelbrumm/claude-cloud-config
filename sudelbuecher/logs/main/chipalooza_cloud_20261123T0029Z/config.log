@@ -1,0 +1,5 @@
+./scripts/parse_config.py
+Done with generating project wrapper verilog netlist
+Done with generating padframe verilog netlist
+Done with generating layout Tcl script
+Done with generating all files

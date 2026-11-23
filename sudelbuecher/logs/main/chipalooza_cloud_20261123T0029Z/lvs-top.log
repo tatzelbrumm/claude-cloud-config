@@ -1,0 +1,47 @@
+cd validate && ./run_lvs_ocd_chipalooza.sh
+Netgen 1.5.332 compiled on Mon Nov 23 00:28:41 UTC 2026
+Warning: netgen command 'global' use fully-qualified name '::netgen::global'
+Warning: netgen command 'format' use fully-qualified name '::netgen::format'
+Call to undefined subcircuit cap_nmos_06v0
+Creating placeholder cell definition.
+Call to undefined subcircuit ppolyf_u
+Creating placeholder cell definition.
+Call to undefined subcircuit nfet_06v0
+Creating placeholder cell definition.
+Call to undefined subcircuit pfet_06v0
+Creating placeholder cell definition.
+Call to undefined subcircuit nfet_03v3
+Creating placeholder cell definition.
+Call to undefined subcircuit pfet_03v3
+Creating placeholder cell definition.
+Call to undefined subcircuit pfet_06v0_dss
+Creating placeholder cell definition.
+Call to undefined subcircuit nfet_06v0_dss
+Creating placeholder cell definition.
+Call to undefined subcircuit pfet_05v0
+Creating placeholder cell definition.
+Call to undefined subcircuit nfet_05v0
+Creating placeholder cell definition.
+Call to undefined subcircuit ppolyf_u_1k
+Creating placeholder cell definition.
+Call to undefined subcircuit cap_mim_2f0_m4m5_noshield
+Creating placeholder cell definition.
+Call to undefined subcircuit pnp_05p00x05p00
+Creating placeholder cell definition.
+Call to undefined subcircuit rm2
+Creating placeholder cell definition.
+Call to undefined subcircuit pfet_03v3
+Creating placeholder cell definition.
+Call to undefined subcircuit nfet_03v3
+Creating placeholder cell definition.
+Error in SPICE file read: No file ../netlist/schematic/gf180mcu_ocd_io.spice
+-1
+    while executing
+"readnet spice ../netlist/schematic/gf180mcu_ocd_io.spice $circuit2"
+    (file "netgen.tcl" line 7)
+    invoked from within
+"source netgen.tcl"
+    ("eval" body line 1)
+    invoked from within
+"eval $argv"
+Done!

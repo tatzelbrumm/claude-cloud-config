@@ -1,0 +1,8 @@
+./scripts/set_user_id.py
+Setting project user ID to: 20261213
+Step 1:  Modify layout of the user_id_vias subcell
+Done!
+Step 2:  Set the user project ID in the programming block verilog.
+Done!  (parameter was already correct)
+Step 3:  Add user project ID text to top level layout.
+Done!

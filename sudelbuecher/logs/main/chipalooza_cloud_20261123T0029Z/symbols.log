@@ -1,0 +1,25 @@
+./scripts/run_gen_xschem_syms.sh
+  slot template: 200 x 380 (18 left rows, 1 right)
+  housekeeping_top.sym                        53 pins (12 left, 41 right)  [gl]
+  user_project_control.sym                    26 pins (16 left, 10 right)  [gl]
+  slot1_wrapper.sym                           17 pins (16 left, 1 right)  [mag]  + gl/slot1_wrapper_lvs.v
+  slot2_wrapper.sym                           18 pins (17 left, 1 right)  [mag]  + gl/slot2_wrapper_lvs.v
+  slot3_wrapper.sym                           17 pins (16 left, 1 right)  [mag]  + gl/slot3_wrapper_lvs.v
+  slot4_wrapper.sym                           17 pins (16 left, 1 right)  [mag]  + gl/slot4_wrapper_lvs.v
+  slot5_wrapper.sym                           17 pins (16 left, 1 right)  [mag]  + gl/slot5_wrapper_lvs.v
+  slot6_wrapper.sym                           17 pins (16 left, 1 right)  [mag]  + gl/slot6_wrapper_lvs.v
+  slot7_wrapper.sym                           17 pins (16 left, 1 right)  [mag]  + gl/slot7_wrapper_lvs.v
+  slot8_wrapper.sym                           18 pins (17 left, 1 right)  [mag]  + gl/slot8_wrapper_lvs.v
+  slot9_wrapper.sym                           17 pins (16 left, 1 right)  [mag]  + gl/slot9_wrapper_lvs.v
+  slot10_wrapper.sym                          18 pins (17 left, 1 right)  [mag]  + gl/slot10_wrapper_lvs.v
+  slot11_wrapper.sym                          18 pins (17 left, 1 right)  [mag]  + gl/slot11_wrapper_lvs.v
+  slot12_wrapper.sym                          17 pins (16 left, 1 right)  [mag]  + gl/slot12_wrapper_lvs.v
+  slot13_wrapper.sym                          17 pins (16 left, 1 right)  [mag]  + gl/slot13_wrapper_lvs.v
+  slot14_wrapper.sym                          17 pins (16 left, 1 right)  [mag]  + gl/slot14_wrapper_lvs.v
+  slot15_wrapper.sym                          17 pins (16 left, 1 right)  [mag]  + gl/slot15_wrapper_lvs.v
+  slot16_wrapper.sym                          17 pins (16 left, 1 right)  [mag]  + gl/slot16_wrapper_lvs.v
+  slot17_wrapper.sym                          18 pins (17 left, 1 right)  [mag]  + gl/slot17_wrapper_lvs.v
+  slot18_wrapper.sym                          17 pins (16 left, 1 right)  [mag]  + gl/slot18_wrapper_lvs.v
+  gf180mcu_ocd_ip_sram__sram1024x8m8wm1.sym    9 pins (8 left, 1 right)  [spice]
+  gf180mcu_padframe.sym                       70 pins (52 left, 18 right)  [vsrc]
+Done!

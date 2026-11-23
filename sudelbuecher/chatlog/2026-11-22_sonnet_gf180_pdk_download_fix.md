@@ -1787,8 +1787,211 @@ Tell me when you want me to look again, and I'll rerun the check from here. I wo
 clear for takeoff. 
 update the chatlog and other logs.
 
-*[Bash: Rebuild chat log with the session wrapper.]*
+*[Bash: Rebuild chat log with the session wrapper.  
+Bash: Update note, commit, push, re-check fork branches.]*
+
+**Assistant:**
+
+The logs are updated and pushed to `sudel_buecher` (commit `cea2931`).
+
+- **Chat log:** I rebuilt it with the new `session_chatlog.sh` through 2026-11-23 00:28 UTC. It has 33 user turns. All 88 texts are present, and none of the reasoning is in the file. The index in `chatlog/README.md` is updated. This reply and your "clear for takeoff" are not in it yet.
+- **Note:** `notes/2026-11-22_ciel_fallback_and_chipalooza_cloud_plan.md` has a new section. It covers the prompt review (errors found and fixed), the log-pushing design, the pad check result, the unchecked `addpath` order, and your launch settings.
+- **Other logs:** The failed setup log and its `MANIFEST.tsv` row were already filed. Nothing else has been produced since.
+
+I just checked your fork, and the cloud session has not pushed `chipalooza_logs` or `chipalooza_artifacts` yet. If they still aren't there after a few minutes, look at what the session printed in its first steps, because its first action is the push test. I'll check again when you ask.
+
+## Turn 34 (2026-11-23 00:29 UTC)
+
+**User:**
+
+Step 1: check and setup.
+
+*[Bash: Check fork for pushed logs from the cloud session.]*
+
+**Assistant:**
+
+Both branches now exist, so the session's push tests passed. I'm reading its logs.
+
+*[Bash: Read the pushed logs and step statuses.  
+Bash: Read check and setup logs; find the setup script.  
+Bash: Find whether setup.sh exists or was removed.  
+Bash: Check whether submodules are populated.  
+Bash: Test anonymous access to the three submodule repos.  
+Bash: Fix prompt for missing setup.sh and submodules.]*
+
+**Assistant:**
+
+Step 1 has run, and `make check` passed but `make setup` failed. The cause is a bug in the harness, not in your environment. I read both logs from your fork's `chipalooza_logs` branch.
+
+**What the session reported**
+- Both push tests passed. `chipalooza_logs` and `chipalooza_artifacts` exist on your fork, and `make check` and `make setup` were run through the runner.
+- **`make check` passed:** it printed "0 stale, 1 not built, 46 checked". The one item is `validate/lvs/comp.out`, which is expected on a fresh clone.
+- **`make setup` failed with `rc=2`:** `./scripts/setup.sh: No such file or directory`.
+
+**Why it failed**
+- The Makefile's `setup` target calls `./scripts/setup.sh`, and that file does not exist in the repo. It is not in your fork or in Tim's upstream, and it is not in the history I searched (200 commits).
+- Only comments in `gen_padframe.tcl` still say "see setup.sh". The README's steps 1 to 3 never mention a setup script.
+- My prompt told the session to run `make setup`. That was my mistake, because I took the target from the Makefile without checking the script.
+- The session stopped at the first failure, as the prompt tells it to.
+
+**A second problem I found while reading the README**
+- Step 1 of the README clones with `--recurse-submodules` for three dependency repos (`analog_switches`, `biasgen`, `por`). In a normal cloud clone, `dependencies/` is empty.
+- I tested that all three repos are readable anonymously, and their pinned commits match the current heads.
+- So the prompt now runs `git submodule update --init --depth 1` as a step. I made this change in commit `d7869c1`, and the prompt is now 70 lines.
+
+**What to do with the running session**
+Don't paste the whole new prompt. Send it this message, which keeps its environment and state:
+
+```
+make setup does not exist (scripts/setup.sh is missing in the repo). Skip it. Run the step `submodules`: git submodule update --init --depth 1 (via run_step.sh, from the harness checkout; expect the three dependencies/ directories to fill). Then run the pad check from step 1 ($SB/harness_tools/pad_abutment_check.tcl; expect ABUT_SUMMARY pads 17 empty 0), then continue step 2 from clean-config in the order of the prompt.
+```
+
+I'll look at the next logs whenever you ask.
+
+## Turn 35 (2026-11-23 00:32 UTC)
+
+**User:**
+
+Pad check passes. Now the build chain, run sequentially with a helper.
+
+**Assistant:**
+
+I'm writing a chain runner, so one background job runs the whole sequence and the session only polls it.
+
+*[Bash: Write and test the chain runner with dummy steps.  
+Bash: Document and push the chain runner.]*
+
+**Assistant:**
+
+The chain helper is `run_chain.sh`, pushed to `sudel_buecher` in commit `467e3d3`.
+
+**What it does**
+- It runs these steps one after another, each through `run_step.sh`, as one background job: clean-config, config, padframe, wrappers, symbols, gds-slots, user-id, projects-gds, gds-prefill, gds-final, drc-final, extract-sch-top, extract-top, lvs-top. Each step is `make <step>`.
+- It stops at the first failing step, except `projects-gds` and `lvs-top`, which are allowed to fail. The earlier log push after each step still applies.
+- It skips steps that already finished with `rc=0`. If the chain stops, rerunning it resumes at the failed step.
+- It writes progress lines to `/var/tmp/runs/chain.status`, ending with `CHAIN_DONE` or `CHAIN_STOPPED <step>`.
+- If `CHATLOG_MODEL` is set, it also rebuilds the chat log after each step.
+
+I tested it with a dummy Makefile: it stopped at a failing step, resumed and skipped the finished step, and carried on past a step I allowed to fail.
+
+**Message to send to the running session:**
+
+```
+Run the build chain with the helper. From the harness checkout:
+. /var/tmp/env.sh; git -C /var/tmp/sb pull -q
+CHATLOG_MODEL="<your model>" nohup $SB/harness_tools/run_chain.sh > /dev/null 2>&1 &
+Then poll with:
+until grep -qE 'CHAIN_DONE|CHAIN_STOPPED' /var/tmp/runs/chain.status; do sleep 30; done; cat /var/tmp/runs/chain.status
+(repeat if the tool call times out; print only the status file and the tail -5 of the log of the failing step).
+Do not start steps by hand while the chain runs. When it ends, report the status file, then continue with step 3 of the prompt (final GDS, pack and push).
+```
+
+I haven't run any of the real steps, so what the chain does to your repo (for example `clean-config` moving files into `archive/`) is as the README describes. If it stops, the cloud session's report and the status line tell us where.
+
+## Turn 36 (2026-11-23 00:34 UTC)
+
+**User:**
+
+STOP. this was a status quote , not a prompt. DO NOT BUILD THE CHAIN YOURSELF. PURGE WHATEVER MESS YOU MADE.
+
+**Assistant:**
+
+Understood. You posted a status line from the cloud session, and I treated it as an instruction. I'm removing what I built for it.
+
+*[Bash: Revert the chain runner commit and clean scratch dirs.]*
+
+**Assistant:**
+
+`run_chain.sh` and its README entry are removed, in revert commit `6ebc4e1` on `sudel_buecher`. `harness_tools/` no longer contains `run_chain.sh`, and neither the README nor the prompt mentions it.
+
+**What the revert does and doesn't remove**
+- The original commit `467e3d3` is still in the branch history, followed by the revert. I did not force-push to erase it, because rewriting a shared branch needs your explicit go-ahead. Say so if you want it removed from the history.
+- I also deleted my temporary test folders under `/var/tmp` and the scratchpad.
+
+**What I did not do**
+- I did not send anything to your cloud session, launch anything, or run any build step.
+- Nothing was pushed to your fork. I only read its `chipalooza_logs` branch.
+
+**An earlier change that stays unless you say otherwise**
+- Commit `d7869c1` changed the prompt after I read the session's `setup.log` on your fork. `make setup` fails because `scripts/setup.sh` doesn't exist, so the prompt now initialises the submodules instead.
+- That change was based on evidence in the log. If you consider it unwanted too, I'll revert it.
+
+I won't act on your quoted status lines again. If you want me to react to one, tell me so.
+
+## Turn 37 (2026-11-23 00:39 UTC)
+
+**User:**
+
+the cloud task seems to run now. what should i be looking for?
+here's some output. Looking ok?
+
+```
+cd /var/tmp/runs; tail -3 projects-gds.log; (nohup /var/tmp/seq.sh gds-prefill gds-final drc-final extract-sch-top extract-top lvs-top > /var/tmp/seq2.out 2>&1 &) ; sleep 240; cat /var/tmp/seq2.out
+
+No project assigned:  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
+
+Wrote scripts/user_projects.tcl (0 project(s) placed).
+gds-prefill: END 00:35:59 rc=0 seconds=159
+gds-final: END 00:37:10 rc=0 seconds=68
+Shell cwd was reset to /home/user/gf180mcu_ocd_chipalooza
+
+sleep 500; cat /var/tmp/seq2.out
+
+Blocked: sleep 500 followed by: cat /var/tmp/seq2.out. To wait for a condition, use Monitor with an until-loop (e.g. `until <check>; do sleep 2; done`). To wait for a command you started, use run_in_background: true. Do not chain shorter sleeps to work around this block.
+
+until grep -q 'lvs-top\|rc=[1-9]' /var/tmp/seq2.out; do sleep 10; done; cat /var/tmp/seq2.out
+```
+
+*[Bash: Read step statuses and key log tails from the fork.  
+Bash: Inspect the 3-second DRC log and the final GDS log.  
+Bash: Read the final-GDS script and its log.  
+Bash: Scan all pushed logs for hidden errors.  
+Bash: Look at the suspicious lines in three logs.]*
+
+**Assistant:**
+
+Mostly fine, with one real problem: **`drc-final` did not actually pass**. I read the step logs it pushed to your fork's `chipalooza_logs`.
+
+**What's good**
+- All steps up to `extract-sch-top` finished with `rc=0`: check, submodules, clean-config, config, padframe, wrappers, symbols, gds-slots, user-id, projects-gds, gds-prefill, gds-final and extract-sch-top.
+- `projects-gds`: "No project assigned: 1..18", "0 project(s) placed". That is correct for an empty harness.
+- `gds-final` printed md5, sha1 and sha256 for `gf180mcu_ocd_chipalooza_final.gds`, so a final GDS exists.
+- The "suspicious" lines I found are the usual noise:
+  - Magic prints "couldn't be read" for slot wrapper cells before it creates them.
+  - `gds-prefill` has "placed on top of itself" warnings from the foundry SRAM GDS.
+  - `padframe` has "open_source couldn't be read".
+
+**The problem: `drc-final`**
+- Its log shows `ERROR: ... 'source': Cell name gf180mcu_ocd_chipalooza_final not found in input layout`, yet the step reports `rc=0` in 3 seconds. The harness scripts end with `exit 0` whatever happens, so `rc=0` proves nothing for them.
+- The DRC itself never ran. The final GDS's top cell apparently isn't called `gf180mcu_ocd_chipalooza_final`. I can't tell from the logs what it is called or why.
+- The same applies to the extract and LVS steps: check the files they produce, not just `rc`.
+- `extract-sch-top` also finished in 3 seconds. Its log ends with "Done!" and shows no netlist file, so I can't tell whether it produced one.
+
+**Message to send to the cloud session** (read-only, nothing is rerun):
+
+```
+drc-final logged "ERROR: Cell name gf180mcu_ocd_chipalooza_final not found in input layout" although rc=0 (the harness scripts always exit 0). Pause the sequence. Read-only checks, then report:
+1. python3 -c "import klayout.db as d; l=d.Layout(); l.read('gds/gf180mcu_ocd_chipalooza_final.gds.gz'); print([c.name for c in l.top_cells()], l.cells())"
+2. ls -la gds/ validate/*.lyrdb netlist/ netlist/schematic 2>&1 (names, sizes, times)
+3. From now on judge each step by its log and output files (grep for ERROR, check that the output file exists), not by rc.
+Do not fix, rerun or delete anything.
+```
+
+**What to watch in the rest of the run**
+- **Time:** `extract-top` and `lvs-top` are the slow steps. The README says `lvs-top` is expected to fail on the 5 V / 3.3 V ground domains. Anything else in its log is news.
+- **Files and sizes:** the final GDS and its compressed size, and `netlist/layout/*.spice`.
+- **Resources:** memory and disk, since the session has 15 GB of RAM and 55 GB of disk.
+- **Pushes:** `chipalooza_logs` should keep growing. The last push I saw was at 00:37 UTC.
+- **After the chain:** the packing step, which should create `chipalooza_artifacts`.
+
+## Turn 38 (2026-11-23 01:07 UTC)
+
+**User:**
+
+while the cloud task is churning, update your chatlogs and other logs.
+
+*[Bash: Rebuild chat log; fetch the cloud run's pushed logs.]*
 
 ---
 
-*[End of the export: the last record on the live path is 3f637c54-9bf4-4be8-b779-3a12e993a52b (2026-11-23 00:28 UTC). Later turns are not included.]*
+*[End of the export: the last record on the live path is 29f32859-5057-4af0-933a-b2a631b9ec51 (2026-11-23 01:07 UTC). Later turns are not included.]*

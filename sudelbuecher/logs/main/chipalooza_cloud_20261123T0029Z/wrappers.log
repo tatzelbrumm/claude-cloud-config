@@ -1,0 +1,975 @@
+./scripts/run_gen_user_wrappers.sh
+Generating slot wrappers
+
+Magic 8.3 revision 706 - Compiled on Mon Nov 23 00:28:24 UTC 2026.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+WARNING: RLIMIT_NOFILE is above 1024 and Tcl_Version<9 this may cause runtime issues [rlim_cur=20000]
+Using NULL graphics device.
+Processing system .magicrc file
+Switching to WIRING tool.
+Switching to NETLIST tool.
+Switching to PICK tool.
+Switching to BOX tool.
+Sourcing design .magicrc for technology gf180mcuD ...
+10 Magic internal units = 1 Lambda
+Input style import: scaleFactor=10, multiplier=2
+The following types are not handled by extraction and will be treated as non-electrical types:
+    obsactive mvobsactive filldiff fillpoly m1hole obsm1 fillm1 obsv1 m2hole obsm2 fillm2 obsv2 m3hole obsm3 fillm3 m4hole obsm4 fillm4 m5hole obsm5 fillm5 glass fillblock lvstext obscomment 
+Scaled tech values by 10 / 1 to match internal grid scaling
+Loading gf180mcuD Device Generator Menu ...
+Using technology "gf180mcuD", version 1.0.588-128-ge7a6777
+Cell chipalooza_frame read from current working directory
+Cell user_id_programming read from current working directory
+Cell user_id_vias read from current working directory
+Scaled magic input cell user_id_vias geometry by factor of 2
+Cell gf180mcu_as_sc_mcu7t3v3__tiel_4 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__tieh_4 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__tap_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__fillcap_4 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell housekeeping_top read from current working directory
+housekeeping_top: 10000 rects
+housekeeping_top: 20000 rects
+housekeeping_top: 30000 rects
+housekeeping_top: 40000 rects
+housekeeping_top: 50000 rects
+housekeeping_top: 60000 rects
+housekeeping_top: 70000 rects
+housekeeping_top: 80000 rects
+housekeeping_top: 90000 rects
+housekeeping_top: 100000 rects
+housekeeping_top: 110000 rects
+housekeeping_top: 120000 rects
+housekeeping_top: 130000 rects
+housekeeping_top: 140000 rects
+housekeeping_top: 150000 rects
+housekeeping_top: 160000 rects
+housekeeping_top: 170000 rects
+housekeeping_top: 180000 rects
+housekeeping_top: 190000 rects
+housekeeping_top: 200000 rects
+housekeeping_top: 210000 rects
+housekeeping_top: 220000 rects
+housekeeping_top: 230000 rects
+Cell gf180mcu_as_sc_mcu7t3v3__buff_8 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__clkbuff_12 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__clkbuff_8 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__buff_4 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__clkbuff_4 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__mux2_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__dlybuff_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__fill_1 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__fill_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__fillcap_16 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__fillcap_8 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__buff_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__inv_8 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__inv_4 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__inv_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__inv_6 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__diode_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__dfsrtp_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__nor2b_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__and2_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__nand2_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__or2_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__nor2_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__and4_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__ao31_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__oa21_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__ao21_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__or3_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__oa22_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__oai21_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__oa211_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__nand2b_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__oai22_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__ao22_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__aoi21_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__ao211_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__aoi21b_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__xnor2_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__and3_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__maj3_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__or4_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__oai211_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__mux4_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__nand4_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__aoi31_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__aoi211_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__aoi22_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__nor3_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__xor2_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__nor3b_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__nand3_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__nand3b_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__nand4bb_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__nand4b_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__nor2_4 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell horz_connects read from current working directory
+Cell gf180mcu_ocd_ip_sram__sram1024x8m8wm1 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell xdec128_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell xdec64_468_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell xdec8_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell xdec_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p043105913020110_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p043105913020105_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p043105913020103_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2_03_R270_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2_02_R270_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p043105913020104_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2_01_R270_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p043105913020108_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p043105913020109_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p043105913020107_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p043105913020106_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_1p2_02_R270_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302044_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$204401708_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Scaled magic input cell M3_M2$$204401708_3v1024x8m81 geometry by factor of 2
+Cell M3_M2$$204400684_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$204399660_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$204398636_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$204147756_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$201252908_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$201251884_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Scaled magic input cell M3_M2$$201251884_3v1024x8m81 geometry by factor of 2
+Cell M2_M1$02_R270_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$204408876_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$204407852_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Scaled magic input cell M2_M1$$204407852_3v1024x8m81 geometry by factor of 2
+Cell M2_M1$$204406828_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$204405804_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$204404780_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Scaled magic input cell M2_M1$$204404780_3v1024x8m81 geometry by factor of 2
+Cell M2_M1$$204403756_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$204402732_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$202406956_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$202394668_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Scaled magic input cell M2_M1$$202394668_3v1024x8m81 geometry by factor of 2
+Cell M2_M1$$201262124_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$46894124_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$45004844_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PSUB_05_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PSUB$$45111340_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_POLY243105913020105_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_POLY24310591302033_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_POLY24310591302031_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_POLY24310591302019_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PACTIVE43105913020106_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PACTIVE03_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_NWELL4310591302032_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_NWELL07_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell xdec64_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell xdec32_468_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell xdec32_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmoscap_R270_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmoscap_L1_W2_R270_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$04_R270_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Scaled magic input cell M2_M1$04_R270_3v1024x8m81 geometry by factor of 2
+Cell M1_POLY2_01_R270_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PACTIVE_R270_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_NACTIVE_01_R270_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p043105913020101_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2_02_R90_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p043105913020100_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2_01_R90_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p043105913020111_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302099_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_1p2_02_R90_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_1p2_01_R270_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p043105913020102_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$204146732_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$204145708_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$204144684_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$204143660_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$204142636_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$204222508_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$204221484_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$204220460_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$204141612_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$204140588_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$204139564_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$204138540_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_POLY2$$204150828_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PACTIVE$11_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PACTIVE$10_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_NWELL_01_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_NACTIVE_02_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell rcol4_1024_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell saout_R_m2_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell wen_wm1_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302043_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302041_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302035_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302020_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302014_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2$$202587180_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2$$202586156_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2$$202585132_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2$$202584108_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2$$202583084_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302042_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302040_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302039_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302010_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p0431059130208_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_1p2$$202598444_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_1p2$$202596396_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_1p2$$202595372_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_1p2$$202594348_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M24310591302036_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$202397740_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M14310591302035_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Scaled magic input cell M2_M14310591302035_3v1024x8m81 geometry by factor of 2
+Cell M2_M1$$202396716_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$202395692_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PACTIVE4310591302027_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_NACTIVE_01_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_NACTIVE4310591302037_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell via2_x2_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell via2_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell via1_x2_R90_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell via1_x2_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell via1_R90_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell via1_2_x2_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell via2_x2_R90_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell sacntl_2_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell via1_x2_R270_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell po_m1_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302038_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302027_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2$$46287916_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302031_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2$$46286892_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302013_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2$$46285868_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2$$46284844_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2$$46283820_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302022_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2$$46282796_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302024_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2$$46281772_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302025_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2$$45095980_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302030_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302034_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302033_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302032_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302028_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302023_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302012_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_1p2$$45103148_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302037_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_1p2$$45102124_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302026_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_1p2$$45101100_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302036_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_1p2$$45100076_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302029_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$45008940_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$45006892_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$45005868_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1c$$203396140_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$45003820_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$45002796_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$43374636_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PSUB_285_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PSUB$$44997676_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_POLY2$$45109292_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_POLY2$$44754988_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_POLY2$$44753964_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PACTIVE4310591302034_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_NWELL04_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_NWELL03_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_NWELL02_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell sa_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell via1_R270_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell via1_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell via1_2_x2_R270_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell via2_x2_R270_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell via1_2_x2_R90_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2$$46898220_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302019_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2$$46897196_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2$$46896172_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302021_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2$$46549036_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302018_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_1p2$$46553132_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302015_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_1p2$$46552108_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302016_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_1p2$$46551084_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_1p2$$46550060_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302017_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_1p2$$45107244_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$43371564_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PSUB_04_R90_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PSUB$$46558252_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PSUB$$46557228_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PSUB$$46556204_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PSUB$$46555180_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_NWELL_01_R90_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_NWELL06_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell outbuf_oe_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302051_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302049_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302048_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302047_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2$$171625516_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p0431059130203_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302052_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302050_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302046_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302045_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2431059130207_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1431059130200_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$168351788_R90_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PSUB_02_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PACTIVE4310591302040_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PACTIVE4310591302039_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_NWELL_01_R270_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_NACTIVE4310591302041_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_NACTIVE4310591302038_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell mux821_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell ypass_gate_a_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell via2_R90_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell via1_2_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p0431059130201_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2$$46889004_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p0431059130202_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_1p2$$47119404_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p0431059130200_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2431059130201_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M14310591302020_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1431059130208_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PSUB$$47122476_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_POLY24310591302030_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_NWELL09_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_NWELL05_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell ypass_gate_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M24310591302029_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M14310591302018_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_NACTIVE4310591302028_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$44741676_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$43370540_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Scaled magic input cell M3_M2$$43370540_3v1024x8m81 geometry by factor of 2
+Cell m2_saout01_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$45013036_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Scaled magic input cell M2_M1$$45013036_3v1024x8m81 geometry by factor of 2
+Cell M2_M1$$45012012_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell din_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell po_m1_R270_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell po_m1_R90_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p0431059130209_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p0431059130206_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2$$46887980_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p0431059130204_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2$$46885932_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2$$46273580_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302011_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_1p2$$46884908_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p0431059130207_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_1p2$$46883884_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p0431059130205_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_1p2$$46563372_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$46895148_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$43368492_R90_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$43375660_R90_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PSUB$$46893100_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PSUB$$46892076_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_NWELL08_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell saout_m2_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M24310591302026_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M14310591302025_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_NACTIVE4310591302024_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell rdummy_3v512x4_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell ypass_gate_3v1024x8m81_0 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell via2_R90_3v1024x8m81_0 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell via1_x2_R90_3v1024x8m81_0 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell via1_R270_3v1024x8m81_0 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell via1_R90_3v1024x8m81_0 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell via1_2_3v1024x8m81_0 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$43368492_3v1024x8m81_0 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PSUB$$45111340_3v1024x8m81_0 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PACTIVE4310591302075_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_NWELL$$47121452_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_NWELL$$46277676_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell via1_2_x2_R270_3v1024x8m81_0 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell via2_x2_R270_3v1024x8m81_0 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell via1_x2_R270_3v1024x8m81_0 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell via1_2_x2_R90_3v1024x8m81_0 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell via2_x2_R90_3v1024x8m81_0 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell via1_2_x2_3v1024x8m81_0 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302097_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302095_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302098_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302096_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$47117356_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$43375660_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PSUB$$46274604_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_POLY2$$46559276_3v1024x8m81_0 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_NWELL$$44998700_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell 018SRAM_strap1_bndry_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell 018SRAM_strap1_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M24310591302021_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell 018SRAM_cell1_dummy_R_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell 018SRAM_cell1_dummy_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell 018SRAM_cell1_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell 018SRAM_cell1_2x_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell rarray4_1024_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell 018SRAM_strap1_2x_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M24310591302023_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M24310591302022_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$201416748_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell dcap_103_novia_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell power_route_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell power_route_07_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M243105913020102_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M24310591302095_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M14310591302097_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Scaled magic input cell M2_M14310591302097_3v1024x8m81 geometry by factor of 2
+Cell power_route_06_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M243105913020101_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Scaled magic input cell M3_M243105913020101_3v1024x8m81 geometry by factor of 2
+Cell M3_M243105913020100_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M24310591302099_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Scaled magic input cell M3_M24310591302099_3v1024x8m81 geometry by factor of 2
+Cell M3_M24310591302098_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Scaled magic input cell M3_M24310591302098_3v1024x8m81 geometry by factor of 2
+Cell power_route_05_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M24310591302096_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell power_route_04_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M24310591302094_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Scaled magic input cell M3_M24310591302094_3v1024x8m81 geometry by factor of 2
+Cell M3_M24310591302091_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Scaled magic input cell M3_M24310591302091_3v1024x8m81 geometry by factor of 2
+Cell M3_M24310591302090_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M24310591302089_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M24310591302088_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M24310591302086_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M24310591302085_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M24310591302084_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M24310591302083_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M24310591302082_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M24310591302042_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Scaled magic input cell M3_M24310591302042_3v1024x8m81 geometry by factor of 2
+Cell M2_M14310591302093_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M14310591302092_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M14310591302087_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M14310591302081_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M14310591302080_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell power_route_02_b_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell power_route_02_a_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell power_route_01_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M24310591302016_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M14310591302017_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2431059130206_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M14310591302012_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell power_route_01_c_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell power_route_01_b_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell power_route_01_a_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell power_a_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M243105913020104_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Scaled magic input cell M3_M243105913020104_3v1024x8m81 geometry by factor of 2
+Cell M2_M143105913020103_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Scaled magic input cell M2_M143105913020103_3v1024x8m81 geometry by factor of 2
+Cell M3_M24310591302015_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Scaled magic input cell M3_M24310591302015_3v1024x8m81 geometry by factor of 2
+Cell M3_M24310591302013_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M24310591302011_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2431059130209_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2431059130205_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2431059130202_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Scaled magic input cell M3_M2431059130202_3v1024x8m81 geometry by factor of 2
+Cell M3_M2$$201415724_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$201414700_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$201413676_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$201412652_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$201258028_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$201254956_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$201253932_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$201250860_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Scaled magic input cell M3_M2$$201250860_3v1024x8m81 geometry by factor of 2
+Cell M3_M2$$201249836_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$201248812_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell m2m3_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1431059130204_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1431059130203_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Scaled magic input cell M2_M1431059130203_3v1024x8m81 geometry by factor of 2
+Cell M2_M1$$201260076_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$199747628_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PSUB4310591302014_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PSUB4310591302010_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell lcol4_1024_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell ldummy_3v512x4_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell new_dummyrowunit01_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell new_dummyrow_unit_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell array16_1024_dummy_01_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell 018SRAM_cell1_cutPC_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell col_1024a_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell Cell_array8x8_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell 018SRAM_strap1_2x_bndry_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell GF018_3v1024x8M8WM1_lef_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell G_ring_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PSUB4310591302046_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PSUB4310591302045_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PSUB4310591302044_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PSUB4310591302043_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell control_3v1024x8_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell ypredec1_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell ypredec1_ys_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302055_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302054_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M24310591302053_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M14310591302056_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Scaled magic input cell M2_M14310591302056_3v1024x8m81 geometry by factor of 2
+Cell M2_M14310591302055_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Scaled magic input cell M2_M14310591302055_3v1024x8m81 geometry by factor of 2
+Cell M2_M14310591302054_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M14310591302052_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Scaled magic input cell M2_M14310591302052_3v1024x8m81 geometry by factor of 2
+Cell ypredec1_xax8_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell ypredec1_xa_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2$$47821868_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302060_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2$$47820844_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302061_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$47819820_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$47333420_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$47332396_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$47108140_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$47515692_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$43380780_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Scaled magic input cell M2_M1$$43380780_3v1024x8m81 geometry by factor of 2
+Cell M2_M1$$43379756_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$43378732_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M24310591302058_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M14310591302057_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Scaled magic input cell M2_M14310591302057_3v1024x8m81 geometry by factor of 2
+Cell ypredec1_bot_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_1p2$$47514668_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302057_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$47334444_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$43368492_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$43377708_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$34864172_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PSUB$$47818796_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_POLY2$$46559276_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_NWELL14_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell alatch_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2_161_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2_160_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2$$47331372_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302058_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_1p2_157_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_1p2$$47329324_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302059_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$47333420_150_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$47108140_149_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$43368492_151_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1_154_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$43380780_152_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$43379756_153_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PSUB$$45110316_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_POLY2_155_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2$$47109164_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302062_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302056_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_1p2$$47342636_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302053_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$47633452_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$47632428_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$43368492_R270_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M14310591302051_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$47631404_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$47630380_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PSUB$$47114284_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_NWELL13_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_NWELL12_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell prexdec_top_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell xpredec1_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell xpredec1_xa_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2$$47513644_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302068_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2$$47512620_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302072_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$47327276_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$43376684_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_POLY24310591302060_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell xpredec1_bot_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2$$47337516_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302070_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_1p2$$47336492_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302071_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PSUB$$47335468_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_NWELL10_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_POLY2_R270_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell xpredec0_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell xpredec0_xa_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2$$47643692_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302067_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2$$47642668_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_1p2$$47641644_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$47644716_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$47640620_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$47500332_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_POLY24310591302059_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell xpredec0_bot_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2$$47504428_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302063_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2$$47503404_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302064_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302066_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_1p2$$47502380_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302065_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$47645740_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_NWELL11_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302069_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PACTIVE_02_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$47115308_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M24310591302050_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$201401388_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$201255980_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$202405932_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Scaled magic input cell M2_M1$$202405932_3v1024x8m81 geometry by factor of 2
+Cell M2_M1$$199746604_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PACTIVE4310591302049_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PACTIVE4310591302048_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_NACTIVE4310591302047_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell gen_3v1024x8_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell wen_v2_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302082_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302080_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302079_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302077_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302081_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302078_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302076_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302075_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M24310591302072_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M14310591302074_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M14310591302073_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PACTIVE_01_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PACTIVE4310591302071_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PACTIVE4310591302069_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_NACTIVE4310591302070_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302094_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302092_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302089_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302088_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302074_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2$$48624684_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302091_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2$$48623660_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302073_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2$$47815724_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_5p04310591302087_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell pmos_1p2$$47330348_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302093_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302090_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302083_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_1p2$$48629804_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_1p2$$48308268_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302084_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_1p2$$48306220_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302085_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_1p2$$48302124_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell nmos_5p04310591302086_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M24310591302064_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$169756716_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$169755692_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$169753644_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$48231468_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$48229420_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$48228396_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$48227372_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M2$$48066604_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M14310591302065_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1_01_R270_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$170064940_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$170063916_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$170061868_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$168351788_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$48316460_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$48224300_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$48222252_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$48221228_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$48220204_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$48219180_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$48218156_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$48217132_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M1$$34864172_R90_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PSUB_03_R90_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PSUB_03_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PSUB_02_R90_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PSUB$$48312364_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_POLY24310591302067_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_POLY24310591302066_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_POLY24310591302062_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_POLY24310591302061_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PACTIVE_03_R90_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PACTIVE_02_R90_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PACTIVE_01_R90_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PACTIVE4310591302068_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PACTIVE06_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PACTIVE02_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_PACTIVE01_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_NWELL_03_R90_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_NWELL_02_R90_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_NWELL17_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_NWELL16_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_NWELL01_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M1_NACTIVE4310591302063_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell antenna_tiedown_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell 3v1024x8M8W_PWR_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M24310591302079_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M24310591302078_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M3_M24310591302077_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell M2_M14310591302076_3v1024x8m81 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/mag
+Cell gf180mcu_ocd_ip__biasgen read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic
+Cell via_Y6HC2N read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell bias_pstack read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic
+Cell via_Y6HG9Q read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell via_Y6HE6N read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Scaled magic input cell via_Y6HE6N geometry by factor of 2
+Cell via_Y6H4DQ read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell pfet_06v0_3RDKLZ read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell bias_stack_via read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic
+Cell bias_nstack read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic
+Cell nfet_06v0_6R5Q3A read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell bias_generator_fe read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic
+Cell level_shift_5v read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic
+Cell via_Y6Z2DQ read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Scaled magic input cell via_Y6Z2DQ geometry by factor of 2
+Cell via_Y6HW5N read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell pfet_05v0_NN58UV read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell pfet_05v0_CKH6W8 read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell nfet_05v0_QZU775 read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell nfet_05v0_PM8J2B read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell nfet_05v0_KAV8ES read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell bias_amp_large read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic
+Cell via_Y6ZY8N read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell pfet_05v0_XC6Y4S read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell nfet_05v0_PSSCLX read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell nfet_05v0_CJX5SS read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell via_Z29PWH read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell via_Z2RFBL read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell via_Y6ZU9Q read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell ppolyf_u_1k_PNFQJL read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell ppolyf_u_1k_CSXJ42 read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell cap_mim_2p0fF_BXZFNP read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell bias_pset read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic
+Cell via_Y6ZX9Q read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell bias_pset2 read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic
+Cell bias_nset read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic
+Cell bias_generator_ben250nm read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic
+Cell bias_generator_ben1um read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic
+Cell bias_generator_be0p read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic
+Cell gf180mcu_ocd_ip__por read from path ../dependencies/gf180mcu_ocd_ip__por/magic
+Cell ppolyf_u_1k_FPWM3N read from path ../dependencies/gf180mcu_ocd_ip__por/magic/paramcells
+Cell nfet_03v3_UDCARV read from path ../dependencies/gf180mcu_ocd_ip__por/magic/paramcells
+Cell pfet_03v3_KAPG2P read from path ../dependencies/gf180mcu_ocd_ip__por/magic/paramcells
+Cell gf180mcu_as_sc_mcu7t3v3__buff_12 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell por_amp read from path ../dependencies/gf180mcu_ocd_ip__por/magic
+Cell nfet_03v3_J6SUXM read from path ../dependencies/gf180mcu_ocd_ip__por/magic/paramcells
+Cell pfet_03v3_C7VN8M read from path ../dependencies/gf180mcu_ocd_ip__por/magic/paramcells
+Cell nfet_03v3_J6SUXX read from path ../dependencies/gf180mcu_ocd_ip__por/magic/paramcells
+Cell por_3v3_schmitt_inv read from path ../dependencies/gf180mcu_ocd_ip__por/magic
+Cell pfet_03v3_W2ZTV7 read from path ../dependencies/gf180mcu_ocd_ip__por/magic/paramcells
+Cell nfet_03v3_45Z7NE read from path ../dependencies/gf180mcu_ocd_ip__por/magic/paramcells
+Cell pfet_03v3_VR43ZA read from path ../dependencies/gf180mcu_ocd_ip__por/magic/paramcells
+Cell pfet_03v3_9U7ATZ read from path ../dependencies/gf180mcu_ocd_ip__por/magic/paramcells
+Cell nfet_03v3_3DMKYT read from path ../dependencies/gf180mcu_ocd_ip__por/magic/paramcells
+Cell pfet_03v3_HJ4KN5 read from path ../dependencies/gf180mcu_ocd_ip__por/magic/paramcells
+Cell nfet_03v3_EENGZV read from path ../dependencies/gf180mcu_ocd_ip__por/magic/paramcells
+Cell diode_nd2ps_03v3_E3DKMC read from path ../dependencies/gf180mcu_ocd_ip__por/magic/paramcells
+Cell cap_mim_2p0fF_U8GDWG read from path ../dependencies/gf180mcu_ocd_ip__por/magic/paramcells
+Cell slot18_wrapper couldn't be read
+Cell slot18_wrapper is unavailable.  It could not be expanded.
+Cell analog_pswitch_small read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic
+Cell via_NN8LKN read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell sw_lvl_shift read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic
+Cell via_Y6ZD6N read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell via_Y6Z86N read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell via_QP3U7V read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell pfet_05v0_KB9L9L read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell pfet_05v0_GAMEYB read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell nfet_05v0_Q93XV3 read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell nfet_05v0_C5JAWQ read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell asw_via1_3cut read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell asw_via1_2cut read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell pfet_05v0_TLQX2N read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell asw_via1_10cut read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Scaled magic input cell asw_via1_10cut geometry by factor of 2
+Cell analog_switch_small read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic
+Cell pfet_05v0_5EY6NQ read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell nfet_05v0_BXKAQ9 read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell gf180mcu_ocd_ip__bandgap read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic
+Cell bandgap_unbuffered read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic
+Cell bg_trim read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic
+Cell via_Y6ZQZM read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell ppolyf_u_9UW4BA read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell nfet_03v3_GP977X read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell se_folded_cascode_p read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic
+Cell via_Y6ZA6N read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Scaled magic input cell via_Y6ZA6N geometry by factor of 2
+Cell via_Y6Z5DQ read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell pfet_03v3_VL4T3E read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell pfet_03v3_KYJ9T3 read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell pfet_03v3_EQVFPB read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell pfet_03v3_D4F3X8 read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell pfet_03v3_7FHHXC read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell pfet_03v3_4WQT4W read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell nfet_03v3_ZG26GW read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell nfet_03v3_M2KJJV read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell nfet_03v3_AN5CUU read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell ppolyf_u_C4FXRX read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell pnp_05p00x05p00_0 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_pr/mag
+Cell pfet_03v3_BWTVHK read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell pfet_03v3_773T9V read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell pfet_03v3_73PQE5 read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell nfet_03v3_EV2W8D read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell cap_mim_2p0fF_FSLCUY read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell gf180mcu_ocd_ip__classab_buffer read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic
+Cell se_folded_cascode_np_ab read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic
+Cell via_Y6ZJCQ read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell via_Y6HNCQ read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell via_Y6H8HQ read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell via_1x3y read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic
+Cell pfet_03v3_YE3MY2 read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell pfet_03v3_XWLNX2 read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell pfet_03v3_T5C93T read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell pfet_03v3_AETW28 read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell pfet_03v3_24XKES read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell pfet_03v3_9TM96F read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell pfet_03v3_9BJ35S read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell nfet_03v3_XRMCLC read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell nfet_03v3_XHQ8ZW read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell nfet_03v3_R9L2XL read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell nfet_03v3_LJJGJM read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell nfet_03v3_CRBY7Y read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell nfet_03v3_6VJ5RZ read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell cap_mim_2p0fF_C3477V read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell gf180mcu_ocd_ip__voltgen read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic
+Cell n_amp_large read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic
+Cell via_Y6HY9Q read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Scaled magic input cell via_Y6HY9Q geometry by factor of 2
+Cell pfet_05v0_RAB9YU read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell nfet_05v0_AZK53F read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell nfet_05v0_86WUHR read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell xgate read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic
+Cell via_Y6ZG8N read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell pfet_05v0_EHWMPZ read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell nfet_05v0_CMFWB7 read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell vg_via_3cut read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic
+Cell se_folded_cascode_p_5v read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic
+Cell pfet_05v0_W3EAQ3 read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell pfet_05v0_VL499E read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell pfet_05v0_VL4T3E read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell pfet_05v0_PT3HG9 read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell pfet_05v0_C6CVG7 read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell pfet_05v0_6SSZEG read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell nfet_05v0_CUJVBA read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell nfet_05v0_BD8PBQ read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell nfet_05v0_9G2NJM read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell ppolyf_u_1k_2M3DQH read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell pfet_05v0_EWZE6Z read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell hv_inv_1 read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic
+Cell pfet_05v0_MGHZK5 read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell nfet_05v0_XXEKSY read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell cap_mim_2p0fF_UUELYS read from path ../dependencies/gf180mcu_ocd_ip__biasgen/magic/paramcells
+Cell slot1_wrapper couldn't be read
+Cell slot1_wrapper is unavailable.  It could not be expanded.
+Cell slot17_wrapper couldn't be read
+Cell slot17_wrapper is unavailable.  It could not be expanded.
+Cell slot2_wrapper couldn't be read
+Cell slot2_wrapper is unavailable.  It could not be expanded.
+Cell slot16_wrapper couldn't be read
+Cell slot16_wrapper is unavailable.  It could not be expanded.
+Cell slot3_wrapper couldn't be read
+Cell slot3_wrapper is unavailable.  It could not be expanded.
+Cell slot15_wrapper couldn't be read
+Cell slot15_wrapper is unavailable.  It could not be expanded.
+Cell slot4_wrapper couldn't be read
+Cell slot4_wrapper is unavailable.  It could not be expanded.
+Cell slot14_wrapper couldn't be read
+Cell slot14_wrapper is unavailable.  It could not be expanded.
+Cell slot13_wrapper couldn't be read
+Cell slot13_wrapper is unavailable.  It could not be expanded.
+Cell slot6_wrapper couldn't be read
+Cell slot6_wrapper is unavailable.  It could not be expanded.
+Cell slot5_wrapper couldn't be read
+Cell slot5_wrapper is unavailable.  It could not be expanded.
+Cell slot12_wrapper couldn't be read
+Cell slot12_wrapper is unavailable.  It could not be expanded.
+Cell slot11_wrapper couldn't be read
+Cell slot11_wrapper is unavailable.  It could not be expanded.
+Cell slot8_wrapper couldn't be read
+Cell slot8_wrapper is unavailable.  It could not be expanded.
+Cell slot7_wrapper couldn't be read
+Cell slot7_wrapper is unavailable.  It could not be expanded.
+Cell slot10_wrapper couldn't be read
+Cell slot10_wrapper is unavailable.  It could not be expanded.
+Cell slot9_wrapper couldn't be read
+Cell slot9_wrapper is unavailable.  It could not be expanded.
+Cell analog_switch_array read from current working directory
+Cell central_column read from current working directory
+Cell analog_switch_med read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic
+Cell via_Z29SAL read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell via_Z9R6XL read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell via_Y6ZQ5N read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell via_QZBZRE read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell via_AWBR46 read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell pfet_05v0_6SLWPD read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell nfet_05v0_VPM4SY read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell gate_drive_med read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic
+Cell via_Y6Z2DQ_x2 read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell via_Y6H96N read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell via_Y2RFX7 read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell via_Y2RFW7 read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell pfet_06v0_2T3SUY read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell nfet_05v0_5HT2VB read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell asw_via1_16cut read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell asw_via1_9cut read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell chipalooza_frame_wrapper read from current working directory
+Cell project_control_area read from current working directory
+Cell user_project_control read from current working directory
+Cell gf180mcu_as_sc_mcu7t3v3__dlxtp_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell gf180mcu_as_sc_mcu7t3v3__dlxtn_2 read from path /foss/pdks/gf180mcuD/libs.ref/gf180mcu_as_sc_mcu7t3v3/mag
+Cell power_stage read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic
+Cell via_NZW5ZC read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell via_B4YQGJ read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell pfet_05v0_WX3F8K read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell gate_drive_large read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic
+Cell pfet_06v0_27GLKX read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell pfet_05v0_X3LYAZ read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell nfet_05v0_BJME2D read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell nfet_05v0_AGRLGL read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell power_stage3v3 read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic
+Cell via_Z3LBH9 read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell via_QLR8H8 read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell via_4K6DRW read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell pfet_03v3_GVZKMY read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic/paramcells
+Cell gate_drive_3v3 read from path ../dependencies/gf180mcu_ocd_ip__analog_switches/magic
+Processing timestamp mismatches.
+Timestamp mismatches found in these cells: user_id_programming, user_id_vias, chipalooza_frame_wrapper.
+Cell slot1_wrapper read from current working directory
+Cell slot2_wrapper read from current working directory
+Cell slot3_wrapper read from current working directory
+Cell slot4_wrapper read from current working directory
+Cell slot5_wrapper read from current working directory
+Cell slot6_wrapper read from current working directory
+Cell slot7_wrapper read from current working directory
+Cell slot8_wrapper read from current working directory
+Cell slot9_wrapper read from current working directory
+Cell slot10_wrapper read from current working directory
+Cell slot11_wrapper read from current working directory
+Cell slot12_wrapper read from current working directory
+Cell slot13_wrapper read from current working directory
+Cell slot14_wrapper read from current working directory
+Cell slot15_wrapper read from current working directory
+Cell slot16_wrapper read from current working directory
+Cell slot17_wrapper read from current working directory
+Cell slot18_wrapper read from current working directory

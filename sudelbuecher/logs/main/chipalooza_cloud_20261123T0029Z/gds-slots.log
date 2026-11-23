@@ -1,0 +1,58 @@
+./scripts/run_gen_wrapper_gds.sh
+Generating GDS for Chipalooza slot wrappers
+
+Magic 8.3 revision 706 - Compiled on Mon Nov 23 00:28:24 UTC 2026.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+WARNING: RLIMIT_NOFILE is above 1024 and Tcl_Version<9 this may cause runtime issues [rlim_cur=20000]
+Using NULL graphics device.
+Processing system .magicrc file
+Switching to WIRING tool.
+Switching to NETLIST tool.
+Switching to PICK tool.
+Switching to BOX tool.
+Sourcing design .magicrc for technology gf180mcuD ...
+10 Magic internal units = 1 Lambda
+Input style import: scaleFactor=10, multiplier=2
+The following types are not handled by extraction and will be treated as non-electrical types:
+    obsactive mvobsactive filldiff fillpoly m1hole obsm1 fillm1 obsv1 m2hole obsm2 fillm2 obsv2 m3hole obsm3 fillm3 m4hole obsm4 fillm4 m5hole obsm5 fillm5 glass fillblock lvstext obscomment 
+Scaled tech values by 10 / 1 to match internal grid scaling
+Loading gf180mcuD Device Generator Menu ...
+Using technology "gf180mcuD", version 1.0.588-128-ge7a6777
+Cell slot1_wrapper read from current working directory
+   Generating output for cell slot1_wrapper
+Cell slot2_wrapper read from current working directory
+   Generating output for cell slot2_wrapper
+Cell slot3_wrapper read from current working directory
+   Generating output for cell slot3_wrapper
+Cell slot4_wrapper read from current working directory
+   Generating output for cell slot4_wrapper
+Cell slot5_wrapper read from current working directory
+   Generating output for cell slot5_wrapper
+Cell slot6_wrapper read from current working directory
+   Generating output for cell slot6_wrapper
+Cell slot7_wrapper read from current working directory
+   Generating output for cell slot7_wrapper
+Cell slot8_wrapper read from current working directory
+   Generating output for cell slot8_wrapper
+Cell slot9_wrapper read from current working directory
+   Generating output for cell slot9_wrapper
+Cell slot10_wrapper read from current working directory
+   Generating output for cell slot10_wrapper
+Cell slot11_wrapper read from current working directory
+   Generating output for cell slot11_wrapper
+Cell slot12_wrapper read from current working directory
+   Generating output for cell slot12_wrapper
+Cell slot13_wrapper read from current working directory
+   Generating output for cell slot13_wrapper
+Cell slot14_wrapper read from current working directory
+   Generating output for cell slot14_wrapper
+Cell slot15_wrapper read from current working directory
+   Generating output for cell slot15_wrapper
+Cell slot16_wrapper read from current working directory
+   Generating output for cell slot16_wrapper
+Cell slot17_wrapper read from current working directory
+   Generating output for cell slot17_wrapper
+Cell slot18_wrapper read from current working directory
+   Generating output for cell slot18_wrapper
+Done!

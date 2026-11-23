@@ -1,0 +1,2 @@
+START 00:32:31 git submodule update --init --depth 1
+END 00:32:33 rc=0 seconds=2

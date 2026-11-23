@@ -1,0 +1,5 @@
+NOT BUILT
+   validate/lvs/comp.out
+        build with:  make lvs   (in validate/lvs)
+
+0 stale, 1 not built, 46 checked

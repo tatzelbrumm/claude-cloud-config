@@ -1,0 +1,9 @@
+Submodule 'dependencies/gf180mcu_ocd_ip__analog_switches' (https://github.com/RTimothyEdwards/gf180mcu_ocd_ip__analog_switches) registered for path 'dependencies/gf180mcu_ocd_ip__analog_switches'
+Submodule 'dependencies/gf180mcu_ocd_ip__biasgen' (https://github.com/RTimothyEdwards/gf180mcu_ocd_ip__biasgen) registered for path 'dependencies/gf180mcu_ocd_ip__biasgen'
+Submodule 'dependencies/gf180mcu_ocd_ip__por' (https://github.com/RTimothyEdwards/gf180mcu_ocd_ip__por) registered for path 'dependencies/gf180mcu_ocd_ip__por'
+Cloning into '/home/user/gf180mcu_ocd_chipalooza/dependencies/gf180mcu_ocd_ip__analog_switches'...
+Cloning into '/home/user/gf180mcu_ocd_chipalooza/dependencies/gf180mcu_ocd_ip__biasgen'...
+Cloning into '/home/user/gf180mcu_ocd_chipalooza/dependencies/gf180mcu_ocd_ip__por'...
+Submodule path 'dependencies/gf180mcu_ocd_ip__analog_switches': checked out 'c21d8c0fdd0ee3ca42f8cd496a55ed5afc3d88d1'
+Submodule path 'dependencies/gf180mcu_ocd_ip__biasgen': checked out '96a93f811a10c0b63111a5bd862e3173300802d4'
+Submodule path 'dependencies/gf180mcu_ocd_ip__por': checked out 'a6f16be7c509820f2bd50f7ac517edb58cf8a3f2'

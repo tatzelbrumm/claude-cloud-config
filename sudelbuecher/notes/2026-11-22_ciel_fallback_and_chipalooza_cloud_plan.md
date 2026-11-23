@@ -56,3 +56,17 @@ The environment's Setup field cannot be edited by the assistant's tool (limit 10
   branch main, Sonnet 5.5, effort Medium, mode Auto. The user pasted the prompt and launched it at about 00:30 UTC. Whether the
   session can push to the fork was unknown at that time (its first step tests it).
 - The chat log tools now find the last record that has a `uuid` themselves and handle user messages with images.
+
+## Update 2026-11-23 ~01:10 UTC: first cloud build (summary by the assistant, from the session's REPORT.md and logs)
+Logs: `../logs/main/chipalooza_cloud_20261123T0029Z/`; its chat log: `../chatlog/2026-11-23_sonnet_chipalooza_cloud_build.md`.
+- `make setup` fails: `scripts/setup.sh` does not exist in the harness repo (Makefile target dead). The prompt now initialises the
+  three submodules instead (they are empty in a fresh clone).
+- Pad check passes (17 pads, 0 empty). Steps check ... gds-final, extract-sch-top, extract-top finished (extract-top 1621 s).
+- **Exit codes are not evidence:** the harness scripts end with `exit 0`. `drc-final` logged `Cell name gf180mcu_ocd_chipalooza_final
+  not found` (no .lyrdb), `lvs-top` logged `No file ../netlist/schematic/gf180mcu_ocd.io.spice` (no comp.out), both with rc=0.
+- Cause of the drc-final failure according to the session: upstream commit `bf1d19b` replaced the Magic compositor with `fill_all.rb`,
+  which keeps the top cell name, so `gds-final` no longer renames it. The session wrote a patch, `ISSUE.md` and `PR.md` into
+  `fixes/` of branch `chipalooza_artifacts` of the fork (not applied to any build). Not verified by me.
+- Sizes: final GDS (gz) 33.1 MB, xz pack 23.7 MB in one 90 MB chunk, prefill GDS 22.8 MB. So the full GDS fits in one chunk.
+- The session also pushed `mag_files.tar.xz`, `gds_prefill_and_slots.tar` and `fixes/` to the artifacts branch, which the prompt's push
+  permission (GDS chunks and cells.tsv only) did not cover.
