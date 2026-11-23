@@ -19,3 +19,13 @@ files of `gf180mcu_ocd_chipalooza` (12 to 210 KB), never yet on a multi-GB file.
 
 Tested: byte-exact round trip with 1 and 5 chunks; fetch from a bare repo; a corrupted chunk makes unpack fail;
 the table is deterministic.
+
+Added 2026-11-23 (for `chipalooza_cloud_task_prompt.txt`):
+- `push_logs.sh <url> <branch> <dir> [label]` : append-only commit of the logs to a branch (orphan on first use); skips the
+  network when nothing changed. `push_logs_loop.sh` runs it every N seconds in the background.
+- `run_step.sh <name> <command...>` : runs one step with log, real exit code and seconds in `/var/tmp/runs/`, then pushes.
+- `pad_abutment_check.tcl` : first-call abutment box of the 17 `gf180mcu_ocd_io__*` pad cells, as the harness reads it.
+  Tested 2026-11-23 on the ciel-installed PDK `e7a6777`: 17 pads, 0 empty. (A first draft without `box values 0 0 0 0` before
+  `getcell` gave empty boxes for all; that was the test's fault, not the PDK's.)
+- `gds_pack.sh` now compresses with `xz -6 -T0` by default (`-9e` is several times slower); override with `XZ_OPTS`.
+- Chat log of a cloud session: `../chatlog_tools/session_chatlog.sh`.

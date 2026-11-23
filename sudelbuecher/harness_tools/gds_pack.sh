@@ -8,21 +8,22 @@
 #   <outdir>/MANIFEST.txt             sizes, xz settings, date, how to unpack
 #   <outdir>/gds_unpack.sh            copy of the unpack script
 # PUSH_URL + PUSH_BRANCH: commit <outdir> as ONE commit with no parent (orphan) and force-push it, replacing the branch.
-# Permission to push that branch must come from the user. Compression: xz -9e -T0 (about 1.3 GB RAM per thread at -9e).
+# Permission to push that branch must come from the user. Compression: xz -6 -T0 by default (about 100 MB RAM per thread);
+# -9e is several times slower and not worth it for GDS (override with XZ_OPTS="-9e -T0").
 set -euo pipefail
 f=$1; out=$2; chunk=${3:-90M}
 [ -f "$f" ] || { echo "no such file: $f" >&2; exit 1; }
 name=$(basename "$f"); mkdir -p "$out"; here=$(cd "$(dirname "$0")" && pwd)
 orig=$(stat -c %s "$f")
 sha=$(sha256sum "$f" | cut -d' ' -f1)
-xz -9e -T0 -c "$f" | split -b "$chunk" -a 3 - "$out/$name.xz.part-"
+xz ${XZ_OPTS:--6 -T0} -c "$f" | split -b "$chunk" -a 3 - "$out/$name.xz.part-"
 ( cd "$out" && { echo "$sha  $name"; sha256sum "$name".xz.part-*; } > SHA256SUMS )
 comp=$(cat "$out/$name".xz.part-* | wc -c)
 cp "$here/gds_unpack.sh" "$out/"
 cat > "$out/MANIFEST.txt" <<M
 file: $name
 original bytes: $orig
-compressed bytes: $comp (xz -9e -T0, chunks of $chunk)
+compressed bytes: $comp (xz ${XZ_OPTS:--6 -T0}, chunks of $chunk)
 chunks: $(ls "$out/$name".xz.part-* | wc -l)
 packed: $(date -u +%Y-%m-%dT%H:%MZ)
 unpack: ./gds_unpack.sh <dir with the chunks> [output dir]   (cat chunks | xz -d, then sha256sum -c)
