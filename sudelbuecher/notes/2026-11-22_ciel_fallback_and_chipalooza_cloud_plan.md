@@ -73,3 +73,12 @@ Logs: `../logs/main/chipalooza_cloud_20261123T0029Z/`; its chat log: `../chatlog
 - Correction (user, ~01:15 UTC): the push permission in the prompt was far too narrow. The user told the running session so, and it
   widened its exports accordingly (whole-tree tarball, fixes, patches). The "beyond the permission" remark above describes the prompt as
   written, not misbehaviour by the session.
+
+## The user's seven answers to the running cloud session (~01:20 UTC), recorded for the next run
+1. Pushing only to chipalooza_logs / chipalooza_artifacts: OK as a baseline. 2. No opinion on the session's claude/* branch, but the
+whole working tree must end up in the user's GitHub repository, compressed if large. 3. A separate patch is fine if its contents are
+visible in the repository. 4. Rerun gds-final and drc-final with the patch; work out gf180mcu_ocd_io.spice for lvs-top (the planning
+session had already sent the PDK-copy fix). 5. Keep the working tree and export it. 6. The user wants the raw transcript exception
+lifted; the prompt does NOT include it (the transcript holds the reasoning; the verbatim chat log, built by script without reasoning,
+is the record). 7. No pull request: prepare files in the tatzelbrumm repo; the user files PRs and issues.
+The prompt's PUSH PERMISSION block (commit following this note) was rewritten accordingly.

@@ -1,5 +1,6 @@
 Goal: build the Chipalooza harness (README steps 4-13) in this environment and bring the complete final GDS to the user.
-Do not debug at length: on the first failing step stop and report it (exceptions marked below).
+On a failing step: find the cause from the log, prepare a fix as a patch file in the repository, and report; apply it and rerun
+only when the user says so.
 
 BOOTSTRAP (first command; the tools and notes live on the public orphan branch sudel_buecher of claude-cloud-config):
   git clone --depth 1 -b sudel_buecher https://github.com/tatzelbrumm/claude-cloud-config /var/tmp/sb && mkdir -p /var/tmp/runs
@@ -10,14 +11,21 @@ BOOTSTRAP (first command; the tools and notes live on the public orphan branch s
 Every Bash call starts a fresh shell: begin each command that uses $SB, $PUSH_URL, $LOGS_BRANCH or $ART_BRANCH with
 `. /var/tmp/env.sh`. The harness checkout is this session's repository (cd into it; `git rev-parse --show-toplevel`).
 
-PUSH PERMISSION (given by the user with this message; nothing else may be pushed, ever):
-  repo $PUSH_URL, branch $LOGS_BRANCH (normal commits, append only: logs, chat log, report),
-  branch $ART_BRANCH (one parentless commit, force-pushed: GDS chunks and cells.tsv only).
-  No other branch, no other repo, no tags, no changes to main. Never push the raw session transcript (it holds reasoning).
+PUSH PERMISSION (given by the user with this message). Everything the user wants out of this container goes into the user's own
+repository $PUSH_URL, nothing anywhere else:
+  - branch $LOGS_BRANCH: normal commits, append only: logs, chat log, report.
+  - branch $ART_BRANCH: force-pushed (replace) any time: packed GDS (chunks of at most 90 MB), cells.tsv, a compressed tarball
+    (xz, chunks) of the WHOLE working tree including ignored and untracked files (not .git) at the end of the run, patches,
+    ISSUE.md / PR.md drafts and any other file the user may want to read. Put patches and drafts where the user can see their
+    contents as plain files (e.g. fixes/), not only inside a tarball.
+  - the session's own claude/* branch: the stop hook may ask you to commit there; you may, if the user has no objection.
+  - never: main, tags, any other repo, a pull request or an issue (prepare the files; the user files them), the raw session
+    transcript (it holds reasoning; the built chat log is the record).
   Logs go to the repository from the start and during every step, so nothing depends on this container surviving.
 
-RULES: build outputs in the working tree are expected (the build rewrites tracked files); never edit a tracked file by hand,
-never commit or push the working tree. Do not source .designinit (it is for the user's local container). Do not run
+RULES: build outputs in the working tree are expected (the build rewrites tracked files). Do not hand-edit tracked files, with
+this exception: a patch you prepared may be applied to the working tree to rerun a step when the user says so; keep the patch
+file visible in the repository. Do not source .designinit (it is for the user's local container). Do not run
 `make synth-hk` or `make synth-ctrl` (they need LibreLane under nix; the digital layouts are committed as .mag). Each step
 below runs through the step runner, from the harness checkout, in the background, and is polled:
   . /var/tmp/env.sh; nohup $SB/harness_tools/run_step.sh <name> make <target> > /dev/null 2>&1 &
