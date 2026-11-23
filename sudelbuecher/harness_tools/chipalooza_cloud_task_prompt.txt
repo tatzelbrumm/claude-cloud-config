@@ -29,6 +29,11 @@ do not run `make synth-hk` or `make synth-ctrl` (they need LibreLane under nix; 
    runs for hours:  nohup $SB/harness_tools/push_logs_loop.sh $PUSH_URL $LOGS_BRANCH /var/tmp/runs 120 > /var/tmp/push_loop.log 2>&1 &
    (/var/tmp/runs is only the staging directory; the repository is where the logs live.) Check once that
    `git ls-remote $PUSH_URL $LOGS_BRANCH` shows the branch.
+   CHAT LOG (the user explicitly asks for one): a verbatim log of this session, built by script from its raw transcript,
+   never retyped. After every step, and at the end, run
+   $SB/chatlog_tools/session_chatlog.sh /var/tmp/runs/chatlog.md "Chipalooza cloud build" "<your model>"
+   (prints only counts; the background pusher then pushes it). Exit 2 NO_TRANSCRIPT: say so, do not reconstruct a log.
+   Exit 1: report it. Never push the raw transcript: it contains the reasoning.
 0. Environment. Print: `tail -3 /foss/setup.log`, `grep -c PDK_LIB_MISSING /foss/setup.log` (expect 0),
    `echo $PDK_ROOT $PDK`, `magic --version`, `ls $PDK_ROOT/$PDK/libs.ref`, `nproc; free -g; df -h /var/tmp`.
    Also state which model you are running as, and your effort setting if you can see it (use your get_session tool if you
@@ -55,4 +60,4 @@ do not run `make synth-hk` or `make synth-ctrl` (they need LibreLane under nix; 
    /var/tmp/runs and push the logs again.
 5. Report: one table (step, exit code, seconds, first error), the sizes (final GDS, packed, chunks), the pad-view findings
    of step 1, the path of each log and of cells.tsv. Push the report as /var/tmp/runs/REPORT.md with the last push_logs.sh call, so it
-   is on $LOGS_BRANCH too. Do not push or commit anything except what PUSH PERMISSION allows. No chat log.
+   is on $LOGS_BRANCH too. Do not push or commit anything except what PUSH PERMISSION allows.

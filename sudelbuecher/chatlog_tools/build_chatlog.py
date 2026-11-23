@@ -13,7 +13,7 @@ recs = [json.loads(l) for l in open(src)]
 by = {r['uuid']: r for r in recs if 'uuid' in r}
 
 # live path: parentUuid back from the last record (logicalParentUuid across the compaction boundary)
-live, u = [], recs[-1].get('uuid')
+live, u = [], next((r['uuid'] for r in reversed(recs) if 'uuid' in r), None)   # last record that has a uuid (title/last-prompt records come after)
 while u:
     r = by.get(u)
     if r is None:

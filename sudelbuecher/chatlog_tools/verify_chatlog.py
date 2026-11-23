@@ -10,7 +10,7 @@ import json, re, sys
 recs = [json.loads(l) for l in open(sys.argv[1])]
 log = open(sys.argv[2]).read()
 by = {r['uuid']: r for r in recs if 'uuid' in r}
-live, u = set(), recs[-1].get('uuid')
+live, u = set(), next((r['uuid'] for r in reversed(recs) if 'uuid' in r), None)
 while u and u in by:
     live.add(u); r = by[u]; u = r.get('parentUuid') or r.get('logicalParentUuid')
 
