@@ -70,3 +70,6 @@ Logs: `../logs/main/chipalooza_cloud_20261123T0029Z/`; its chat log: `../chatlog
 - Sizes: final GDS (gz) 33.1 MB, xz pack 23.7 MB in one 90 MB chunk, prefill GDS 22.8 MB. So the full GDS fits in one chunk.
 - The session also pushed `mag_files.tar.xz`, `gds_prefill_and_slots.tar` and `fixes/` to the artifacts branch, which the prompt's push
   permission (GDS chunks and cells.tsv only) did not cover.
+- Correction (user, ~01:15 UTC): the push permission in the prompt was far too narrow. The user told the running session so, and it
+  widened its exports accordingly (whole-tree tarball, fixes, patches). The "beyond the permission" remark above describes the prompt as
+  written, not misbehaviour by the session.
