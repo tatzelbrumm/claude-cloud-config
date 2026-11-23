@@ -29,6 +29,3 @@ Added 2026-11-23 (for `chipalooza_cloud_task_prompt.txt`):
   `getcell` gave empty boxes for all; that was the test's fault, not the PDK's.)
 - `gds_pack.sh` now compresses with `xz -6 -T0` by default (`-9e` is several times slower); override with `XZ_OPTS`.
 - Chat log of a cloud session: `../chatlog_tools/session_chatlog.sh`.
-- `run_chain.sh [step ...]` : the README-order build as one background job (clean-config ... lvs-top), each step through
-  `run_step.sh`; stops at the first failure except `CONTINUE_ON` (default projects-gds, lvs-top); skips steps already rc=0, so a
-  restart resumes; progress in `/var/tmp/runs/chain.status`. Tested only with a dummy Makefile (failure stop, resume, continue-on).
