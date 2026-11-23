@@ -67,7 +67,10 @@ and the seconds, and pushes the logs when the step ends.
 2. BUILD, README order, one step at a time (step name = make target), stop at the first failure except where noted:
   clean-config (README 4: saves the previous generated files to archive/), config, padframe, wrappers, symbols, gds-slots,
   user-id, projects-gds (all 18 slots are "-": if it fails for lack of projects, report and CONTINUE), gds-prefill, gds-final,
-  drc-final, extract-sch-top, extract-top, lvs-top (README says top-level LVS currently fails on the 5 V / 3 V ground domains:
+  drc-final, extract-sch-top, extract-top, lvs-top. BEFORE lvs-top, copy the pad netlist the LVS script reads (it is in no commit):
+  cp $PDK_ROOT/$PDK/libs.ref/gf180mcu_ocd_io/spice/gf180mcu_ocd_io.spice netlist/schematic/   (untracked input; never commit it).
+  The harness scripts exit 0 whatever happens: judge DRC/extract/LVS steps by their log (grep ERROR) and output files, not by rc.
+  (README says top-level LVS currently fails on the 5 V / 3 V ground domains:
   report the failure, do not fix it). If a step refuses because a file exists (config, padframe), say which file; do not delete it.
 
 3. FINAL GDS. Find it: `ls -la gds magic | grep -i final` (expect gds/gf180mcu_ocd_chipalooza_final.gds, maybe .gz). Estimate:
