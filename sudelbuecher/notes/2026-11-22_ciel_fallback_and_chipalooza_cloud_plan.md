@@ -91,3 +91,10 @@ agent). It is NOT limited to `gf180mcu_ocd_io__cor`. An Opus 5.5 (Medium) subage
 lines, PDK spice fallback), `ANALYSIS.md`, logs. Patches apply on `78edf00` (checked). Agent's own LVS run: pin errors 452 -> 0, padframe 189/189
 devices, still "Netlists do not match" (ground domains vss3v3/vss5v0, README issue). Suspected separate bug: `gen_padframe_template.tcl` lines
 1076-1077 label two dvss pads `vdd5v0`. Not yet applied or rerun in the cloud build.
+
+## State at ~02:25 UTC
+Cloud build logs refreshed from the fork (`logs/main/chipalooza_cloud_20261123T0029Z/`, 46 files; fork `chipalooza_logs` at ffe669f). The cloud session's
+own fixes and issue/PR drafts (from branch `chipalooza_artifacts`, commit 48d76fc, 02:08 UTC) are filed in
+`../harness_tools/fixes/cloud_session_fixes/` (top-cell rename patch, `lvs_sram_spice_path.patch`, `ISSUE*.md`, `PR*.md`, an applied-changes patch and its copy of
+`pad_pins`). The pad pin fix of the planning session's Opus agent is in `../harness_tools/fixes/pad_pins/`. Big artifacts (final GDS pack, whole-tree tarball,
+prefill/slot GDS, `old_final_unrenamed_topcell.gds.gz`, `results/`) stay on the fork's `chipalooza_artifacts` branch only.

@@ -34,11 +34,1190 @@ Call to undefined subcircuit pfet_03v3
 Creating placeholder cell definition.
 Call to undefined subcircuit nfet_03v3
 Creating placeholder cell definition.
-Error in SPICE file read: No file ../netlist/schematic/gf180mcu_ocd_io.spice
+Call to undefined subcircuit cap_nmos_06v0
+Creating placeholder cell definition.
+Call to undefined subcircuit ppolyf_u
+Creating placeholder cell definition.
+Call to undefined subcircuit io_out_24
+Creating placeholder cell definition.
+Call to undefined subcircuit io_in
+Creating placeholder cell definition.
+Call to undefined subcircuit io_pupd
+Creating placeholder cell definition.
+Call to undefined subcircuit io_nand2_1
+Creating placeholder cell definition.
+Call to undefined subcircuit io_inv_2
+Creating placeholder cell definition.
+Call to undefined subcircuit io_inv_1
+Creating placeholder cell definition.
+Call to undefined subcircuit io_lvlshft
+Creating placeholder cell definition.
+Call to undefined subcircuit drive_select_24
+Creating placeholder cell definition.
+Call to undefined subcircuit io_inv_3
+Creating placeholder cell definition.
+Call to undefined subcircuit pfet_06v0
+Creating placeholder cell definition.
+Call to undefined subcircuit nfet_06v0
+Creating placeholder cell definition.
+Call to undefined subcircuit io_xfer_1i
+Creating placeholder cell definition.
+Call to undefined subcircuit io_inv_1i
+Creating placeholder cell definition.
+Call to undefined subcircuit io_inv_2i
+Creating placeholder cell definition.
+Call to undefined subcircuit io_inv_3i
+Creating placeholder cell definition.
+Call to undefined subcircuit io_xfer_1
+Creating placeholder cell definition.
+Call to undefined subcircuit io_inv_4
+Creating placeholder cell definition.
+Call to undefined subcircuit nfet_06v0_dss
+Creating placeholder cell definition.
+Call to undefined subcircuit pfet_06v0_dss
+Creating placeholder cell definition.
+Call to undefined subcircuit io_out
+Creating placeholder cell definition.
+Call to undefined subcircuit drive_select
+Creating placeholder cell definition.
+Warning:  A case-insensitive file has been read and so the	verilog file must be treated case-insensitive to match.
+Note:  Implicit pin Y in instance clkload0 of gf180mcu_as_sc_mcu7t3v3__inv_4 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload1 of gf180mcu_as_sc_mcu7t3v3__clkbuff_12 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload10 of gf180mcu_as_sc_mcu7t3v3__inv_2 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload11 of gf180mcu_as_sc_mcu7t3v3__inv_4 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload12 of gf180mcu_as_sc_mcu7t3v3__inv_6 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload13 of gf180mcu_as_sc_mcu7t3v3__clkbuff_4 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload14 of gf180mcu_as_sc_mcu7t3v3__clkbuff_12 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload15 of gf180mcu_as_sc_mcu7t3v3__clkbuff_12 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload16 of gf180mcu_as_sc_mcu7t3v3__inv_8 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload17 of gf180mcu_as_sc_mcu7t3v3__clkbuff_4 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload18 of gf180mcu_as_sc_mcu7t3v3__inv_2 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload19 of gf180mcu_as_sc_mcu7t3v3__inv_8 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload2 of gf180mcu_as_sc_mcu7t3v3__inv_6 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload20 of gf180mcu_as_sc_mcu7t3v3__inv_2 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload21 of gf180mcu_as_sc_mcu7t3v3__inv_4 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload22 of gf180mcu_as_sc_mcu7t3v3__clkbuff_12 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload23 of gf180mcu_as_sc_mcu7t3v3__inv_4 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload24 of gf180mcu_as_sc_mcu7t3v3__clkbuff_12 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload25 of gf180mcu_as_sc_mcu7t3v3__inv_8 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload3 of gf180mcu_as_sc_mcu7t3v3__inv_8 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload4 of gf180mcu_as_sc_mcu7t3v3__inv_8 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload5 of gf180mcu_as_sc_mcu7t3v3__inv_8 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload6 of gf180mcu_as_sc_mcu7t3v3__inv_2 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload7 of gf180mcu_as_sc_mcu7t3v3__inv_2 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload8 of gf180mcu_as_sc_mcu7t3v3__inv_2 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload9 of gf180mcu_as_sc_mcu7t3v3__clkbuff_12 in cell housekeeping_top
+Warning:  A case-insensitive file has been read and so the	verilog file must be treated case-insensitive to match.
+Note:  Implicit pin Y in instance clkload0 of gf180mcu_as_sc_mcu7t3v3__clkbuff_4 in cell user_project_control
+Warning:  A case-insensitive file has been read and so the	verilog file must be treated case-insensitive to match.
+Improper assignment;  right-hand side cannot be parsed.
+Left-hand side is "mask_rev".
+Improper expression is "(".
+Module 'user_id_programming' cannot be read by netgen (expression in 'assign');  it will be elaborated by yosys.
+Duplicate cell housekeeping_top in file
+Renaming original cell to housekeeping_top[[0]]
+Note:  Implicit pin Y in instance clkload0 of gf180mcu_as_sc_mcu7t3v3__inv_4 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload1 of gf180mcu_as_sc_mcu7t3v3__clkbuff_12 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload10 of gf180mcu_as_sc_mcu7t3v3__inv_2 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload11 of gf180mcu_as_sc_mcu7t3v3__inv_4 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload12 of gf180mcu_as_sc_mcu7t3v3__inv_6 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload13 of gf180mcu_as_sc_mcu7t3v3__clkbuff_4 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload14 of gf180mcu_as_sc_mcu7t3v3__clkbuff_12 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload15 of gf180mcu_as_sc_mcu7t3v3__clkbuff_12 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload16 of gf180mcu_as_sc_mcu7t3v3__inv_8 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload17 of gf180mcu_as_sc_mcu7t3v3__clkbuff_4 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload18 of gf180mcu_as_sc_mcu7t3v3__inv_2 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload19 of gf180mcu_as_sc_mcu7t3v3__inv_8 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload2 of gf180mcu_as_sc_mcu7t3v3__inv_6 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload20 of gf180mcu_as_sc_mcu7t3v3__inv_2 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload21 of gf180mcu_as_sc_mcu7t3v3__inv_4 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload22 of gf180mcu_as_sc_mcu7t3v3__clkbuff_12 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload23 of gf180mcu_as_sc_mcu7t3v3__inv_4 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload24 of gf180mcu_as_sc_mcu7t3v3__clkbuff_12 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload25 of gf180mcu_as_sc_mcu7t3v3__inv_8 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload3 of gf180mcu_as_sc_mcu7t3v3__inv_8 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload4 of gf180mcu_as_sc_mcu7t3v3__inv_8 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload5 of gf180mcu_as_sc_mcu7t3v3__inv_8 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload6 of gf180mcu_as_sc_mcu7t3v3__inv_2 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload7 of gf180mcu_as_sc_mcu7t3v3__inv_2 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload8 of gf180mcu_as_sc_mcu7t3v3__inv_2 in cell housekeeping_top
+Note:  Implicit pin Y in instance clkload9 of gf180mcu_as_sc_mcu7t3v3__clkbuff_12 in cell housekeeping_top
+Duplicate cell user_project_control in file
+Renaming original cell to user_project_control[[0]]
+Note:  Implicit pin Y in instance clkload0 of gf180mcu_as_sc_mcu7t3v3__clkbuff_4 in cell user_project_control
+Note:  1 module will be elaborated by yosys (see above).
+Warning:  A case-insensitive file has been read and so the	verilog file must be treated case-insensitive to match.
+Verilog placeholder module slot1_wrapper replaced by module definition
+
+Subcircuit pins:
+Circuit 1: _PLACEHOLDER_                   |Circuit 2: slot1_wrapper                   
+-------------------------------------------|-------------------------------------------
+s1_an[0]                                   |s1_an[0]                                   
+s1_an[1]                                   |s1_an[1]                                   
+vdd_3v3                                    |vdd_3v3                                    
+vss_5v0                                    |vss_5v0                                    
+vdd_5v0                                    |vdd_5v0                                    
+vss_3v3                                    |vss_3v3                                    
+analog_bus3                                |analog_bus3                                
+analog_bus2                                |analog_bus2                                
+analog_bus1                                |analog_bus1                                
+analog_bus0                                |analog_bus0                                
+vbias                                      |vbias                                      
+ibias0                                     |ibias0                                     
+ibias1                                     |ibias1                                     
+dig_out[11]                                |dig_out[11]                                
+dig_out[10]                                |dig_out[10]                                
+dig_out[9]                                 |dig_out[9]                                 
+dig_out[8]                                 |dig_out[8]                                 
+dig_out[7]                                 |dig_out[7]                                 
+dig_out[6]                                 |dig_out[6]                                 
+dig_out[5]                                 |dig_out[5]                                 
+dig_out[4]                                 |dig_out[4]                                 
+dig_out[3]                                 |dig_out[3]                                 
+dig_out[2]                                 |dig_out[2]                                 
+dig_out[1]                                 |dig_out[1]                                 
+dig_out[0]                                 |dig_out[0]                                 
+dig_in[23]                                 |dig_in[23]                                 
+dig_in[22]                                 |dig_in[22]                                 
+dig_in[21]                                 |dig_in[21]                                 
+dig_in[20]                                 |dig_in[20]                                 
+dig_in[19]                                 |dig_in[19]                                 
+dig_in[18]                                 |dig_in[18]                                 
+dig_in[17]                                 |dig_in[17]                                 
+dig_in[16]                                 |dig_in[16]                                 
+dig_in[15]                                 |dig_in[15]                                 
+dig_in[14]                                 |dig_in[14]                                 
+dig_in[13]                                 |dig_in[13]                                 
+dig_in[12]                                 |dig_in[12]                                 
+dig_in[11]                                 |dig_in[11]                                 
+dig_in[10]                                 |dig_in[10]                                 
+dig_in[9]                                  |dig_in[9]                                  
+dig_in[8]                                  |dig_in[8]                                  
+dig_in[7]                                  |dig_in[7]                                  
+dig_in[6]                                  |dig_in[6]                                  
+dig_in[5]                                  |dig_in[5]                                  
+dig_in[4]                                  |dig_in[4]                                  
+dig_in[3]                                  |dig_in[3]                                  
+dig_in[2]                                  |dig_in[2]                                  
+dig_in[1]                                  |dig_in[1]                                  
+dig_in[0]                                  |dig_in[0]                                  
+reset                                      |reset                                      
+enable                                     |enable                                     
+clk                                        |clk                                        
+---------------------------------------------------------------------------------------
+Warning:  A case-insensitive file has been read and so the	verilog file must be treated case-insensitive to match.
+Verilog placeholder module slot2_wrapper replaced by module definition
+
+Subcircuit pins:
+Circuit 1: _PLACEHOLDER_                   |Circuit 2: slot2_wrapper                   
+-------------------------------------------|-------------------------------------------
+s2_an[0]                                   |s2_an[0]                                   
+s2_an[1]                                   |s2_an[1]                                   
+vss5v0                                     |vss5v0                                     
+vdd_3v3                                    |vdd_3v3                                    
+vss_5v0                                    |vss_5v0                                    
+vdd_5v0                                    |vdd_5v0                                    
+vss_3v3                                    |vss_3v3                                    
+analog_bus3                                |analog_bus3                                
+analog_bus2                                |analog_bus2                                
+analog_bus1                                |analog_bus1                                
+analog_bus0                                |analog_bus0                                
+vbias                                      |vbias                                      
+ibias0                                     |ibias0                                     
+ibias1                                     |ibias1                                     
+dig_out[11]                                |dig_out[11]                                
+dig_out[10]                                |dig_out[10]                                
+dig_out[9]                                 |dig_out[9]                                 
+dig_out[8]                                 |dig_out[8]                                 
+dig_out[7]                                 |dig_out[7]                                 
+dig_out[6]                                 |dig_out[6]                                 
+dig_out[5]                                 |dig_out[5]                                 
+dig_out[4]                                 |dig_out[4]                                 
+dig_out[3]                                 |dig_out[3]                                 
+dig_out[2]                                 |dig_out[2]                                 
+dig_out[1]                                 |dig_out[1]                                 
+dig_out[0]                                 |dig_out[0]                                 
+dig_in[23]                                 |dig_in[23]                                 
+dig_in[22]                                 |dig_in[22]                                 
+dig_in[21]                                 |dig_in[21]                                 
+dig_in[20]                                 |dig_in[20]                                 
+dig_in[19]                                 |dig_in[19]                                 
+dig_in[18]                                 |dig_in[18]                                 
+dig_in[17]                                 |dig_in[17]                                 
+dig_in[16]                                 |dig_in[16]                                 
+dig_in[15]                                 |dig_in[15]                                 
+dig_in[14]                                 |dig_in[14]                                 
+dig_in[13]                                 |dig_in[13]                                 
+dig_in[12]                                 |dig_in[12]                                 
+dig_in[11]                                 |dig_in[11]                                 
+dig_in[10]                                 |dig_in[10]                                 
+dig_in[9]                                  |dig_in[9]                                  
+dig_in[8]                                  |dig_in[8]                                  
+dig_in[7]                                  |dig_in[7]                                  
+dig_in[6]                                  |dig_in[6]                                  
+dig_in[5]                                  |dig_in[5]                                  
+dig_in[4]                                  |dig_in[4]                                  
+dig_in[3]                                  |dig_in[3]                                  
+dig_in[2]                                  |dig_in[2]                                  
+dig_in[1]                                  |dig_in[1]                                  
+dig_in[0]                                  |dig_in[0]                                  
+reset                                      |reset                                      
+enable                                     |enable                                     
+clk                                        |clk                                        
+---------------------------------------------------------------------------------------
+Warning:  A case-insensitive file has been read and so the	verilog file must be treated case-insensitive to match.
+Verilog placeholder module slot3_wrapper replaced by module definition
+
+Subcircuit pins:
+Circuit 1: _PLACEHOLDER_                   |Circuit 2: slot3_wrapper                   
+-------------------------------------------|-------------------------------------------
+s3_an[0]                                   |s3_an[0]                                   
+s3_an[1]                                   |s3_an[1]                                   
+vdd_3v3                                    |vdd_3v3                                    
+vss_5v0                                    |vss_5v0                                    
+vdd_5v0                                    |vdd_5v0                                    
+vss_3v3                                    |vss_3v3                                    
+analog_bus3                                |analog_bus3                                
+analog_bus2                                |analog_bus2                                
+analog_bus1                                |analog_bus1                                
+analog_bus0                                |analog_bus0                                
+vbias                                      |vbias                                      
+ibias0                                     |ibias0                                     
+ibias1                                     |ibias1                                     
+dig_out[11]                                |dig_out[11]                                
+dig_out[10]                                |dig_out[10]                                
+dig_out[9]                                 |dig_out[9]                                 
+dig_out[8]                                 |dig_out[8]                                 
+dig_out[7]                                 |dig_out[7]                                 
+dig_out[6]                                 |dig_out[6]                                 
+dig_out[5]                                 |dig_out[5]                                 
+dig_out[4]                                 |dig_out[4]                                 
+dig_out[3]                                 |dig_out[3]                                 
+dig_out[2]                                 |dig_out[2]                                 
+dig_out[1]                                 |dig_out[1]                                 
+dig_out[0]                                 |dig_out[0]                                 
+dig_in[23]                                 |dig_in[23]                                 
+dig_in[22]                                 |dig_in[22]                                 
+dig_in[21]                                 |dig_in[21]                                 
+dig_in[20]                                 |dig_in[20]                                 
+dig_in[19]                                 |dig_in[19]                                 
+dig_in[18]                                 |dig_in[18]                                 
+dig_in[17]                                 |dig_in[17]                                 
+dig_in[16]                                 |dig_in[16]                                 
+dig_in[15]                                 |dig_in[15]                                 
+dig_in[14]                                 |dig_in[14]                                 
+dig_in[13]                                 |dig_in[13]                                 
+dig_in[12]                                 |dig_in[12]                                 
+dig_in[11]                                 |dig_in[11]                                 
+dig_in[10]                                 |dig_in[10]                                 
+dig_in[9]                                  |dig_in[9]                                  
+dig_in[8]                                  |dig_in[8]                                  
+dig_in[7]                                  |dig_in[7]                                  
+dig_in[6]                                  |dig_in[6]                                  
+dig_in[5]                                  |dig_in[5]                                  
+dig_in[4]                                  |dig_in[4]                                  
+dig_in[3]                                  |dig_in[3]                                  
+dig_in[2]                                  |dig_in[2]                                  
+dig_in[1]                                  |dig_in[1]                                  
+dig_in[0]                                  |dig_in[0]                                  
+reset                                      |reset                                      
+enable                                     |enable                                     
+clk                                        |clk                                        
+---------------------------------------------------------------------------------------
+Warning:  A case-insensitive file has been read and so the	verilog file must be treated case-insensitive to match.
+Verilog placeholder module slot4_wrapper replaced by module definition
+
+Subcircuit pins:
+Circuit 1: _PLACEHOLDER_                   |Circuit 2: slot4_wrapper                   
+-------------------------------------------|-------------------------------------------
+s4_an[0]                                   |s4_an[0]                                   
+s4_an[1]                                   |s4_an[1]                                   
+vdd_3v3                                    |vdd_3v3                                    
+vss_5v0                                    |vss_5v0                                    
+vdd_5v0                                    |vdd_5v0                                    
+vss_3v3                                    |vss_3v3                                    
+analog_bus3                                |analog_bus3                                
+analog_bus2                                |analog_bus2                                
+analog_bus1                                |analog_bus1                                
+analog_bus0                                |analog_bus0                                
+vbias                                      |vbias                                      
+ibias0                                     |ibias0                                     
+ibias1                                     |ibias1                                     
+dig_out[11]                                |dig_out[11]                                
+dig_out[10]                                |dig_out[10]                                
+dig_out[9]                                 |dig_out[9]                                 
+dig_out[8]                                 |dig_out[8]                                 
+dig_out[7]                                 |dig_out[7]                                 
+dig_out[6]                                 |dig_out[6]                                 
+dig_out[5]                                 |dig_out[5]                                 
+dig_out[4]                                 |dig_out[4]                                 
+dig_out[3]                                 |dig_out[3]                                 
+dig_out[2]                                 |dig_out[2]                                 
+dig_out[1]                                 |dig_out[1]                                 
+dig_out[0]                                 |dig_out[0]                                 
+dig_in[23]                                 |dig_in[23]                                 
+dig_in[22]                                 |dig_in[22]                                 
+dig_in[21]                                 |dig_in[21]                                 
+dig_in[20]                                 |dig_in[20]                                 
+dig_in[19]                                 |dig_in[19]                                 
+dig_in[18]                                 |dig_in[18]                                 
+dig_in[17]                                 |dig_in[17]                                 
+dig_in[16]                                 |dig_in[16]                                 
+dig_in[15]                                 |dig_in[15]                                 
+dig_in[14]                                 |dig_in[14]                                 
+dig_in[13]                                 |dig_in[13]                                 
+dig_in[12]                                 |dig_in[12]                                 
+dig_in[11]                                 |dig_in[11]                                 
+dig_in[10]                                 |dig_in[10]                                 
+dig_in[9]                                  |dig_in[9]                                  
+dig_in[8]                                  |dig_in[8]                                  
+dig_in[7]                                  |dig_in[7]                                  
+dig_in[6]                                  |dig_in[6]                                  
+dig_in[5]                                  |dig_in[5]                                  
+dig_in[4]                                  |dig_in[4]                                  
+dig_in[3]                                  |dig_in[3]                                  
+dig_in[2]                                  |dig_in[2]                                  
+dig_in[1]                                  |dig_in[1]                                  
+dig_in[0]                                  |dig_in[0]                                  
+reset                                      |reset                                      
+enable                                     |enable                                     
+clk                                        |clk                                        
+---------------------------------------------------------------------------------------
+Warning:  A case-insensitive file has been read and so the	verilog file must be treated case-insensitive to match.
+Verilog placeholder module slot5_wrapper replaced by module definition
+
+Subcircuit pins:
+Circuit 1: _PLACEHOLDER_                   |Circuit 2: slot5_wrapper                   
+-------------------------------------------|-------------------------------------------
+s5_an[0]                                   |s5_an[0]                                   
+s5_an[1]                                   |s5_an[1]                                   
+vdd_3v3                                    |vdd_3v3                                    
+vss_5v0                                    |vss_5v0                                    
+vdd_5v0                                    |vdd_5v0                                    
+vss_3v3                                    |vss_3v3                                    
+analog_bus3                                |analog_bus3                                
+analog_bus2                                |analog_bus2                                
+analog_bus1                                |analog_bus1                                
+analog_bus0                                |analog_bus0                                
+vbias                                      |vbias                                      
+ibias0                                     |ibias0                                     
+ibias1                                     |ibias1                                     
+dig_out[11]                                |dig_out[11]                                
+dig_out[10]                                |dig_out[10]                                
+dig_out[9]                                 |dig_out[9]                                 
+dig_out[8]                                 |dig_out[8]                                 
+dig_out[7]                                 |dig_out[7]                                 
+dig_out[6]                                 |dig_out[6]                                 
+dig_out[5]                                 |dig_out[5]                                 
+dig_out[4]                                 |dig_out[4]                                 
+dig_out[3]                                 |dig_out[3]                                 
+dig_out[2]                                 |dig_out[2]                                 
+dig_out[1]                                 |dig_out[1]                                 
+dig_out[0]                                 |dig_out[0]                                 
+dig_in[23]                                 |dig_in[23]                                 
+dig_in[22]                                 |dig_in[22]                                 
+dig_in[21]                                 |dig_in[21]                                 
+dig_in[20]                                 |dig_in[20]                                 
+dig_in[19]                                 |dig_in[19]                                 
+dig_in[18]                                 |dig_in[18]                                 
+dig_in[17]                                 |dig_in[17]                                 
+dig_in[16]                                 |dig_in[16]                                 
+dig_in[15]                                 |dig_in[15]                                 
+dig_in[14]                                 |dig_in[14]                                 
+dig_in[13]                                 |dig_in[13]                                 
+dig_in[12]                                 |dig_in[12]                                 
+dig_in[11]                                 |dig_in[11]                                 
+dig_in[10]                                 |dig_in[10]                                 
+dig_in[9]                                  |dig_in[9]                                  
+dig_in[8]                                  |dig_in[8]                                  
+dig_in[7]                                  |dig_in[7]                                  
+dig_in[6]                                  |dig_in[6]                                  
+dig_in[5]                                  |dig_in[5]                                  
+dig_in[4]                                  |dig_in[4]                                  
+dig_in[3]                                  |dig_in[3]                                  
+dig_in[2]                                  |dig_in[2]                                  
+dig_in[1]                                  |dig_in[1]                                  
+dig_in[0]                                  |dig_in[0]                                  
+reset                                      |reset                                      
+enable                                     |enable                                     
+clk                                        |clk                                        
+---------------------------------------------------------------------------------------
+Warning:  A case-insensitive file has been read and so the	verilog file must be treated case-insensitive to match.
+Verilog placeholder module slot6_wrapper replaced by module definition
+
+Subcircuit pins:
+Circuit 1: _PLACEHOLDER_                   |Circuit 2: slot6_wrapper                   
+-------------------------------------------|-------------------------------------------
+s6_an[0]                                   |s6_an[0]                                   
+s6_an[1]                                   |s6_an[1]                                   
+vdd_3v3                                    |vdd_3v3                                    
+vss_5v0                                    |vss_5v0                                    
+vdd_5v0                                    |vdd_5v0                                    
+vss_3v3                                    |vss_3v3                                    
+analog_bus3                                |analog_bus3                                
+analog_bus2                                |analog_bus2                                
+analog_bus1                                |analog_bus1                                
+analog_bus0                                |analog_bus0                                
+vbias                                      |vbias                                      
+ibias0                                     |ibias0                                     
+ibias1                                     |ibias1                                     
+dig_out[11]                                |dig_out[11]                                
+dig_out[10]                                |dig_out[10]                                
+dig_out[9]                                 |dig_out[9]                                 
+dig_out[8]                                 |dig_out[8]                                 
+dig_out[7]                                 |dig_out[7]                                 
+dig_out[6]                                 |dig_out[6]                                 
+dig_out[5]                                 |dig_out[5]                                 
+dig_out[4]                                 |dig_out[4]                                 
+dig_out[3]                                 |dig_out[3]                                 
+dig_out[2]                                 |dig_out[2]                                 
+dig_out[1]                                 |dig_out[1]                                 
+dig_out[0]                                 |dig_out[0]                                 
+dig_in[23]                                 |dig_in[23]                                 
+dig_in[22]                                 |dig_in[22]                                 
+dig_in[21]                                 |dig_in[21]                                 
+dig_in[20]                                 |dig_in[20]                                 
+dig_in[19]                                 |dig_in[19]                                 
+dig_in[18]                                 |dig_in[18]                                 
+dig_in[17]                                 |dig_in[17]                                 
+dig_in[16]                                 |dig_in[16]                                 
+dig_in[15]                                 |dig_in[15]                                 
+dig_in[14]                                 |dig_in[14]                                 
+dig_in[13]                                 |dig_in[13]                                 
+dig_in[12]                                 |dig_in[12]                                 
+dig_in[11]                                 |dig_in[11]                                 
+dig_in[10]                                 |dig_in[10]                                 
+dig_in[9]                                  |dig_in[9]                                  
+dig_in[8]                                  |dig_in[8]                                  
+dig_in[7]                                  |dig_in[7]                                  
+dig_in[6]                                  |dig_in[6]                                  
+dig_in[5]                                  |dig_in[5]                                  
+dig_in[4]                                  |dig_in[4]                                  
+dig_in[3]                                  |dig_in[3]                                  
+dig_in[2]                                  |dig_in[2]                                  
+dig_in[1]                                  |dig_in[1]                                  
+dig_in[0]                                  |dig_in[0]                                  
+reset                                      |reset                                      
+enable                                     |enable                                     
+clk                                        |clk                                        
+---------------------------------------------------------------------------------------
+Warning:  A case-insensitive file has been read and so the	verilog file must be treated case-insensitive to match.
+Verilog placeholder module slot7_wrapper replaced by module definition
+
+Subcircuit pins:
+Circuit 1: _PLACEHOLDER_                   |Circuit 2: slot7_wrapper                   
+-------------------------------------------|-------------------------------------------
+s7_an[0]                                   |s7_an[0]                                   
+s7_an[1]                                   |s7_an[1]                                   
+vdd_3v3                                    |vdd_3v3                                    
+vss_5v0                                    |vss_5v0                                    
+vdd_5v0                                    |vdd_5v0                                    
+vss_3v3                                    |vss_3v3                                    
+analog_bus3                                |analog_bus3                                
+analog_bus2                                |analog_bus2                                
+analog_bus1                                |analog_bus1                                
+analog_bus0                                |analog_bus0                                
+vbias                                      |vbias                                      
+ibias0                                     |ibias0                                     
+ibias1                                     |ibias1                                     
+dig_out[11]                                |dig_out[11]                                
+dig_out[10]                                |dig_out[10]                                
+dig_out[9]                                 |dig_out[9]                                 
+dig_out[8]                                 |dig_out[8]                                 
+dig_out[7]                                 |dig_out[7]                                 
+dig_out[6]                                 |dig_out[6]                                 
+dig_out[5]                                 |dig_out[5]                                 
+dig_out[4]                                 |dig_out[4]                                 
+dig_out[3]                                 |dig_out[3]                                 
+dig_out[2]                                 |dig_out[2]                                 
+dig_out[1]                                 |dig_out[1]                                 
+dig_out[0]                                 |dig_out[0]                                 
+dig_in[23]                                 |dig_in[23]                                 
+dig_in[22]                                 |dig_in[22]                                 
+dig_in[21]                                 |dig_in[21]                                 
+dig_in[20]                                 |dig_in[20]                                 
+dig_in[19]                                 |dig_in[19]                                 
+dig_in[18]                                 |dig_in[18]                                 
+dig_in[17]                                 |dig_in[17]                                 
+dig_in[16]                                 |dig_in[16]                                 
+dig_in[15]                                 |dig_in[15]                                 
+dig_in[14]                                 |dig_in[14]                                 
+dig_in[13]                                 |dig_in[13]                                 
+dig_in[12]                                 |dig_in[12]                                 
+dig_in[11]                                 |dig_in[11]                                 
+dig_in[10]                                 |dig_in[10]                                 
+dig_in[9]                                  |dig_in[9]                                  
+dig_in[8]                                  |dig_in[8]                                  
+dig_in[7]                                  |dig_in[7]                                  
+dig_in[6]                                  |dig_in[6]                                  
+dig_in[5]                                  |dig_in[5]                                  
+dig_in[4]                                  |dig_in[4]                                  
+dig_in[3]                                  |dig_in[3]                                  
+dig_in[2]                                  |dig_in[2]                                  
+dig_in[1]                                  |dig_in[1]                                  
+dig_in[0]                                  |dig_in[0]                                  
+reset                                      |reset                                      
+enable                                     |enable                                     
+clk                                        |clk                                        
+---------------------------------------------------------------------------------------
+Warning:  A case-insensitive file has been read and so the	verilog file must be treated case-insensitive to match.
+Verilog placeholder module slot8_wrapper replaced by module definition
+
+Subcircuit pins:
+Circuit 1: _PLACEHOLDER_                   |Circuit 2: slot8_wrapper                   
+-------------------------------------------|-------------------------------------------
+vss5v0                                     |vss5v0                                     
+s8_an[0]                                   |s8_an[0]                                   
+vdd_3v3                                    |vdd_3v3                                    
+vss_5v0                                    |vss_5v0                                    
+vdd_5v0                                    |vdd_5v0                                    
+vss_3v3                                    |vss_3v3                                    
+analog_bus3                                |analog_bus3                                
+analog_bus2                                |analog_bus2                                
+analog_bus1                                |analog_bus1                                
+analog_bus0                                |analog_bus0                                
+vbias                                      |vbias                                      
+ibias0                                     |ibias0                                     
+ibias1                                     |ibias1                                     
+dig_out[11]                                |dig_out[11]                                
+dig_out[10]                                |dig_out[10]                                
+dig_out[9]                                 |dig_out[9]                                 
+dig_out[8]                                 |dig_out[8]                                 
+dig_out[7]                                 |dig_out[7]                                 
+dig_out[6]                                 |dig_out[6]                                 
+dig_out[5]                                 |dig_out[5]                                 
+dig_out[4]                                 |dig_out[4]                                 
+dig_out[3]                                 |dig_out[3]                                 
+dig_out[2]                                 |dig_out[2]                                 
+dig_out[1]                                 |dig_out[1]                                 
+dig_out[0]                                 |dig_out[0]                                 
+dig_in[23]                                 |dig_in[23]                                 
+dig_in[22]                                 |dig_in[22]                                 
+dig_in[21]                                 |dig_in[21]                                 
+dig_in[20]                                 |dig_in[20]                                 
+dig_in[19]                                 |dig_in[19]                                 
+dig_in[18]                                 |dig_in[18]                                 
+dig_in[17]                                 |dig_in[17]                                 
+dig_in[16]                                 |dig_in[16]                                 
+dig_in[15]                                 |dig_in[15]                                 
+dig_in[14]                                 |dig_in[14]                                 
+dig_in[13]                                 |dig_in[13]                                 
+dig_in[12]                                 |dig_in[12]                                 
+dig_in[11]                                 |dig_in[11]                                 
+dig_in[10]                                 |dig_in[10]                                 
+dig_in[9]                                  |dig_in[9]                                  
+dig_in[8]                                  |dig_in[8]                                  
+dig_in[7]                                  |dig_in[7]                                  
+dig_in[6]                                  |dig_in[6]                                  
+dig_in[5]                                  |dig_in[5]                                  
+dig_in[4]                                  |dig_in[4]                                  
+dig_in[3]                                  |dig_in[3]                                  
+dig_in[2]                                  |dig_in[2]                                  
+dig_in[1]                                  |dig_in[1]                                  
+dig_in[0]                                  |dig_in[0]                                  
+reset                                      |reset                                      
+enable                                     |enable                                     
+clk                                        |clk                                        
+---------------------------------------------------------------------------------------
+Warning:  A case-insensitive file has been read and so the	verilog file must be treated case-insensitive to match.
+Verilog placeholder module slot9_wrapper replaced by module definition
+
+Subcircuit pins:
+Circuit 1: _PLACEHOLDER_                   |Circuit 2: slot9_wrapper                   
+-------------------------------------------|-------------------------------------------
+s9_an[0]                                   |s9_an[0]                                   
+s9_an[1]                                   |s9_an[1]                                   
+s9_an[2]                                   |s9_an[2]                                   
+vdd_3v3                                    |vdd_3v3                                    
+vss_5v0                                    |vss_5v0                                    
+vdd_5v0                                    |vdd_5v0                                    
+vss_3v3                                    |vss_3v3                                    
+analog_bus3                                |analog_bus3                                
+analog_bus2                                |analog_bus2                                
+analog_bus1                                |analog_bus1                                
+analog_bus0                                |analog_bus0                                
+vbias                                      |vbias                                      
+ibias0                                     |ibias0                                     
+ibias1                                     |ibias1                                     
+dig_out[11]                                |dig_out[11]                                
+dig_out[10]                                |dig_out[10]                                
+dig_out[9]                                 |dig_out[9]                                 
+dig_out[8]                                 |dig_out[8]                                 
+dig_out[7]                                 |dig_out[7]                                 
+dig_out[6]                                 |dig_out[6]                                 
+dig_out[5]                                 |dig_out[5]                                 
+dig_out[4]                                 |dig_out[4]                                 
+dig_out[3]                                 |dig_out[3]                                 
+dig_out[2]                                 |dig_out[2]                                 
+dig_out[1]                                 |dig_out[1]                                 
+dig_out[0]                                 |dig_out[0]                                 
+dig_in[23]                                 |dig_in[23]                                 
+dig_in[22]                                 |dig_in[22]                                 
+dig_in[21]                                 |dig_in[21]                                 
+dig_in[20]                                 |dig_in[20]                                 
+dig_in[19]                                 |dig_in[19]                                 
+dig_in[18]                                 |dig_in[18]                                 
+dig_in[17]                                 |dig_in[17]                                 
+dig_in[16]                                 |dig_in[16]                                 
+dig_in[15]                                 |dig_in[15]                                 
+dig_in[14]                                 |dig_in[14]                                 
+dig_in[13]                                 |dig_in[13]                                 
+dig_in[12]                                 |dig_in[12]                                 
+dig_in[11]                                 |dig_in[11]                                 
+dig_in[10]                                 |dig_in[10]                                 
+dig_in[9]                                  |dig_in[9]                                  
+dig_in[8]                                  |dig_in[8]                                  
+dig_in[7]                                  |dig_in[7]                                  
+dig_in[6]                                  |dig_in[6]                                  
+dig_in[5]                                  |dig_in[5]                                  
+dig_in[4]                                  |dig_in[4]                                  
+dig_in[3]                                  |dig_in[3]                                  
+dig_in[2]                                  |dig_in[2]                                  
+dig_in[1]                                  |dig_in[1]                                  
+dig_in[0]                                  |dig_in[0]                                  
+reset                                      |reset                                      
+enable                                     |enable                                     
+clk                                        |clk                                        
+---------------------------------------------------------------------------------------
+Warning:  A case-insensitive file has been read and so the	verilog file must be treated case-insensitive to match.
+Verilog placeholder module slot10_wrapper replaced by module definition
+
+Subcircuit pins:
+Circuit 1: _PLACEHOLDER_                   |Circuit 2: slot10_wrapper                  
+-------------------------------------------|-------------------------------------------
+vss3v3                                     |vss3v3                                     
+s10_an[0]                                  |s10_an[0]                                  
+s10_an[1]                                  |s10_an[1]                                  
+s10_an[2]                                  |s10_an[2]                                  
+vdd_3v3                                    |vdd_3v3                                    
+vss_5v0                                    |vss_5v0                                    
+vdd_5v0                                    |vdd_5v0                                    
+vss_3v3                                    |vss_3v3                                    
+analog_bus3                                |analog_bus3                                
+analog_bus2                                |analog_bus2                                
+analog_bus1                                |analog_bus1                                
+analog_bus0                                |analog_bus0                                
+vbias                                      |vbias                                      
+ibias0                                     |ibias0                                     
+ibias1                                     |ibias1                                     
+dig_out[11]                                |dig_out[11]                                
+dig_out[10]                                |dig_out[10]                                
+dig_out[9]                                 |dig_out[9]                                 
+dig_out[8]                                 |dig_out[8]                                 
+dig_out[7]                                 |dig_out[7]                                 
+dig_out[6]                                 |dig_out[6]                                 
+dig_out[5]                                 |dig_out[5]                                 
+dig_out[4]                                 |dig_out[4]                                 
+dig_out[3]                                 |dig_out[3]                                 
+dig_out[2]                                 |dig_out[2]                                 
+dig_out[1]                                 |dig_out[1]                                 
+dig_out[0]                                 |dig_out[0]                                 
+dig_in[23]                                 |dig_in[23]                                 
+dig_in[22]                                 |dig_in[22]                                 
+dig_in[21]                                 |dig_in[21]                                 
+dig_in[20]                                 |dig_in[20]                                 
+dig_in[19]                                 |dig_in[19]                                 
+dig_in[18]                                 |dig_in[18]                                 
+dig_in[17]                                 |dig_in[17]                                 
+dig_in[16]                                 |dig_in[16]                                 
+dig_in[15]                                 |dig_in[15]                                 
+dig_in[14]                                 |dig_in[14]                                 
+dig_in[13]                                 |dig_in[13]                                 
+dig_in[12]                                 |dig_in[12]                                 
+dig_in[11]                                 |dig_in[11]                                 
+dig_in[10]                                 |dig_in[10]                                 
+dig_in[9]                                  |dig_in[9]                                  
+dig_in[8]                                  |dig_in[8]                                  
+dig_in[7]                                  |dig_in[7]                                  
+dig_in[6]                                  |dig_in[6]                                  
+dig_in[5]                                  |dig_in[5]                                  
+dig_in[4]                                  |dig_in[4]                                  
+dig_in[3]                                  |dig_in[3]                                  
+dig_in[2]                                  |dig_in[2]                                  
+dig_in[1]                                  |dig_in[1]                                  
+dig_in[0]                                  |dig_in[0]                                  
+reset                                      |reset                                      
+enable                                     |enable                                     
+clk                                        |clk                                        
+---------------------------------------------------------------------------------------
+Warning:  A case-insensitive file has been read and so the	verilog file must be treated case-insensitive to match.
+Verilog placeholder module slot11_wrapper replaced by module definition
+
+Subcircuit pins:
+Circuit 1: _PLACEHOLDER_                   |Circuit 2: slot11_wrapper                  
+-------------------------------------------|-------------------------------------------
+vss3v3                                     |vss3v3                                     
+s11_an[0]                                  |s11_an[0]                                  
+vdd_3v3                                    |vdd_3v3                                    
+vss_5v0                                    |vss_5v0                                    
+vdd_5v0                                    |vdd_5v0                                    
+vss_3v3                                    |vss_3v3                                    
+analog_bus3                                |analog_bus3                                
+analog_bus2                                |analog_bus2                                
+analog_bus1                                |analog_bus1                                
+analog_bus0                                |analog_bus0                                
+vbias                                      |vbias                                      
+ibias0                                     |ibias0                                     
+ibias1                                     |ibias1                                     
+dig_out[11]                                |dig_out[11]                                
+dig_out[10]                                |dig_out[10]                                
+dig_out[9]                                 |dig_out[9]                                 
+dig_out[8]                                 |dig_out[8]                                 
+dig_out[7]                                 |dig_out[7]                                 
+dig_out[6]                                 |dig_out[6]                                 
+dig_out[5]                                 |dig_out[5]                                 
+dig_out[4]                                 |dig_out[4]                                 
+dig_out[3]                                 |dig_out[3]                                 
+dig_out[2]                                 |dig_out[2]                                 
+dig_out[1]                                 |dig_out[1]                                 
+dig_out[0]                                 |dig_out[0]                                 
+dig_in[23]                                 |dig_in[23]                                 
+dig_in[22]                                 |dig_in[22]                                 
+dig_in[21]                                 |dig_in[21]                                 
+dig_in[20]                                 |dig_in[20]                                 
+dig_in[19]                                 |dig_in[19]                                 
+dig_in[18]                                 |dig_in[18]                                 
+dig_in[17]                                 |dig_in[17]                                 
+dig_in[16]                                 |dig_in[16]                                 
+dig_in[15]                                 |dig_in[15]                                 
+dig_in[14]                                 |dig_in[14]                                 
+dig_in[13]                                 |dig_in[13]                                 
+dig_in[12]                                 |dig_in[12]                                 
+dig_in[11]                                 |dig_in[11]                                 
+dig_in[10]                                 |dig_in[10]                                 
+dig_in[9]                                  |dig_in[9]                                  
+dig_in[8]                                  |dig_in[8]                                  
+dig_in[7]                                  |dig_in[7]                                  
+dig_in[6]                                  |dig_in[6]                                  
+dig_in[5]                                  |dig_in[5]                                  
+dig_in[4]                                  |dig_in[4]                                  
+dig_in[3]                                  |dig_in[3]                                  
+dig_in[2]                                  |dig_in[2]                                  
+dig_in[1]                                  |dig_in[1]                                  
+dig_in[0]                                  |dig_in[0]                                  
+reset                                      |reset                                      
+enable                                     |enable                                     
+clk                                        |clk                                        
+---------------------------------------------------------------------------------------
+Warning:  A case-insensitive file has been read and so the	verilog file must be treated case-insensitive to match.
+Verilog placeholder module slot12_wrapper replaced by module definition
+
+Subcircuit pins:
+Circuit 1: _PLACEHOLDER_                   |Circuit 2: slot12_wrapper                  
+-------------------------------------------|-------------------------------------------
+s12_an[0]                                  |s12_an[0]                                  
+s12_an[1]                                  |s12_an[1]                                  
+vdd_3v3                                    |vdd_3v3                                    
+vss_5v0                                    |vss_5v0                                    
+vdd_5v0                                    |vdd_5v0                                    
+vss_3v3                                    |vss_3v3                                    
+analog_bus3                                |analog_bus3                                
+analog_bus2                                |analog_bus2                                
+analog_bus1                                |analog_bus1                                
+analog_bus0                                |analog_bus0                                
+vbias                                      |vbias                                      
+ibias0                                     |ibias0                                     
+ibias1                                     |ibias1                                     
+dig_out[11]                                |dig_out[11]                                
+dig_out[10]                                |dig_out[10]                                
+dig_out[9]                                 |dig_out[9]                                 
+dig_out[8]                                 |dig_out[8]                                 
+dig_out[7]                                 |dig_out[7]                                 
+dig_out[6]                                 |dig_out[6]                                 
+dig_out[5]                                 |dig_out[5]                                 
+dig_out[4]                                 |dig_out[4]                                 
+dig_out[3]                                 |dig_out[3]                                 
+dig_out[2]                                 |dig_out[2]                                 
+dig_out[1]                                 |dig_out[1]                                 
+dig_out[0]                                 |dig_out[0]                                 
+dig_in[23]                                 |dig_in[23]                                 
+dig_in[22]                                 |dig_in[22]                                 
+dig_in[21]                                 |dig_in[21]                                 
+dig_in[20]                                 |dig_in[20]                                 
+dig_in[19]                                 |dig_in[19]                                 
+dig_in[18]                                 |dig_in[18]                                 
+dig_in[17]                                 |dig_in[17]                                 
+dig_in[16]                                 |dig_in[16]                                 
+dig_in[15]                                 |dig_in[15]                                 
+dig_in[14]                                 |dig_in[14]                                 
+dig_in[13]                                 |dig_in[13]                                 
+dig_in[12]                                 |dig_in[12]                                 
+dig_in[11]                                 |dig_in[11]                                 
+dig_in[10]                                 |dig_in[10]                                 
+dig_in[9]                                  |dig_in[9]                                  
+dig_in[8]                                  |dig_in[8]                                  
+dig_in[7]                                  |dig_in[7]                                  
+dig_in[6]                                  |dig_in[6]                                  
+dig_in[5]                                  |dig_in[5]                                  
+dig_in[4]                                  |dig_in[4]                                  
+dig_in[3]                                  |dig_in[3]                                  
+dig_in[2]                                  |dig_in[2]                                  
+dig_in[1]                                  |dig_in[1]                                  
+dig_in[0]                                  |dig_in[0]                                  
+reset                                      |reset                                      
+enable                                     |enable                                     
+clk                                        |clk                                        
+---------------------------------------------------------------------------------------
+Warning:  A case-insensitive file has been read and so the	verilog file must be treated case-insensitive to match.
+Verilog placeholder module slot13_wrapper replaced by module definition
+
+Subcircuit pins:
+Circuit 1: _PLACEHOLDER_                   |Circuit 2: slot13_wrapper                  
+-------------------------------------------|-------------------------------------------
+s13_an[0]                                  |s13_an[0]                                  
+s13_an[1]                                  |s13_an[1]                                  
+vdd_3v3                                    |vdd_3v3                                    
+vss_5v0                                    |vss_5v0                                    
+vdd_5v0                                    |vdd_5v0                                    
+vss_3v3                                    |vss_3v3                                    
+analog_bus3                                |analog_bus3                                
+analog_bus2                                |analog_bus2                                
+analog_bus1                                |analog_bus1                                
+analog_bus0                                |analog_bus0                                
+vbias                                      |vbias                                      
+ibias0                                     |ibias0                                     
+ibias1                                     |ibias1                                     
+dig_out[11]                                |dig_out[11]                                
+dig_out[10]                                |dig_out[10]                                
+dig_out[9]                                 |dig_out[9]                                 
+dig_out[8]                                 |dig_out[8]                                 
+dig_out[7]                                 |dig_out[7]                                 
+dig_out[6]                                 |dig_out[6]                                 
+dig_out[5]                                 |dig_out[5]                                 
+dig_out[4]                                 |dig_out[4]                                 
+dig_out[3]                                 |dig_out[3]                                 
+dig_out[2]                                 |dig_out[2]                                 
+dig_out[1]                                 |dig_out[1]                                 
+dig_out[0]                                 |dig_out[0]                                 
+dig_in[23]                                 |dig_in[23]                                 
+dig_in[22]                                 |dig_in[22]                                 
+dig_in[21]                                 |dig_in[21]                                 
+dig_in[20]                                 |dig_in[20]                                 
+dig_in[19]                                 |dig_in[19]                                 
+dig_in[18]                                 |dig_in[18]                                 
+dig_in[17]                                 |dig_in[17]                                 
+dig_in[16]                                 |dig_in[16]                                 
+dig_in[15]                                 |dig_in[15]                                 
+dig_in[14]                                 |dig_in[14]                                 
+dig_in[13]                                 |dig_in[13]                                 
+dig_in[12]                                 |dig_in[12]                                 
+dig_in[11]                                 |dig_in[11]                                 
+dig_in[10]                                 |dig_in[10]                                 
+dig_in[9]                                  |dig_in[9]                                  
+dig_in[8]                                  |dig_in[8]                                  
+dig_in[7]                                  |dig_in[7]                                  
+dig_in[6]                                  |dig_in[6]                                  
+dig_in[5]                                  |dig_in[5]                                  
+dig_in[4]                                  |dig_in[4]                                  
+dig_in[3]                                  |dig_in[3]                                  
+dig_in[2]                                  |dig_in[2]                                  
+dig_in[1]                                  |dig_in[1]                                  
+dig_in[0]                                  |dig_in[0]                                  
+reset                                      |reset                                      
+enable                                     |enable                                     
+clk                                        |clk                                        
+---------------------------------------------------------------------------------------
+Warning:  A case-insensitive file has been read and so the	verilog file must be treated case-insensitive to match.
+Verilog placeholder module slot14_wrapper replaced by module definition
+
+Subcircuit pins:
+Circuit 1: _PLACEHOLDER_                   |Circuit 2: slot14_wrapper                  
+-------------------------------------------|-------------------------------------------
+s14_an[0]                                  |s14_an[0]                                  
+s14_an[1]                                  |s14_an[1]                                  
+vdd_3v3                                    |vdd_3v3                                    
+vss_5v0                                    |vss_5v0                                    
+vdd_5v0                                    |vdd_5v0                                    
+vss_3v3                                    |vss_3v3                                    
+analog_bus3                                |analog_bus3                                
+analog_bus2                                |analog_bus2                                
+analog_bus1                                |analog_bus1                                
+analog_bus0                                |analog_bus0                                
+vbias                                      |vbias                                      
+ibias0                                     |ibias0                                     
+ibias1                                     |ibias1                                     
+dig_out[11]                                |dig_out[11]                                
+dig_out[10]                                |dig_out[10]                                
+dig_out[9]                                 |dig_out[9]                                 
+dig_out[8]                                 |dig_out[8]                                 
+dig_out[7]                                 |dig_out[7]                                 
+dig_out[6]                                 |dig_out[6]                                 
+dig_out[5]                                 |dig_out[5]                                 
+dig_out[4]                                 |dig_out[4]                                 
+dig_out[3]                                 |dig_out[3]                                 
+dig_out[2]                                 |dig_out[2]                                 
+dig_out[1]                                 |dig_out[1]                                 
+dig_out[0]                                 |dig_out[0]                                 
+dig_in[23]                                 |dig_in[23]                                 
+dig_in[22]                                 |dig_in[22]                                 
+dig_in[21]                                 |dig_in[21]                                 
+dig_in[20]                                 |dig_in[20]                                 
+dig_in[19]                                 |dig_in[19]                                 
+dig_in[18]                                 |dig_in[18]                                 
+dig_in[17]                                 |dig_in[17]                                 
+dig_in[16]                                 |dig_in[16]                                 
+dig_in[15]                                 |dig_in[15]                                 
+dig_in[14]                                 |dig_in[14]                                 
+dig_in[13]                                 |dig_in[13]                                 
+dig_in[12]                                 |dig_in[12]                                 
+dig_in[11]                                 |dig_in[11]                                 
+dig_in[10]                                 |dig_in[10]                                 
+dig_in[9]                                  |dig_in[9]                                  
+dig_in[8]                                  |dig_in[8]                                  
+dig_in[7]                                  |dig_in[7]                                  
+dig_in[6]                                  |dig_in[6]                                  
+dig_in[5]                                  |dig_in[5]                                  
+dig_in[4]                                  |dig_in[4]                                  
+dig_in[3]                                  |dig_in[3]                                  
+dig_in[2]                                  |dig_in[2]                                  
+dig_in[1]                                  |dig_in[1]                                  
+dig_in[0]                                  |dig_in[0]                                  
+reset                                      |reset                                      
+enable                                     |enable                                     
+clk                                        |clk                                        
+---------------------------------------------------------------------------------------
+Warning:  A case-insensitive file has been read and so the	verilog file must be treated case-insensitive to match.
+Verilog placeholder module slot15_wrapper replaced by module definition
+
+Subcircuit pins:
+Circuit 1: _PLACEHOLDER_                   |Circuit 2: slot15_wrapper                  
+-------------------------------------------|-------------------------------------------
+s15_an[0]                                  |s15_an[0]                                  
+s15_an[1]                                  |s15_an[1]                                  
+vdd_3v3                                    |vdd_3v3                                    
+vss_5v0                                    |vss_5v0                                    
+vdd_5v0                                    |vdd_5v0                                    
+vss_3v3                                    |vss_3v3                                    
+analog_bus3                                |analog_bus3                                
+analog_bus2                                |analog_bus2                                
+analog_bus1                                |analog_bus1                                
+analog_bus0                                |analog_bus0                                
+vbias                                      |vbias                                      
+ibias0                                     |ibias0                                     
+ibias1                                     |ibias1                                     
+dig_out[11]                                |dig_out[11]                                
+dig_out[10]                                |dig_out[10]                                
+dig_out[9]                                 |dig_out[9]                                 
+dig_out[8]                                 |dig_out[8]                                 
+dig_out[7]                                 |dig_out[7]                                 
+dig_out[6]                                 |dig_out[6]                                 
+dig_out[5]                                 |dig_out[5]                                 
+dig_out[4]                                 |dig_out[4]                                 
+dig_out[3]                                 |dig_out[3]                                 
+dig_out[2]                                 |dig_out[2]                                 
+dig_out[1]                                 |dig_out[1]                                 
+dig_out[0]                                 |dig_out[0]                                 
+dig_in[23]                                 |dig_in[23]                                 
+dig_in[22]                                 |dig_in[22]                                 
+dig_in[21]                                 |dig_in[21]                                 
+dig_in[20]                                 |dig_in[20]                                 
+dig_in[19]                                 |dig_in[19]                                 
+dig_in[18]                                 |dig_in[18]                                 
+dig_in[17]                                 |dig_in[17]                                 
+dig_in[16]                                 |dig_in[16]                                 
+dig_in[15]                                 |dig_in[15]                                 
+dig_in[14]                                 |dig_in[14]                                 
+dig_in[13]                                 |dig_in[13]                                 
+dig_in[12]                                 |dig_in[12]                                 
+dig_in[11]                                 |dig_in[11]                                 
+dig_in[10]                                 |dig_in[10]                                 
+dig_in[9]                                  |dig_in[9]                                  
+dig_in[8]                                  |dig_in[8]                                  
+dig_in[7]                                  |dig_in[7]                                  
+dig_in[6]                                  |dig_in[6]                                  
+dig_in[5]                                  |dig_in[5]                                  
+dig_in[4]                                  |dig_in[4]                                  
+dig_in[3]                                  |dig_in[3]                                  
+dig_in[2]                                  |dig_in[2]                                  
+dig_in[1]                                  |dig_in[1]                                  
+dig_in[0]                                  |dig_in[0]                                  
+reset                                      |reset                                      
+enable                                     |enable                                     
+clk                                        |clk                                        
+---------------------------------------------------------------------------------------
+Warning:  A case-insensitive file has been read and so the	verilog file must be treated case-insensitive to match.
+Verilog placeholder module slot16_wrapper replaced by module definition
+
+Subcircuit pins:
+Circuit 1: _PLACEHOLDER_                   |Circuit 2: slot16_wrapper                  
+-------------------------------------------|-------------------------------------------
+s16_an[0]                                  |s16_an[0]                                  
+s16_an[1]                                  |s16_an[1]                                  
+vdd_3v3                                    |vdd_3v3                                    
+vss_5v0                                    |vss_5v0                                    
+vdd_5v0                                    |vdd_5v0                                    
+vss_3v3                                    |vss_3v3                                    
+analog_bus3                                |analog_bus3                                
+analog_bus2                                |analog_bus2                                
+analog_bus1                                |analog_bus1                                
+analog_bus0                                |analog_bus0                                
+vbias                                      |vbias                                      
+ibias0                                     |ibias0                                     
+ibias1                                     |ibias1                                     
+dig_out[11]                                |dig_out[11]                                
+dig_out[10]                                |dig_out[10]                                
+dig_out[9]                                 |dig_out[9]                                 
+dig_out[8]                                 |dig_out[8]                                 
+dig_out[7]                                 |dig_out[7]                                 
+dig_out[6]                                 |dig_out[6]                                 
+dig_out[5]                                 |dig_out[5]                                 
+dig_out[4]                                 |dig_out[4]                                 
+dig_out[3]                                 |dig_out[3]                                 
+dig_out[2]                                 |dig_out[2]                                 
+dig_out[1]                                 |dig_out[1]                                 
+dig_out[0]                                 |dig_out[0]                                 
+dig_in[23]                                 |dig_in[23]                                 
+dig_in[22]                                 |dig_in[22]                                 
+dig_in[21]                                 |dig_in[21]                                 
+dig_in[20]                                 |dig_in[20]                                 
+dig_in[19]                                 |dig_in[19]                                 
+dig_in[18]                                 |dig_in[18]                                 
+dig_in[17]                                 |dig_in[17]                                 
+dig_in[16]                                 |dig_in[16]                                 
+dig_in[15]                                 |dig_in[15]                                 
+dig_in[14]                                 |dig_in[14]                                 
+dig_in[13]                                 |dig_in[13]                                 
+dig_in[12]                                 |dig_in[12]                                 
+dig_in[11]                                 |dig_in[11]                                 
+dig_in[10]                                 |dig_in[10]                                 
+dig_in[9]                                  |dig_in[9]                                  
+dig_in[8]                                  |dig_in[8]                                  
+dig_in[7]                                  |dig_in[7]                                  
+dig_in[6]                                  |dig_in[6]                                  
+dig_in[5]                                  |dig_in[5]                                  
+dig_in[4]                                  |dig_in[4]                                  
+dig_in[3]                                  |dig_in[3]                                  
+dig_in[2]                                  |dig_in[2]                                  
+dig_in[1]                                  |dig_in[1]                                  
+dig_in[0]                                  |dig_in[0]                                  
+reset                                      |reset                                      
+enable                                     |enable                                     
+clk                                        |clk                                        
+---------------------------------------------------------------------------------------
+Warning:  A case-insensitive file has been read and so the	verilog file must be treated case-insensitive to match.
+Verilog placeholder module slot17_wrapper replaced by module definition
+
+Subcircuit pins:
+Circuit 1: _PLACEHOLDER_                   |Circuit 2: slot17_wrapper                  
+-------------------------------------------|-------------------------------------------
+vss3v3                                     |vss3v3                                     
+s17_an[0]                                  |s17_an[0]                                  
+s17_an[1]                                  |s17_an[1]                                  
+vdd_3v3                                    |vdd_3v3                                    
+vss_5v0                                    |vss_5v0                                    
+vdd_5v0                                    |vdd_5v0                                    
+vss_3v3                                    |vss_3v3                                    
+analog_bus3                                |analog_bus3                                
+analog_bus2                                |analog_bus2                                
+analog_bus1                                |analog_bus1                                
+analog_bus0                                |analog_bus0                                
+vbias                                      |vbias                                      
+ibias0                                     |ibias0                                     
+ibias1                                     |ibias1                                     
+dig_out[11]                                |dig_out[11]                                
+dig_out[10]                                |dig_out[10]                                
+dig_out[9]                                 |dig_out[9]                                 
+dig_out[8]                                 |dig_out[8]                                 
+dig_out[7]                                 |dig_out[7]                                 
+dig_out[6]                                 |dig_out[6]                                 
+dig_out[5]                                 |dig_out[5]                                 
+dig_out[4]                                 |dig_out[4]                                 
+dig_out[3]                                 |dig_out[3]                                 
+dig_out[2]                                 |dig_out[2]                                 
+dig_out[1]                                 |dig_out[1]                                 
+dig_out[0]                                 |dig_out[0]                                 
+dig_in[23]                                 |dig_in[23]                                 
+dig_in[22]                                 |dig_in[22]                                 
+dig_in[21]                                 |dig_in[21]                                 
+dig_in[20]                                 |dig_in[20]                                 
+dig_in[19]                                 |dig_in[19]                                 
+dig_in[18]                                 |dig_in[18]                                 
+dig_in[17]                                 |dig_in[17]                                 
+dig_in[16]                                 |dig_in[16]                                 
+dig_in[15]                                 |dig_in[15]                                 
+dig_in[14]                                 |dig_in[14]                                 
+dig_in[13]                                 |dig_in[13]                                 
+dig_in[12]                                 |dig_in[12]                                 
+dig_in[11]                                 |dig_in[11]                                 
+dig_in[10]                                 |dig_in[10]                                 
+dig_in[9]                                  |dig_in[9]                                  
+dig_in[8]                                  |dig_in[8]                                  
+dig_in[7]                                  |dig_in[7]                                  
+dig_in[6]                                  |dig_in[6]                                  
+dig_in[5]                                  |dig_in[5]                                  
+dig_in[4]                                  |dig_in[4]                                  
+dig_in[3]                                  |dig_in[3]                                  
+dig_in[2]                                  |dig_in[2]                                  
+dig_in[1]                                  |dig_in[1]                                  
+dig_in[0]                                  |dig_in[0]                                  
+reset                                      |reset                                      
+enable                                     |enable                                     
+clk                                        |clk                                        
+---------------------------------------------------------------------------------------
+Warning:  A case-insensitive file has been read and so the	verilog file must be treated case-insensitive to match.
+Verilog placeholder module slot18_wrapper replaced by module definition
+
+Subcircuit pins:
+Circuit 1: _PLACEHOLDER_                   |Circuit 2: slot18_wrapper                  
+-------------------------------------------|-------------------------------------------
+s18_an[0]                                  |s18_an[0]                                  
+s18_an[1]                                  |s18_an[1]                                  
+vdd_3v3                                    |vdd_3v3                                    
+vss_5v0                                    |vss_5v0                                    
+vdd_5v0                                    |vdd_5v0                                    
+vss_3v3                                    |vss_3v3                                    
+analog_bus3                                |analog_bus3                                
+analog_bus2                                |analog_bus2                                
+analog_bus1                                |analog_bus1                                
+analog_bus0                                |analog_bus0                                
+vbias                                      |vbias                                      
+ibias0                                     |ibias0                                     
+ibias1                                     |ibias1                                     
+dig_out[11]                                |dig_out[11]                                
+dig_out[10]                                |dig_out[10]                                
+dig_out[9]                                 |dig_out[9]                                 
+dig_out[8]                                 |dig_out[8]                                 
+dig_out[7]                                 |dig_out[7]                                 
+dig_out[6]                                 |dig_out[6]                                 
+dig_out[5]                                 |dig_out[5]                                 
+dig_out[4]                                 |dig_out[4]                                 
+dig_out[3]                                 |dig_out[3]                                 
+dig_out[2]                                 |dig_out[2]                                 
+dig_out[1]                                 |dig_out[1]                                 
+dig_out[0]                                 |dig_out[0]                                 
+dig_in[23]                                 |dig_in[23]                                 
+dig_in[22]                                 |dig_in[22]                                 
+dig_in[21]                                 |dig_in[21]                                 
+dig_in[20]                                 |dig_in[20]                                 
+dig_in[19]                                 |dig_in[19]                                 
+dig_in[18]                                 |dig_in[18]                                 
+dig_in[17]                                 |dig_in[17]                                 
+dig_in[16]                                 |dig_in[16]                                 
+dig_in[15]                                 |dig_in[15]                                 
+dig_in[14]                                 |dig_in[14]                                 
+dig_in[13]                                 |dig_in[13]                                 
+dig_in[12]                                 |dig_in[12]                                 
+dig_in[11]                                 |dig_in[11]                                 
+dig_in[10]                                 |dig_in[10]                                 
+dig_in[9]                                  |dig_in[9]                                  
+dig_in[8]                                  |dig_in[8]                                  
+dig_in[7]                                  |dig_in[7]                                  
+dig_in[6]                                  |dig_in[6]                                  
+dig_in[5]                                  |dig_in[5]                                  
+dig_in[4]                                  |dig_in[4]                                  
+dig_in[3]                                  |dig_in[3]                                  
+dig_in[2]                                  |dig_in[2]                                  
+dig_in[1]                                  |dig_in[1]                                  
+dig_in[0]                                  |dig_in[0]                                  
+reset                                      |reset                                      
+enable                                     |enable                                     
+clk                                        |clk                                        
+---------------------------------------------------------------------------------------
+Error in SPICE file read: No file /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/cdl/gf180mcu_ocd_ip_sram__sram1024x8m8wm1.cdl
 -1
     while executing
-"readnet spice ../netlist/schematic/gf180mcu_ocd_io.spice $circuit2"
-    (file "netgen.tcl" line 7)
+"readnet spice /foss/pdks/gf180mcuD/libs.ref/gf180mcu_ocd_ip_sram/cdl/gf180mcu_ocd_ip_sram__sram1024x8m8wm1.cdl $circuit2"
+    (file "netgen.tcl" line 33)
     invoked from within
 "source netgen.tcl"
     ("eval" body line 1)

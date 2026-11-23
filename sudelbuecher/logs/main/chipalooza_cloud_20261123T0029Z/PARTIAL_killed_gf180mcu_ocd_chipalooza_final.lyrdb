@@ -1,0 +1,4639 @@
+<?xml version="1.0" encoding="utf-8"?>
+<report-database>
+ <description/>
+ <original-file/>
+ <generator>drc: script='/foss/pdks/gf180mcuD/libs.tech/klayout/tech/drc/gf180mcu.drc'</generator>
+ <top-cell>gf180mcu_ocd_chipalooza_final</top-cell>
+ <tags>
+ </tags>
+ <categories>
+  <category>
+   <name>V1.1</name>
+   <description>V1.1 : Min/max via1 size . : 0.26µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V1.2a</name>
+   <description>V1.2a : min. via1 spacing : 0.26µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V1.2b</name>
+   <description>V1.2b : Space in 4x4 or larger via1 array : 0.36µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V1.3a</name>
+   <description>V1.3a : metal1 overlap of via1 &gt;= 0</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V1.3c</name>
+   <description>V1.3c : metal1 (&lt; 0.34um) end-of-line overlap of via1: 0.06µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V1.3d</name>
+   <description>V1.3d : If metal1 overlap via1 by &lt; 0.04um on one side, adjacent metal1 edges overlap. : 0.06µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V1.4a</name>
+   <description>V1.4a : metal2 overlap of via1 &gt;= 0.01 upper_metal</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V1.4b</name>
+   <description>V1.4b : metal2 (&lt; 0.34um) end-of-line overlap of via1 : 0.06µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V1.4c</name>
+   <description>V1.4c : If metal2 overlap via1 by &lt; 0.04um on one side, adjacent metal2 edges overlap. : 0.06µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V2.1</name>
+   <description>V2.1 : Min/max via2 size . : 0.26µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V2.2a</name>
+   <description>V2.2a : min. via2 spacing : 0.26µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V2.2b</name>
+   <description>V2.2b : Space in 4x4 or larger via2 array : 0.36µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V2.3b</name>
+   <description>V2.3b : metal2 overlap of via2 &gt;= 0.01</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V2.3c</name>
+   <description>V2.3c : metal2 (&lt; 0.34um) end-of-line overlap of via2: 0.06µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V2.3d</name>
+   <description>V2.3d : If metal2 overlap via2 by &lt; 0.04um on one side, adjacent metal2 edges overlap. : 0.06µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V2.4a</name>
+   <description>V2.4a : metal3 overlap of via2 &gt;= 0.01 upper_metal</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V2.4b</name>
+   <description>V2.4b : metal3 (&lt; 0.34um) end-of-line overlap of via2 : 0.06µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V2.4c</name>
+   <description>V2.4c : If metal3 overlap via2 by &lt; 0.04um on one side, adjacent metal3 edges overlap. : 0.06µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V3.1</name>
+   <description>V3.1 : Min/max via3 size . : 0.26µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V3.2a</name>
+   <description>V3.2a : min. via3 spacing : 0.26µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V3.2b</name>
+   <description>V3.2b : Space in 4x4 or larger via3 array : 0.36µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V3.3b</name>
+   <description>V3.3b : metal3 overlap of via3 &gt;= 0.01</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V3.3c</name>
+   <description>V3.3c : metal3 (&lt; 0.34um) end-of-line overlap of via3: 0.06µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V3.3d</name>
+   <description>V3.3d : If metal3 overlap via3 by &lt; 0.04um on one side, adjacent metal3 edges overlap. : 0.06µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V3.4a</name>
+   <description>V3.4a : metal4 overlap of via3 &gt;= 0.01 upper_metal</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V3.4b</name>
+   <description>V3.4b : metal4 (&lt; 0.34um) end-of-line overlap of via3 : 0.06µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V3.4c</name>
+   <description>V3.4c : If metal4 overlap via3 by &lt; 0.04um on one side, adjacent metal4 edges overlap. : 0.06µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V4.1</name>
+   <description>V4.1 : Min/max via4 size . : 0.26µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V4.2a</name>
+   <description>V4.2a : min. via4 spacing : 0.26µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V4.2b</name>
+   <description>V4.2b : Space in 4x4 or larger via4 array : 0.36µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V4.3b</name>
+   <description>V4.3b : metal4 overlap of via4 &gt;= 0.01</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V4.3c</name>
+   <description>V4.3c : metal4 (&lt; 0.34um) end-of-line overlap of via4: 0.06µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V4.3d</name>
+   <description>V4.3d : If metal4 overlap via4 by &lt; 0.04um on one side, adjacent metal4 edges overlap. : 0.06µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V4.4a</name>
+   <description>V4.4a : metal5 overlap of via4 &gt;= 0.01 upper_metal</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V4.4b</name>
+   <description>V4.4b : metal5 (&lt; 0.34um) end-of-line overlap of via4 : 0.06µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>V4.4c</name>
+   <description>V4.4c : If metal5 overlap via4 by &lt; 0.04um on one side, adjacent metal5 edges overlap. : 0.06µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.8</name>
+   <description>ANT.8: Maximum ratio of contact area to related gate oxide area: 10</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_i_ANT.2</name>
+   <description>ANT.16_i_ANT.2: Maximum ratio of Metal1 perimeter area to related thin gate oxide area: 400</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_ii_ANT.2</name>
+   <description>ANT.16_ii_ANT.2: Maximum ratio of Metal1 perimeter area to related thick gate oxide area: 400</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_i_ANT.3</name>
+   <description>ANT.16_i_ANT.3: Maximum ratio of Metal2 perimeter area to related gate oxide area: 400</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_ii_ANT.3</name>
+   <description>ANT.16_ii_ANT.3: Maximum ratio of Metal2 perimeter area to related gate oxide area: 400</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_i_ANT.4</name>
+   <description>ANT.16_i_ANT.4: Maximum ratio of Metal3 perimeter area to related thin gate oxide area: 400</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_ii_ANT.4</name>
+   <description>ANT.16_ii_ANT.4: Maximum ratio of Metal3 perimeter area to related thick gate oxide area: 400</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_i_ANT.5</name>
+   <description>ANT.16_i_ANT.5: Maximum ratio of Metal4 perimeter area to related gate oxide area: 400</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_ii_ANT.5</name>
+   <description>ANT.16_ii_ANT.5: Maximum ratio of Metal4 perimeter area to related gate oxide area: 400</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_iii_ANT.14_M4_MIMB</name>
+   <description>ANT.16_iii_ANT.14_M4_MIMB: Maximum ratio of Metal4 perimeter area to related MIM area is 400</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_i_ANT.6</name>
+   <description>ANT.16_i_ANT.6: Maximum ratio of Metal5 perimeter area to related thin gate oxide area: 400</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_ii_ANT.6</name>
+   <description>ANT.16_ii_ANT.6: Maximum ratio of Metal5 perimeter area to related thick gate oxide area 400</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_iii_ANT.14_M5_MIMB</name>
+   <description>ANT.16_iii_ANT.14_M5_MIMB: Maximum ratio of Metal5 perimeter area to related MIM area is 400</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.1</name>
+   <description>ANT.1: Maximum ratio of Poly2 perimeter area to related gate oxide area: 200</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_i_ANT.9</name>
+   <description>ANT.16_i_ANT.9: Maximum ratio of Via1 area to related thin gate oxide area: 20</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_ii_ANT.9</name>
+   <description>ANT.16_ii_ANT.9: Maximum ratio of Via1 area to related thick gate oxide area: 20</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_i_ANT.10</name>
+   <description>ANT.16_i_ANT.10: Maximum ratio of Via2 area to related thin gate oxide area: 20</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_ii_ANT.10</name>
+   <description>ANT.16_ii_ANT.10: Maximum ratio of Via2 area to related thick gate oxide area: 20</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_i_ANT.11</name>
+   <description>ANT.16_i_ANT.11: Maximum ratio of Via3 area to related thin gate oxide area: 20</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_ii_ANT.11</name>
+   <description>ANT.16_ii_ANT.11: Maximum ratio of Via3 area to related thick gate oxide area: 20</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_iii_ANT.15_V3_MIMB</name>
+   <description>ANT.16_iii_ANT.15_V3_MIMB: Maximum ratio of Via3 area to related MIM area is 20</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_i_ANT.12</name>
+   <description>ANT.16_i_ANT.12: Maximum ratio of Via4 area to related thin gate oxide area: 20</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_ii_ANT.12</name>
+   <description>ANT.16_ii_ANT.12: Maximum ratio of Via4 area to related thick gate oxide area: 20</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ANT.16_iii_ANT.15_V4_MIMB</name>
+   <description>ANT.16_iii_ANT.15_V4_MIMB: Maximum ratio of Via4 area to related MIM area is 20</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>comp_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on comp</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>comp_ACUTE</name>
+   <description>ACUTE : non 45 degree angle comp</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>dnwell_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on dnwell</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>dnwell_ACUTE</name>
+   <description>ACUTE : non 45 degree angle dnwell</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>nwell_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on nwell</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>nwell_ACUTE</name>
+   <description>ACUTE : non 45 degree angle nwell</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>lvpwell_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on lvpwell</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>lvpwell_ACUTE</name>
+   <description>ACUTE : non 45 degree angle lvpwell</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>dualgate_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on dualgate</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>dualgate_ACUTE</name>
+   <description>ACUTE : non 45 degree angle dualgate</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>poly2_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on poly2</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>poly2_ACUTE</name>
+   <description>ACUTE : non 45 degree angle poly2</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>nplus_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on nplus</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>nplus_ACUTE</name>
+   <description>ACUTE : non 45 degree angle nplus</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>pplus_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on pplus</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>pplus_ACUTE</name>
+   <description>ACUTE : non 45 degree angle pplus</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>sab_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on sab</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>sab_ACUTE</name>
+   <description>ACUTE : non 45 degree angle sab</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>esd_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on esd</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>esd_ACUTE</name>
+   <description>ACUTE : non 45 degree angle esd</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>resistor_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on resistor</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>resistor_ACUTE</name>
+   <description>ACUTE : non 45 degree angle resistor</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>fhres_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on fhres</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>fhres_ACUTE</name>
+   <description>ACUTE : non 45 degree angle fhres</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>fusetop_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on fusetop</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>fusetop_ACUTE</name>
+   <description>ACUTE : non 45 degree angle fusetop</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>fusewindow_d_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on fusewindow_d</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>fusewindow_d_ACUTE</name>
+   <description>ACUTE : non 45 degree angle fusewindow_d</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>polyfuse_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on polyfuse</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>polyfuse_ACUTE</name>
+   <description>ACUTE : non 45 degree angle polyfuse</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>mvsd_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on mvsd</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>mvsd_ACUTE</name>
+   <description>ACUTE : non 45 degree angle mvsd</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>mvpsd_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on mvpsd</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>mvpsd_ACUTE</name>
+   <description>ACUTE : non 45 degree angle mvpsd</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>nat_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on nat</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>nat_ACUTE</name>
+   <description>ACUTE : non 45 degree angle nat</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>comp_dummy_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on comp_dummy</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>comp_dummy_ACUTE</name>
+   <description>ACUTE : non 45 degree angle comp_dummy</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>poly2_dummy_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on poly2_dummy</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>poly2_dummy_ACUTE</name>
+   <description>ACUTE : non 45 degree angle poly2_dummy</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>schottky_diode_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on schottky_diode</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>schottky_diode_ACUTE</name>
+   <description>ACUTE : non 45 degree angle schottky_diode</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>zener_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on zener</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>zener_ACUTE</name>
+   <description>ACUTE : non 45 degree angle zener</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>res_mk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on res_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>res_mk_ACUTE</name>
+   <description>ACUTE : non 45 degree angle res_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>opc_drc_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on opc_drc</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>opc_drc_ACUTE</name>
+   <description>ACUTE : non 45 degree angle opc_drc</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ndmy_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on ndmy</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ndmy_ACUTE</name>
+   <description>ACUTE : non 45 degree angle ndmy</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>pmndmy_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on pmndmy</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>pmndmy_ACUTE</name>
+   <description>ACUTE : non 45 degree angle pmndmy</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>v5_xtor_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on v5_xtor</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>v5_xtor_ACUTE</name>
+   <description>ACUTE : non 45 degree angle v5_xtor</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>cap_mk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on cap_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>cap_mk_ACUTE</name>
+   <description>ACUTE : non 45 degree angle cap_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>mos_cap_mk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on mos_cap_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>mos_cap_mk_ACUTE</name>
+   <description>ACUTE : non 45 degree angle mos_cap_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ind_mk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on ind_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ind_mk_ACUTE</name>
+   <description>ACUTE : non 45 degree angle ind_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>diode_mk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on diode_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>diode_mk_ACUTE</name>
+   <description>ACUTE : non 45 degree angle diode_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>drc_bjt_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on drc_bjt</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>drc_bjt_ACUTE</name>
+   <description>ACUTE : non 45 degree angle drc_bjt</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>lvs_bjt_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on lvs_bjt</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>lvs_bjt_ACUTE</name>
+   <description>ACUTE : non 45 degree angle lvs_bjt</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>mim_l_mk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on mim_l_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>mim_l_mk_ACUTE</name>
+   <description>ACUTE : non 45 degree angle mim_l_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>latchup_mk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on latchup_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>latchup_mk_ACUTE</name>
+   <description>ACUTE : non 45 degree angle latchup_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>guard_ring_mk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on guard_ring_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>guard_ring_mk_ACUTE</name>
+   <description>ACUTE : non 45 degree angle guard_ring_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>otp_mk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on otp_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>otp_mk_ACUTE</name>
+   <description>ACUTE : non 45 degree angle otp_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>mtpmark_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on mtpmark</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>mtpmark_ACUTE</name>
+   <description>ACUTE : non 45 degree angle mtpmark</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>neo_ee_mk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on neo_ee_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>neo_ee_mk_ACUTE</name>
+   <description>ACUTE : non 45 degree angle neo_ee_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>sramcore_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on sramcore</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>sramcore_ACUTE</name>
+   <description>ACUTE : non 45 degree angle sramcore</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>lvs_rf_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on lvs_rf</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>lvs_rf_ACUTE</name>
+   <description>ACUTE : non 45 degree angle lvs_rf</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>lvs_drain_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on lvs_drain</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>lvs_drain_ACUTE</name>
+   <description>ACUTE : non 45 degree angle lvs_drain</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>hvpolyrs_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on hvpolyrs</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>hvpolyrs_ACUTE</name>
+   <description>ACUTE : non 45 degree angle hvpolyrs</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>lvs_io_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on lvs_io</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>lvs_io_ACUTE</name>
+   <description>ACUTE : non 45 degree angle lvs_io</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>probe_mk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on probe_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>probe_mk_ACUTE</name>
+   <description>ACUTE : non 45 degree angle probe_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>esd_mk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on esd_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>esd_mk_ACUTE</name>
+   <description>ACUTE : non 45 degree angle esd_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>lvs_source_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on lvs_source</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>lvs_source_ACUTE</name>
+   <description>ACUTE : non 45 degree angle lvs_source</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>well_diode_mk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on well_diode_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>well_diode_mk_ACUTE</name>
+   <description>ACUTE : non 45 degree angle well_diode_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ldmos_xtor_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on ldmos_xtor</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ldmos_xtor_ACUTE</name>
+   <description>ACUTE : non 45 degree angle ldmos_xtor</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>plfuse_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on plfuse</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>plfuse_ACUTE</name>
+   <description>ACUTE : non 45 degree angle plfuse</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>efuse_mk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on efuse_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>efuse_mk_ACUTE</name>
+   <description>ACUTE : non 45 degree angle efuse_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>mcell_feol_mk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on mcell_feol_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>mcell_feol_mk_ACUTE</name>
+   <description>ACUTE : non 45 degree angle mcell_feol_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ymtp_mk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on ymtp_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ymtp_mk_ACUTE</name>
+   <description>ACUTE : non 45 degree angle ymtp_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>dev_wf_mk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on dev_wf_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>dev_wf_mk_ACUTE</name>
+   <description>ACUTE : non 45 degree angle dev_wf_mk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>comp_label_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on comp_label</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>comp_label_ACUTE</name>
+   <description>ACUTE : non 45 degree angle comp_label</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>poly2_label_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on poly2_label</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>poly2_label_ACUTE</name>
+   <description>ACUTE : non 45 degree angle poly2_label</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>mdiode_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on mdiode</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>mdiode_ACUTE</name>
+   <description>ACUTE : non 45 degree angle mdiode</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>contact_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on contact</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>contact_ACUTE</name>
+   <description>ACUTE : non 45 degree angle contact</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal1_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal1</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal1_ACUTE</name>
+   <description>ACUTE : non 45 degree angle metal1</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal1_slot_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal1_slot</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal1_slot_ACUTE</name>
+   <description>ACUTE : non 45 degree angle metal1_slot</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal1_blk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal1_blk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal1_blk_ACUTE</name>
+   <description>ACUTE : non 45 degree angle metal1_blk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal1_label_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal1_label</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal1_label_ACUTE</name>
+   <description>ACUTE : non 45 degree angle metal1_label</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal1_res_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal1_res</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal1_res_ACUTE</name>
+   <description>ACUTE : non 45 degree angle metal1_res</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>via1_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on via1</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>via1_ACUTE</name>
+   <description>ACUTE : non 45 degree angle via1</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal2_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal2</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal2_ACUTE</name>
+   <description>ACUTE : non 45 degree angle metal2</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal2_label_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal2_label</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal2_label_ACUTE</name>
+   <description>ACUTE : non 45 degree angle metal2_label</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal2_slot_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal2_slot</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal2_slot_ACUTE</name>
+   <description>ACUTE : non 45 degree angle metal2_slot</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal2_blk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal2_blk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal2_blk_ACUTE</name>
+   <description>ACUTE : non 45 degree angle metal2_blk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal2_res_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal2_res</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal2_res_ACUTE</name>
+   <description>ACUTE : non 45 degree angle metal2_res</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>via2_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on via2</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>via2_ACUTE</name>
+   <description>ACUTE : non 45 degree angle via2</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal3_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal3</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal3_ACUTE</name>
+   <description>ACUTE : non 45 degree angle metal3</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal3_dummy_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal3_dummy</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal3_dummy_ACUTE</name>
+   <description>ACUTE : non 45 degree angle metal3_dummy</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal3_label_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal3_label</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal3_label_ACUTE</name>
+   <description>ACUTE : non 45 degree angle metal3_label</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal3_blk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal3_blk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal3_blk_ACUTE</name>
+   <description>ACUTE : non 45 degree angle metal3_blk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal3_res_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal3_res</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal3_res_ACUTE</name>
+   <description>ACUTE : non 45 degree angle metal3_res</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>via3_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on via3</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>via3_ACUTE</name>
+   <description>ACUTE : non 45 degree angle via3</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal4_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal4</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal4_ACUTE</name>
+   <description>ACUTE : non 45 degree angle metal4</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal4_dummy_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal4_dummy</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal4_dummy_ACUTE</name>
+   <description>ACUTE : non 45 degree angle metal4_dummy</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal4_label_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal4_label</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal4_label_ACUTE</name>
+   <description>ACUTE : non 45 degree angle metal4_label</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal4_blk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal4_blk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal4_blk_ACUTE</name>
+   <description>ACUTE : non 45 degree angle metal4_blk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal4_res_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal4_res</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal4_res_ACUTE</name>
+   <description>ACUTE : non 45 degree angle metal4_res</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>via4_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on via4</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>via4_ACUTE</name>
+   <description>ACUTE : non 45 degree angle via4</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal5_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal5</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal5_ACUTE</name>
+   <description>ACUTE : non 45 degree angle metal5</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal5_dummy_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal5_dummy</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal5_dummy_ACUTE</name>
+   <description>ACUTE : non 45 degree angle metal5_dummy</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal5_label_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal5_label</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal5_label_ACUTE</name>
+   <description>ACUTE : non 45 degree angle metal5_label</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal5_blk_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal5_blk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal5_blk_ACUTE</name>
+   <description>ACUTE : non 45 degree angle metal5_blk</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal5_res_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on metal5_res</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>metal5_res_ACUTE</name>
+   <description>ACUTE : non 45 degree angle metal5_res</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>pad_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on pad</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>pad_ACUTE</name>
+   <description>ACUTE : non 45 degree angle pad</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ubmpperi_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on ubmpperi</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ubmpperi_ACUTE</name>
+   <description>ACUTE : non 45 degree angle ubmpperi</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ubmparray_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on ubmparray</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ubmparray_ACUTE</name>
+   <description>ACUTE : non 45 degree angle ubmparray</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ubmeplate_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on ubmeplate</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ubmeplate_ACUTE</name>
+   <description>ACUTE : non 45 degree angle ubmeplate</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>pr_bndry_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on pr_bndry</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>pr_bndry_ACUTE</name>
+   <description>ACUTE : non 45 degree angle pr_bndry</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>border_OFFGRID</name>
+   <description>OFFGRID : OFFGRID vertex on border</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>border_ACUTE</name>
+   <description>ACUTE : non 45 degree angle border</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>CO.10</name>
+   <description>CO.10 : Contact on Poly2 gate over COMP is forbidden</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>CO.11</name>
+   <description>CO.11 : Contact on field oxide is forbidden</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>CO.1</name>
+   <description>CO.1 : Min/max contact size. : 0.22µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>CO.2a</name>
+   <description>CO.2a : min. contact spacing : 0.25µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>CO.2b</name>
+   <description>CO.2b : Space in 4x4 or larger contact array. : 0.28µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>CO.3</name>
+   <description>CO.3 : Poly2 overlap of contact. : 0.07µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>CO.4</name>
+   <description>CO.4 : COMP overlap of contact. : 0.07µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>CO.5a</name>
+   <description>CO.5a : Nplus overlap of contact on COMP (butted N+/P+) : 0.1µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>CO.5b</name>
+   <description>CO.5b : Pplus overlap of contact on COMP (butted N+/P+) : 0.1µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>CO.6</name>
+   <description>CO.6 : Metal1 overlap of contact &gt;= 0.005 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>CO.6a</name>
+   <description>CO.6a : Metal1 EOL overlap (&lt;0.34µm lines) : 0.06µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>CO.6b</name>
+   <description>CO.6b : Adjacent metal1 edge overlap : 0.06µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>CO.7</name>
+   <description>CO.7 : Space from COMP contact to Poly2 : 0.15µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>CO.8</name>
+   <description>CO.8 : Space from Poly2 contact to COMP : 0.17µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>CO.9</name>
+   <description>CO.9 : Contact must not straddle NCOMP/PCOMP butting edge</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>CUP.2</name>
+   <description>CUP.2 : Minimum width of Metal5 line used for bond pads: 1</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>CUP.3</name>
+   <description>CUP.3 : Minimum space of Metal5 line used for bond pads (slots): 1</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DCF.1a</name>
+   <description>DCF.1a : All area between active polygons (COMP) (with spacing greater than equal to this rule)must be filled with "Dummy COMP" (see exceptions): 20</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.10</name>
+   <description>DF.10 : Min. field area (um2). : 0.26µm²</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.11</name>
+   <description>DF.11 : Min. Length of butting COMP edge. : 0.3µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.12</name>
+   <description>DF.12 : COMP not covered by Nplus or Pplus is forbidden (except those COMP under marking).</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.13_LV</name>
+   <description>DF.13_LV : Max distance of Nwell tap (NCOMP inside Nwell) from (PCOMP inside Nwell): 20um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.13_MV</name>
+   <description>DF.13_MV : Max distance of Nwell tap (NCOMP inside Nwell) from (PCOMP inside Nwell): 15um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.14_LV</name>
+   <description>DF.14_LV : Max distance of substrate tap (PCOMP outside Nwell) from (NCOMP outside Nwell): 20um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.14_MV</name>
+   <description>DF.14_MV : Max distance of substrate tap (PCOMP outside Nwell) from (NCOMP outside Nwell): 15um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.16_LV</name>
+   <description>DF.16_LV : Min. space from (Nwell outside DNWELL) to (NCOMP outside Nwell and DNWELL). : 0.43µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.16_MV</name>
+   <description>DF.16_MV : Min. space from (Nwell outside DNWELL) to (NCOMP outside Nwell and DNWELL). : 0.6µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.17_LV</name>
+   <description>DF.17_LV : Min. space from (Nwell Outside DNWELL) to (PCOMP outside Nwell and DNWELL). : 0.12µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.17_MV</name>
+   <description>DF.17_MV : Min. space from (Nwell Outside DNWELL) to (PCOMP outside Nwell and DNWELL). : 0.16µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.18</name>
+   <description>DF.18 : Min. DNWELL space to (PCOMP outside Nwell and DNWELL). : 2.5µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.19_LV</name>
+   <description>DF.19_LV : Min. DNWELL space to (NCOMP outside Nwell and DNWELL). : 3.2µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.19_MV</name>
+   <description>DF.19_MV : Min. DNWELL space to (NCOMP outside Nwell and DNWELL). : 3.28µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.1a_LV</name>
+   <description>DF.1a_LV : Min. COMP Width. : 0.22µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.1a_MV</name>
+   <description>DF.1a_MV : Min. COMP Width. : 0.3µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.1c</name>
+   <description>DF.1c : Min. COMP Width for MOSCAP. : 1µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.2a_LV</name>
+   <description>DF.2a_LV : Min Channel Width. : 0.22µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.2a_MV</name>
+   <description>DF.2a_MV : Min Channel Width. : nil,0.3µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.2b</name>
+   <description>DF.2b : Max. COMP width for all cases except those used for capacitors,
+                  marked by 'MOS_CAP_MK' layer: 100um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.3a_LV</name>
+   <description>DF.3a_LV : Min. COMP Space is : 0.28µm. [P-substrate tap (PCOMP outside NWELL and DNWELL)
+                  can be butted for different voltage devices as the potential is same]</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.3a_MV</name>
+   <description>DF.3a_MV :  Min. COMP Space is : 0.36µm. [P-substrate tap (PCOMP outside NWELL and DNWELL)
+                  can be butted for different voltage devices as the potential is same]</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.3b</name>
+   <description>DF.3b : Min./Max. NCOMP Space to PCOMP in the same well for butted COMP
+                  (MOSCAP butting is not allowed): 0 um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.3c_LV</name>
+   <description>DF.3c_LV : Min. COMP Space in BJT area (area marked by DRC_BJT layer). : 0.32µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.3c_MV</name>
+   <description>DF.3c_MV : Min. COMP Space in BJT area (area marked by DRC_BJT layer) hasn't been assessed.</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.4a_LV</name>
+   <description>DF.4a_LV : Min. (LVPWELL Space to NCOMP well tap) inside DNWELL. : 0.12µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.4a_MV</name>
+   <description>DF.4a_MV : Min. (LVPWELL Space to NCOMP well tap) inside DNWELL. : 0.16µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.4b_LV</name>
+   <description>DF.4b_LV : Min. DNWELL overlap of NCOMP well tap. : 0.62µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.4b_MV</name>
+   <description>DF.4b_MV : Min. DNWELL overlap of NCOMP well tap. : 0.66µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.4c_LV</name>
+   <description>DF.4c_LV : Min. (Nwell overlap of PCOMP) outside DNWELL. : 0.43µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.4c_MV</name>
+   <description>DF.4c_MV : Min. (Nwell overlap of PCOMP) outside DNWELL. : 0.6µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.4d_LV</name>
+   <description>DF.4d_LV : Min. (Nwell overlap of NCOMP) outside DNWELL. : 0.12µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.4d_MV</name>
+   <description>DF.4d_MV : Min. (Nwell overlap of NCOMP) outside DNWELL. : 0.16µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.4e_LV</name>
+   <description>DF.4e_LV : Min. DNWELL overlap of PCOMP. : 0.93µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.4e_MV</name>
+   <description>DF.4e_MV : Min. DNWELL overlap of PCOMP. : 1.1µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.5_LV</name>
+   <description>DF.5_LV : Min. (LVPWELL overlap of PCOMP well tap) inside DNWELL. : 0.12µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.5_MV</name>
+   <description>DF.5_MV : Min. (LVPWELL overlap of PCOMP well tap) inside DNWELL. : 0.16µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.6_LV</name>
+   <description>DF.6_LV : Min. COMP extend beyond gate (it also means source/drain overhang). : 0.24µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.6_MV</name>
+   <description>DF.6_MV : Min. COMP extend beyond gate (it also means source/drain overhang). : 0.4µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.7_LV</name>
+   <description>DF.7_LV : Min. (LVPWELL Spacer to PCOMP) inside DNWELL. : 0.43µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.7_MV</name>
+   <description>DF.7_MV : Min. (LVPWELL Spacer to PCOMP) inside DNWELL. : 0.6µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.8_LV</name>
+   <description>DF.8_LV : Min. (LVPWELL overlap of NCOMP) Inside DNWELL. : 0.43µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.8_MV</name>
+   <description>DF.8_MV : Min. (LVPWELL overlap of NCOMP) Inside DNWELL. : 0.6µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DF.9</name>
+   <description>DF.9 : Min. COMP area (um2). : 0.2025µm²</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DN.1</name>
+   <description>DN.1 : Min. DNWELL Width : 1.7µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DN.2a</name>
+   <description>DN.2a : Min. DNWELL Space (Equi-potential), Merge if the space is less than : 2.5µm</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>DN.2b</name>
+   <description>DN.2b : Min. DNWELL Space (Different potential) : 5.42µm</description>
+   <categories>
+   </categories>
+  </category>
+ </categories>
+ <cells>
+  <cell>
+   <name>gf180mcu_ocd_chipalooza_final</name>
+   <variant/>
+   <layout-name/>
+   <references>
+   </references>
+  </cell>
+  <cell>
+   <name>gf180mcu_padframe</name>
+   <variant/>
+   <layout-name>gf180mcu_padframe</layout-name>
+   <references>
+    <ref>
+     <parent>gf180mcu_ocd_chipalooza_final</parent>
+     <trans>r0 *1 26,26</trans>
+    </ref>
+   </references>
+  </cell>
+ </cells>
+ <items>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.89,4820.25;765.73,4820.25)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.89,4820.77;765.73,4820.77)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.73,4821.55;765.89,4821.55)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.73,4822.07;765.89,4822.07)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.73,4822.59;765.89,4822.59)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.89,4823.37;765.73,4823.37)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.63,4821.81;765.63,4821.915)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.63,4820.315;765.63,4820.51)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.63,4822.33;765.63,4822.535)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.63,4820.935;765.63,4821.03)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.63,4823.415;765.63,4823.63)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.63,4821.29;765.63,4821.295)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.73,4820.25;765.73,4820.055)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.47,4820.315;765.63,4820.315)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.73,4820.77;765.73,4820.675)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.47,4820.935;765.63,4820.935)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.73,4821.555;765.73,4821.55)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.63,4821.295;765.47,4821.295)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.63,4821.915;765.47,4821.915)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.63,4822.535;765.47,4822.535)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.73,4822.795;765.73,4822.59)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.73,4822.175;765.73,4822.07)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.73,4823.37;765.73,4823.155)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.47,4823.415;765.63,4823.415)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.89,4817.65;765.73,4817.65)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.73,4818.43;765.89,4818.43)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.73,4818.95;765.89,4818.95)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.73,4819.47;765.89,4819.47)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.63,4817.835;765.63,4817.91)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.63,4818.17;765.63,4818.195)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.63,4818.69;765.63,4818.815)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.47,4817.835;765.63,4817.835)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.73,4817.65;765.73,4817.575)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.73,4819.075;765.73,4818.95)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.63,4818.815;765.47,4818.815)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.73,4818.455;765.73,4818.43)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.63,4818.195;765.47,4818.195)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.73,4819.695;765.73,4819.47)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.63,4819.435;765.47,4819.435)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.63,4819.21;765.63,4819.435)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.89,4746.41;765.73,4746.41)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.73,4745.63;765.89,4745.63)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.89,4750.57;765.73,4750.57)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.89,4746.93;765.73,4746.93)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.89,4747.45;765.73,4747.45)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.73,4751.35;765.89,4751.35)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.73,4748.23;765.89,4748.23)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.73,4748.75;765.89,4748.75)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.89,4749.53;765.73,4749.53)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.73,4749.53;765.73,4749.3)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.89,4750.05;765.73,4750.05)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.63,4751.09;765.63,4751.16)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.63,4750.18;765.63,4750.31)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.47,4749.56;765.63,4749.56)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.63,4750.8;765.63,4750.83)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.47,4750.8;765.63,4750.8)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.73,4750.57;765.73,4750.54)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.47,4750.18;765.63,4750.18)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.73,4750.05;765.73,4749.92)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.73,4751.42;765.73,4751.35)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.63,4751.16;765.47,4751.16)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.63,4749.56;765.63,4749.79)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.63,4746.46;765.63,4746.67)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.63,4747.7;765.63,4747.71)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.63,4748.49;765.63,4748.68)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.63,4745.58;765.47,4745.58)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.73,4745.84;765.73,4745.63)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.47,4747.08;765.63,4747.08)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.73,4746.93;765.73,4746.82)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.73,4746.41;765.73,4746.2)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.47,4746.46;765.63,4746.46)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.73,4747.45;765.73,4747.44)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.73,4748.32;765.73,4748.23)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.47,4747.7;765.63,4747.7)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.63,4748.06;765.47,4748.06)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.63,4748.68;765.47,4748.68)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.73,4748.94;765.73,4748.75)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.63,4747.97;765.63,4748.06)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.63,4745.37;765.63,4745.58)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.1'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge: (765.63,4747.08;765.63,4747.19)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.11,4823.39;765.11,4823.63)|(764.87,4823.73;764.87,4823.49)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.11,4820.27;765.11,4820.51)|(764.87,4820.61;764.87,4820.37)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4818.455;765.481,4818.455)|(765.37,4818.69;765.359,4818.69)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4819.075;765.592,4819.075)|(765.37,4819.21;765.248,4819.21)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4821.295;765.47,4821.555)|(765.37,4821.55;765.37,4821.29)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.37,4820.51;765.37,4820.435)|(765.47,4820.675;765.47,4820.75)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (766.09,4819.695;766.148,4819.695)|(765.89,4819.73;765.832,4819.73)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4819.075;765.73,4819.075)|(765.89,4819.21;765.63,4819.21)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (766.09,4822.175;766.099,4822.175)|(765.89,4822.33;765.881,4822.33)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (766.09,4819.564;766.09,4819.695)|(765.89,4819.861;765.89,4819.73)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.37,4819.99;765.37,4819.815)|(765.47,4820.055;765.47,4820.23)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.63,4823.11;765.89,4823.11)|(765.73,4823.155;765.47,4823.155)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.579,4821.555;765.73,4821.555)|(765.781,4821.81;765.63,4821.81)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4823.155;765.47,4823.415)|(765.37,4823.63;765.37,4823.37)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.11,4821.31;765.11,4821.55)|(764.87,4821.65;764.87,4821.41)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (766.09,4821.915;766.09,4822.175)|(765.89,4822.07;765.89,4821.81)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.89,4820.51;765.89,4820.509)|(766.09,4820.675;766.09,4820.676)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.11,4817.15;765.11,4817.39)|(764.87,4817.49;764.87,4817.25)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (766.09,4822.795;766.144,4822.795)|(765.89,4822.85;765.836,4822.85)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (766.09,4823.204;766.09,4823.415)|(765.89,4823.581;765.89,4823.37)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (766.09,4819.435;766.09,4819.636)|(765.89,4819.47;765.89,4819.269)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.89,4823.11;765.89,4822.989)|(766.09,4823.155;766.09,4823.276)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.889,4820.51;765.89,4820.51)|(766.091,4820.675;766.09,4820.675)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (766.09,4820.675;766.09,4820.935)|(765.89,4821.03;765.89,4820.77)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.519,4818.455;765.73,4818.455)|(765.841,4818.69;765.63,4818.69)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.11,4817.67;765.11,4817.91)|(764.87,4818.01;764.87,4817.77)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4822.09;765.47,4822.175)|(765.37,4822.415;765.37,4822.33)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.63,4820.51;765.89,4820.51)|(765.73,4820.675;765.47,4820.675)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4822.175;765.73,4822.175)|(765.89,4822.33;765.63,4822.33)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4819.49;765.47,4819.695)|(765.37,4819.935;765.37,4819.73)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.11,4818.19;765.11,4818.43)|(764.87,4818.53;764.87,4818.29)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4818.45;765.47,4818.455)|(765.37,4818.695;765.37,4818.69)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.218,4819.99;765.37,4819.99)|(765.622,4820.055;765.47,4820.055)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4819.695;765.628,4819.695)|(765.37,4819.73;765.212,4819.73)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4822.61;765.47,4822.795)|(765.37,4823.035;765.37,4822.85)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (766.09,4819.044;766.09,4819.075)|(765.89,4819.241;765.89,4819.21)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (766.09,4819.075;766.112,4819.075)|(765.89,4819.21;765.868,4819.21)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.834,4823.11;765.89,4823.11)|(766.146,4823.155;766.09,4823.155)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (766.09,4821.295;766.09,4821.555)|(765.89,4821.55;765.89,4821.29)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.287,4817.39;765.37,4817.39)|(765.553,4817.575;765.47,4817.575)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.11,4821.83;765.11,4822.07)|(764.87,4822.17;764.87,4821.93)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4817.575;765.47,4817.835)|(765.37,4817.91;765.37,4817.65)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.63,4819.99;765.89,4819.99)|(765.73,4820.055;765.47,4820.055)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4820.055;765.47,4820.315)|(765.37,4820.51;765.37,4820.25)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.63,4817.39;765.89,4817.39)|(765.73,4817.575;765.47,4817.575)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (766.09,4822.684;766.09,4822.795)|(765.89,4822.961;765.89,4822.85)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.11,4820.79;765.11,4821.03)|(764.87,4821.13;764.87,4820.89)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4822.175;765.579,4822.175)|(765.37,4822.33;765.261,4822.33)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.269,4820.51;765.37,4820.51)|(765.571,4820.675;765.47,4820.675)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (766.09,4818.815;766.09,4819.075)|(765.89,4818.95;765.89,4818.69)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4822.795;765.624,4822.795)|(765.37,4822.85;765.216,4822.85)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4819.435;765.47,4819.695)|(765.37,4819.47;765.37,4819.21)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (766.09,4818.195;766.09,4818.455)|(765.89,4818.43;765.89,4818.17)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.838,4819.99;765.89,4819.99)|(766.142,4820.055;766.09,4820.055)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4822.795;765.73,4822.795)|(765.89,4822.85;765.63,4822.85)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (766.09,4820.084;766.09,4820.315)|(765.89,4820.481;765.89,4820.25)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.11,4822.87;765.11,4823.11)|(764.87,4823.21;764.87,4822.97)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.37,4817.39;765.37,4817.335)|(765.47,4817.575;765.47,4817.63)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4819.695;765.73,4819.695)|(765.89,4819.73;765.63,4819.73)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.214,4823.11;765.37,4823.11)|(765.626,4823.155;765.47,4823.155)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.89,4819.99;765.89,4819.889)|(766.09,4820.055;766.09,4820.156)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.37,4823.11;765.37,4822.915)|(765.47,4823.155;765.47,4823.35)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (766.09,4822.164;766.09,4822.175)|(765.89,4822.341;765.89,4822.33)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4820.675;765.47,4820.935)|(765.37,4821.03;765.37,4820.77)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4822.535;765.47,4822.795)|(765.37,4822.59;765.37,4822.33)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4818.195;765.47,4818.455)|(765.37,4818.43;765.37,4818.17)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4821.915;765.47,4822.175)|(765.37,4822.07;765.37,4821.81)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4818.815;765.47,4819.075)|(765.37,4818.95;765.37,4818.69)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (766.09,4817.575;766.09,4817.835)|(765.89,4817.91;765.89,4817.65)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4818.97;765.47,4819.075)|(765.37,4819.315;765.37,4819.21)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.11,4819.23;765.11,4819.47)|(764.87,4819.57;764.87,4819.33)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (766.09,4822.535;766.09,4822.756)|(765.89,4822.59;765.89,4822.369)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.11,4822.35;765.11,4822.59)|(764.87,4822.69;764.87,4822.45)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.11,4818.71;765.11,4818.95)|(764.87,4819.05;764.87,4818.81)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.11,4819.75;765.11,4819.99)|(764.87,4820.09;764.87,4819.85)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (766.09,4747.44;766.09,4747.7)|(765.89,4747.71;765.89,4747.45)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.11,4748.49;765.11,4748.73)|(764.87,4748.63;764.87,4748.39)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.11,4751.09;765.11,4751.33)|(764.87,4751.23;764.87,4750.99)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.215,4746.15;765.37,4746.15)|(765.625,4746.2;765.47,4746.2)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4747.44;765.47,4747.7)|(765.37,4747.71;765.37,4747.45)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.11,4747.97;765.11,4748.21)|(764.87,4748.11;764.87,4747.87)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.89,4749.27;765.89,4749.134)|(766.09,4749.3;766.09,4749.436)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4745.84;765.73,4745.84)|(765.89,4745.89;765.63,4745.89)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.89,4746.67;765.89,4746.654)|(766.09,4746.82;766.09,4746.836)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.11,4749.53;765.11,4749.77)|(764.87,4749.67;764.87,4749.43)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.835,4746.15;765.89,4746.15)|(766.145,4746.2;766.09,4746.2)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.63,4746.67;765.89,4746.67)|(765.73,4746.82;765.47,4746.82)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4746.2;765.47,4746.46)|(765.37,4746.67;765.37,4746.41)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.11,4747.45;765.11,4747.69)|(764.87,4747.59;764.87,4747.35)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.63,4749.27;765.89,4749.27)|(765.73,4749.3;765.47,4749.3)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4749.3;765.47,4749.56)|(765.37,4749.79;765.37,4749.53)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.11,4746.41;765.11,4746.65)|(764.87,4746.55;764.87,4746.31)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (766.09,4745.84;766.145,4745.84)|(765.89,4745.89;765.835,4745.89)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.11,4751.61;765.11,4751.85)|(764.87,4751.75;764.87,4751.51)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.63,4747.19;765.801,4747.19)|(765.73,4747.44;765.559,4747.44)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.865,4749.79;765.89,4749.79)|(766.115,4749.92;766.09,4749.92)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4745.84;765.625,4745.84)|(765.37,4745.89;765.215,4745.89)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (766.09,4751.16;766.09,4751.42)|(765.89,4751.35;765.89,4751.09)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (766.09,4749.364;766.09,4749.56)|(765.89,4749.726;765.89,4749.53)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4748.77;765.47,4748.94)|(765.37,4749.18;765.37,4749.01)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (766.09,4746.244;766.09,4746.46)|(765.89,4746.626;765.89,4746.41)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4751.42;765.547,4751.42)|(765.37,4751.61;765.293,4751.61)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4750.54;765.47,4750.8)|(765.37,4750.83;765.37,4750.57)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.245,4749.79;765.37,4749.79)|(765.595,4749.92;765.47,4749.92)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4745.58;765.47,4745.84)|(765.37,4745.63;765.37,4745.37)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4748.94;765.62,4748.94)|(765.37,4749.01;765.22,4749.01)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.11,4750.57;765.11,4750.81)|(764.87,4750.71;764.87,4750.47)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4745.65;765.47,4745.84)|(765.37,4746.08;765.37,4745.89)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.258,4746.67;765.37,4746.67)|(765.582,4746.82;765.47,4746.82)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (766.09,4749.92;766.09,4750.18)|(765.89,4750.31;765.89,4750.05)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (766.09,4745.58;766.09,4745.796)|(765.89,4745.63;765.89,4745.414)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (766.09,4745.724;766.09,4745.84)|(765.89,4746.006;765.89,4745.89)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.63,4746.15;765.89,4746.15)|(765.73,4746.2;765.47,4746.2)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (766.09,4748.68;766.09,4748.916)|(765.89,4748.75;765.89,4748.514)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4748.06;765.47,4748.32)|(765.37,4748.23;765.37,4747.97)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.832,4749.27;765.89,4749.27)|(766.148,4749.3;766.09,4749.3)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.37,4750.31;765.37,4750.3)|(765.47,4750.54;765.47,4750.55)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (766.09,4750.54;766.09,4750.8)|(765.89,4750.83;765.89,4750.57)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.63,4749.79;765.89,4749.79)|(765.73,4749.92;765.47,4749.92)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.11,4750.05;765.11,4750.29)|(764.87,4750.19;764.87,4749.95)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4748.32;765.567,4748.32)|(765.37,4748.49;765.273,4748.49)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (766.09,4746.82;766.09,4747.08)|(765.89,4747.19;765.89,4746.93)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4748.25;765.47,4748.32)|(765.37,4748.56;765.37,4748.49)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (766.09,4748.06;766.09,4748.32)|(765.89,4748.23;765.89,4747.97)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.37,4749.79;765.37,4749.68)|(765.47,4749.92;765.47,4750.03)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (766.09,4748.844;766.09,4748.94)|(765.89,4749.106;765.89,4749.01)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4748.32;765.73,4748.32)|(765.89,4748.49;765.63,4748.49)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.878,4746.67;765.89,4746.67)|(766.102,4746.82;766.09,4746.82)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.349,4750.31;765.37,4750.31)|(765.491,4750.54;765.47,4750.54)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.37,4746.67;765.37,4746.58)|(765.47,4746.82;765.47,4746.91)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.89,4749.79;765.89,4749.754)|(766.09,4749.92;766.09,4749.956)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4751.42;765.73,4751.42)|(765.89,4751.61;765.63,4751.61)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.11,4745.37;765.11,4745.61)|(764.87,4745.51;764.87,4745.27)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.11,4745.89;765.11,4746.13)|(764.87,4746.03;764.87,4745.79)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.89,4746.15;765.89,4746.034)|(766.09,4746.2;766.09,4746.316)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.212,4749.27;765.37,4749.27)|(765.628,4749.3;765.47,4749.3)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (766.09,4748.94;766.14,4748.94)|(765.89,4749.01;765.84,4749.01)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.37,4746.15;765.37,4745.96)|(765.47,4746.2;765.47,4746.39)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.11,4746.93;765.11,4747.17)|(764.87,4747.07;764.87,4746.83)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4751.37;765.47,4751.42)|(765.37,4751.66;765.37,4751.61)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4748.68;765.47,4748.94)|(765.37,4748.75;765.37,4748.49)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4749.92;765.47,4750.18)|(765.37,4750.31;765.37,4750.05)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.63,4750.31;765.851,4750.31)|(765.73,4750.54;765.509,4750.54)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4748.94;765.73,4748.94)|(765.89,4749.01;765.63,4749.01)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4746.82;765.47,4747.08)|(765.37,4747.19;765.37,4746.93)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.11,4749.01;765.11,4749.25)|(764.87,4749.15;764.87,4748.91)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.37,4749.27;765.37,4749.06)|(765.47,4749.3;765.47,4749.51)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'V2.2a'</category>
+   <cell>gf180mcu_padframe</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <comment/>
+   <image/>
+   <values>
+    <value>edge-pair: (765.47,4751.16;765.47,4751.42)|(765.37,4751.35;765.37,4751.09)</value>
+   </values>
+  </item>
+ </items>
+</report-database>

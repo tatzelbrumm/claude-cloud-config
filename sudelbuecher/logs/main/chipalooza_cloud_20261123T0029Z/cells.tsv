@@ -1,5 +1,5 @@
-# file gf180mcu_ocd_chipalooza_final.gds.gz bytes 33108209 sha256 c29ad1eef43e4c39bd38e998db17adfed851f065473e88fd0eaf68926b898471
-# dbu 0.001 cells 1030 top gf180mcu_ocd_chipalooza
+# file gf180mcu_ocd_chipalooza_final.gds.gz bytes 33098973 sha256 85a9df1cd444741cbc3bbed10e1e34871169b359a9014ed42926d9dcf6e0bbd5
+# dbu 0.001 cells 1030 top gf180mcu_ocd_chipalooza_final
 018SRAM_cell1_2x_3v1024x8m81	120,510,2880,7230	0	2	325e63a203ececb1
 018SRAM_cell1_3v1024x8m81	120,320,2880,3990	52	0	c847a5c06c3ba0e1
 018SRAM_cell1_cutPC_3v1024x8m81	120,320,2880,3990	51	0	f80996e1b6762aaf
@@ -543,7 +543,7 @@ gf180mcu_as_sc_mcu7t3v3__tieh_4	-430,-430,2670,4350	36	0	fedab5f9bce6919e
 gf180mcu_as_sc_mcu7t3v3__tiel_4	-430,-430,2670,4350	37	0	b0f9b20003eabb0a
 gf180mcu_as_sc_mcu7t3v3__xnor2_2	-430,-430,8270,4350	118	0	b74bce2785e8ec5a
 gf180mcu_as_sc_mcu7t3v3__xor2_2	-430,-430,8270,4350	114	0	90137625c1d8808d
-gf180mcu_ocd_chipalooza	0,0,3932000,5122000	235	15	77237fbb9f8ba5c8
+gf180mcu_ocd_chipalooza_final	0,0,3932000,5122000	235	15	77237fbb9f8ba5c8
 gf180mcu_ocd_io__asig_5p0	-160,0,75160,350000	184	2	82fa352a6547691c
 gf180mcu_ocd_io__bi_24t	-160,0,75160,350000	183	2	aeac8b8f3c49be40
 gf180mcu_ocd_io__brk5	-160,0,5160,350000	129	1	c543604701fb5db1

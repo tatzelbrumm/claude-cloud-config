@@ -1,0 +1,68 @@
+diff -uN a/scripts/rename_top_cell.rb b/scripts/rename_top_cell.rb
+--- a/scripts/rename_top_cell.rb	1970-01-01 00:00:00.000000000 +0000
++++ b/scripts/rename_top_cell.rb	2026-11-23 00:49:52.349485953 +0000
+@@ -0,0 +1,8 @@
++# Rename the top cell of a GDS layout in place.
++#   klayout -zz -r rename_top_cell.rb -rd input=in.gds -rd output=out.gds -rd newname=NAME
++ly = RBA::Layout::new()
++ly.read($input)
++top = ly.top_cell
++puts "Renaming top cell #{top.name} -> #{$newname}"
++top.name = $newname
++ly.write($output)
+diff -uN a/scripts/run_gen_filled_final_gds.sh b/scripts/run_gen_filled_final_gds.sh
+--- a/scripts/run_gen_filled_final_gds.sh	2026-11-23 00:49:52.346418379 +0000
++++ b/scripts/run_gen_filled_final_gds.sh	2026-11-23 00:49:52.348019217 +0000
+@@ -7,10 +7,20 @@
+ # cds up one directory level and then down to gds/.  It could be
+ # made smarter about this.
+ 
++# NOTE:  If PROJECT is set as an environment variable, then the final
++# top level cell name and GDS file name will be set to its value.  If
++# not, then the default top level name is "gf180mcu_ocd_chipalooza_final".
++# When submitting for a GF shuttle run, the project name will be dictated
++# by the GF submission process (e.g., PROJECT=GF__MPC9763).
++# The fill script keeps the name of the input top cell, so the top cell
++# is renamed afterwards;  "make drc-final" and the final extraction and LVS
++# look for the cell and file named ${PROJECT}.
++
++export PROJECT=${PROJECT:-gf180mcu_ocd_chipalooza_final}
+ export PDK_ROOT=${PDK_ROOT:-/usr/share/pdk}
+ export PDK=${PDK:-gf180mcuD}
+ 
+-echo "Generating fill for gf180mcu_ocd_chipalooza"
++echo "Generating final (filled) GDS for $PROJECT"
+ 
+ cd ../gds
+ 
+@@ -26,18 +36,25 @@
+ klayout -zz -r \
+     ${PDK_ROOT}/gf180mcuD/libs.tech/klayout/tech/scripts/fill_all.rb \
+     -rd input=gf180mcu_ocd_chipalooza.gds.gz \
+-    -rd output=gf180mcu_ocd_chipalooza_final.gds
++    -rd output=${PROJECT}_fill.gds || exit 1
++
++# Give the filled layout its own top level cell name
++klayout -zz -r ../scripts/rename_top_cell.rb \
++    -rd input=${PROJECT}_fill.gds \
++    -rd output=${PROJECT}.gds \
++    -rd newname=${PROJECT} || exit 1
++rm -f ${PROJECT}_fill.gds
+ 
+ echo "md5sum:"
+-md5sum gf180mcu_ocd_chipalooza_final.gds
++md5sum ${PROJECT}.gds
+ 
+ echo "sha1sum:"
+-sha1sum gf180mcu_ocd_chipalooza_final.gds
++sha1sum ${PROJECT}.gds
+ 
+ echo "sha256sum:"
+-sha256sum gf180mcu_ocd_chipalooza_final.gds
++sha256sum ${PROJECT}.gds
+ 
+-gzip -n --best gf180mcu_ocd_chipalooza_final.gds
++gzip -n --best ${PROJECT}.gds
+ 
+ echo "Done!"
+ exit 0
