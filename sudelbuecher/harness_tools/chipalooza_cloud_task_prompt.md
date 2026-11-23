@@ -35,6 +35,10 @@ do not run `make synth-hk` or `make synth-ctrl` (they need LibreLane under nix; 
 0a. Push test, before anything long: echo "start $(date -u)" > /var/tmp/runs/00_start.log, then
    $SB/harness_tools/push_logs.sh $PUSH_URL $LOGS_BRANCH /var/tmp/runs "start". If it prints PUSH_LOGS_FAILED, stop and
    report the error text: the user would rather fix access now than lose hours of logs.
+   Then start the background pusher, which keeps every log in the repository within two minutes, also during a step that
+   runs for hours:  nohup $SB/harness_tools/push_logs_loop.sh $PUSH_URL $LOGS_BRANCH /var/tmp/runs 120 > /var/tmp/push_loop.log 2>&1 &
+   (/var/tmp/runs is only the staging directory; the repository is where the logs live.) Check once that
+   `git ls-remote $PUSH_URL $LOGS_BRANCH` shows the branch.
 0. Environment. Print: `tail -3 /foss/setup.log`, `grep -c PDK_LIB_MISSING /foss/setup.log` (expect 0),
    `echo $PDK_ROOT $PDK`, `magic --version`, `ls $PDK_ROOT/$PDK/libs.ref`, `nproc; free -g; df -h /var/tmp`.
    Also state which model you are running as, and your effort setting if you can see it (use your get_session tool if you

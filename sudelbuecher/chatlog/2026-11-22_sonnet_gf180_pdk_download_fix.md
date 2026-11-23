@@ -1266,8 +1266,305 @@ And keep the chatlog and other logs up to date.
 *[Bash: Inspect minesweeping branch and manifest format.  
 Bash: Get commit info for filing the setup log.  
 Bash: File prompt, note, setup log and manifest row.  
-Bash: Rebuild and verify the chat log with later turns.]*
+Bash: Rebuild and verify the chat log with later turns.  
+Bash: Update index, commit and push sudel_buecher.]*
+
+**Assistant:**
+
+**Your local branches**
+- You are on `main` (`78edf00`), and it equals `tatzelfork/main`. Nothing is unpushed there.
+- `minesweeping` (`60e30bc`) matches the fork's copy, so nothing is unpushed on that branch either.
+- The local branch `nits` (`949e9ed`) has no upstream on the fork, so it exists only on your machine. I don't know whether you want it pushed.
+- **`minesweeping` is the wrong branch for this test:** I fetched it, and it has your scripts (`check_timestamps.py`, `resave_stale_parents.sh`, `make_pdk_overlay.sh`) plus 116 files of regenerated outputs and edited run scripts (`run_gen_filled_final_gds.sh`, `set_user_id.py` and others). A build on it would mix your results with Tim's and Belal's fixes. So the cloud run should use `main`.
+- **`.designinit` still mentions `minesweeping`:** its header says "fork tatzelbrumm, branch minesweeping", but you are on `main`. Only that comment is out of date.
+
+**What I filed in `sudel_buecher`** (commit `e4e8fc3`)
+- **Task prompt:** `sudelbuecher/harness_tools/chipalooza_cloud_task_prompt.md`. It builds on `main`. It starts with the environment check and the pad abutment check, then runs each step with logs written outside the harness tree. It ends with the hash table, the packing, and a report.
+- **Push permission:** The prompt contains a `PUSH` line that you edit. The session pushes only if the line says "PUSH OK" with a repo and branch. Edit the `<PUSH: ...>` line before pasting.
+- **Setup log:** I filed this session's failed `/foss/setup.log` as `logs/multi-pdk/setup-gf180mcuD_2026-11-22_ciel-failed.log`, with a row in `MANIFEST.tsv` that records it came from the old script (`662d8f1`).
+- **Note:** `notes/2026-11-22_ciel_fallback_and_chipalooza_cloud_plan.md` summarizes the cause, the fix and the plan. It is a summary, not a chat log.
+- **Chat log:** I rebuilt it from the whole session so far, 18 user turns. The check found all 43 texts present and none of the reasoning in the file. The log ends at 23:32 UTC, so this reply and anything after it aren't in it yet. Ask me to rebuild when you want it extended.
+
+I haven't put your untracked build outputs anywhere, because they aren't needed.
+
+## Turn 19 (2026-11-22 23:38 UTC)
+
+**User:**
+
+Will you start a new gf180mcuD session with the prompt automatically, or should I do something manually? (Don't quite yet) 
+If you launch it autonomously, how will I be able to interact? 
+Where did you put sudelbuecher/harness_tools/chipalooza_cloud_task_prompt.md?
+You're making an implicit assumption about the repository this is in.
+
+**Assistant:**
+
+Nothing is launched, and I won't launch anything until you say so. Answers in order:
+
+**Launching and interacting**
+- I have a `create_session` tool that could start the session: environment `gf180mcuD`, the fork as source, the prompt as first message. I haven't tried it, and the permission classifier already refused one repo-attach, so it might refuse this too. If it works, the session would be a normal session. I'd expect it to show up in your session list so you can open it and type into it, but I haven't verified that. I can also read its events and send it messages.
+- **Manual alternative:** you start the session in the web app and paste the prompt. That costs you two minutes, and you stay in control. I'd do it this way for the first run.
+
+**Where the prompt file is:** On the `sudel_buecher` branch of `tatzelbrumm/claude-cloud-config`, at `sudelbuecher/harness_tools/chipalooza_cloud_task_prompt.md`, pushed in commit `e4e8fc3`. In this container it's at `/home/user/claude-cloud-config_sudelbuecher/sudelbuecher/harness_tools/chipalooza_cloud_task_prompt.md`.
+
+**The assumption you caught:** The prompt names paths like `sudelbuecher/harness_tools/cell_hashes.py` and `sudelbuecher/notes/...` as if the new session had the `sudel_buecher` worktree next to its checkout. It would not:
+- A new session whose source is the fork has the fork checked out.
+- `sudel_buecher` is an orphan branch, so no default checkout has it. The worktree `../claude-cloud-config_sudelbuecher` exists only here, because I created it.
+- So the scripts and notes the prompt refers to would be missing, and the "copy logs into the worktree" step would fail.
+
+I'll fix it now.
+
+*[Bash: Test anonymous clone of sudel_buecher branch.  
+Bash: Fix prompt paths to bootstrap the branch itself.]*
+
+**Assistant:**
+
+I fixed the prompt (commit `b42cd75`). It now starts with a bootstrap step: the session clones the `sudel_buecher` branch of `claude-cloud-config` itself into `/var/tmp/sb`. A test clone of that branch from here worked without credentials. Every path in the prompt is now written as `$SB/...`.
+
+**Other changes to the prompt**
+- **Logs:** The step that copied logs into a worktree and edited `MANIFEST.tsv` is gone. Logs stay in `/var/tmp/runs`, and you file them later.
+- **Pushes:** Pushing is limited to what the `PUSH` line allows.
+- **Other repo paths:** The last two lines, with your local commands, still use `sudelbuecher/...` paths. That is correct, since there you use your own checkout of that branch.
+
+**Interaction and what I can't confirm**
+- **A launched session might not show up the way I expect:** I haven't verified how an autonomous session appears in your session list, or whether it would stop at a permission prompt.
+- **My recommendation stands:** start the first run yourself. Open a new session in the gf180mcuD environment with the fork on `main` as its source, and paste the block from the prompt file. Then you see everything and can intervene.
+
+Tell me when you want me to try the launch instead.
+
+## Turn 20 (2026-11-22 23:46 UTC)
+
+**User:**
+
+Yes, walk me through the manual launch, human baby steps. 
+Make sure the logs DON'T just stay in local cloud directories like `/var/tmp/runs`. I don't want to need to remember to file them later.
+Where is the `PUSH` line and what does it allow or disallow?
+
+**Assistant:**
+
+Two of your points need a design change before the walkthrough: the logs must leave the container on their own, and the `PUSH` line must say exactly what is allowed. Here is the current `PUSH` line. It sits in step 4 of the prompt:
+
+```
+<PUSH: not allowed.   or:   PUSH OK: repo <url>, branch chipalooza_artifacts, via PUSH_URL and PUSH_BRANCH>
+```
+
+It covers only one thing, the force-push of the packed GDS chunks to the branch `chipalooza_artifacts`. Logs aren't covered at all, which is the gap you pointed out. I'm adding a log pusher and changing the prompt.
+
+*[Bash: Write and test the log pusher.  
+Bash: Update prompt for log pushing and permissions, commit.  
+Bash: Add missing mkdir to prompt.]*
+
+**Assistant:**
+
+Logs now leave the container on their own. Here is what changed, then the walkthrough.
+
+## The log pusher
+- **New script:** `harness_tools/push_logs.sh` pushes `/var/tmp/runs/*` to a branch as a normal append-only commit. It creates the branch the first time and never force-pushes.
+- **When it runs:** The prompt runs it after every step, whether the step passed or failed. A push failure is reported but doesn't stop the build.
+- **Early failure check:** Before anything long runs, the session does a test push. If that fails, it stops and tells you immediately, so you don't lose hours of work to a missing permission.
+- **Tested:** I tested it against a local bare repo: two pushes appended two commits, a repeat push with no changes did nothing, and an unreachable URL gave `PUSH_LOGS_FAILED`. I haven't tested it against GitHub.
+
+## The PUSH line, now in two places
+It is now a block near the top of the prompt, where you keep exactly one of two alternatives:
+- **`PUSH: NOT ALLOWED.`** The session stops at the start, because logs would be lost.
+- **`PUSH OK. repo: <your fork> ; logs branch: chipalooza_logs; artifacts branch: chipalooza_artifacts`.** This allows:
+  - normal commits of logs to `chipalooza_logs`;
+  - one force-pushed commit of the packed GDS chunks and `cells.tsv` to `chipalooza_artifacts`.
+  - It forbids every other branch, every other repo, tags, and any change to `main`.
+
+You get the logs by `git fetch tatzelfork chipalooza_logs`. They are in your fork instead of `sudel_buecher`, and I'd file them there afterwards from the fork. Pushing straight into `sudel_buecher` would need `claude-cloud-config` as a second repository with push access in the session, which I can't promise the web UI offers.
+
+## Manual launch, step by step
+I'm describing the Claude web app from memory, and button labels may differ. If something doesn't match, tell me what you see.
+
+1. **Open the web app.** Go to https://claude.ai/code and sign in.
+2. **Start a new session.**
+3. **Select the repository** `tatzelbrumm/gf180mcu_ocd_chipalooza` and its branch `main`. It must be the fork, not Tim's upstream.
+4. **Select the environment** `gf180mcuD`. This is the one whose setup script you pasted.
+5. **Choose the model.** Pick Sonnet 5.5.
+6. **Get the prompt.** Open https://github.com/tatzelbrumm/claude-cloud-config/blob/sudel_buecher/sudelbuecher/harness_tools/chipalooza_cloud_task_prompt.md and copy the contents of the grey code block, from `Goal:` to its closing line.
+7. **Edit the PUSH block** in what you pasted: delete the `NOT ALLOWED` alternative and keep the `PUSH OK` one. Check that the repo URL is your fork.
+8. **Send it as the first message.**
+9. **Watch the first minutes.** The session should print the setup log tail, `/foss/pdks gf180mcuD`, Magic 8.3.706 and the library list. If `PDK_FAILED` appears, stop it and tell me.
+10. **Check the pushed logs yourself** after the test push passes:
+    ```bash
+    cd ~/EDA/gf180mcu_ocd_chipalooza
+    git fetch tatzelfork
+    git log --oneline tatzelfork/chipalooza_logs
+    ```
+    You should see a `logs start` commit.
+
+If step 10 shows nothing after a few minutes, the session had no push access to the fork, and the prompt tells it to stop and say so.
+
+## Turn 21 (2026-11-22 23:49 UTC)
+
+**User:**
+
+<PUSH: NOT ALLOWED.> is an ERROR. FIX IMMEDIATELY.
+
+*[Bash: Remove NOT ALLOWED alternative from prompt.  
+Bash: Verify no leftovers, commit and push fix.]*
+
+**Assistant:**
+
+Fixed in commit `9da9932` on `sudel_buecher`. You were right: the `NOT ALLOWED` alternative should never have been in the prompt. Logs must always be pushed, so offering a version that stops the run was wrong.
+
+**What the prompt says now**
+- The push permission is one fixed block, with no alternatives to choose. It gives `PUSH_URL` (your fork), `LOGS_BRANCH=chipalooza_logs` and `ART_BRANCH=chipalooza_artifacts`, and forbids everything else.
+- It says logs are pushed from the start and after every step.
+- The sentence that told the session to stop when push is "NOT ALLOWED" is gone, and so is my instruction to edit the PUSH block before pasting.
+- **What is kept:** the early test push still stops the run if it fails, so a missing permission shows up in minute one.
+
+**What changes for your launch**
+- Step 7 of the walkthrough is gone. You copy the whole grey block and paste it as it is.
+- The block is pasted into a session on your own fork, so the repo URL in it should be right. Check the `PUSH_URL` line once to be sure.
+- The grant lives in the prompt text, which you paste yourself. The session's own permission checks could still refuse a push. The test push at the start tells you that straight away.
+
+I searched the files on `sudel_buecher` for "not allowed" and "PUSH OK" outside the chat log and found no other copies. The chat log is built from the transcript and still shows the old wording, which is correct for a record.
+
+## Turn 22 (2026-11-22 23:52 UTC)
+
+**User:**
+
+implicit assumption: grey block. You're hallucinating UIs again.
+
+**Assistant:**
+
+You're right, and there were two assumptions in that walkthrough.
+
+- **"Grey block":** I assumed how your screen renders the file. In the raw file it is just text between two ``` lines.
+- **The web-app steps** (sign in, select repo, select environment, and so on): I wrote them from general knowledge of such apps, not from anything I can see. I have no view of your UI, so I should not have written them as a procedure.
+
+I'm removing the first assumption, since that one I can fix: a file that contains only the prompt, so there is nothing to find inside it.
+
+*[Bash: Extract prompt into a plain text file and push.]*
+
+**Assistant:**
+
+The prompt is now a plain text file, `sudelbuecher/harness_tools/chipalooza_cloud_task_prompt.txt` on `sudel_buecher` (commit `fa67d66`). It has 49 lines and no markdown fences. The whole file is the first message.
+
+**What I know about the launch**
+- **What the session needs:** source repository = your fork, branch `main`; environment = `gf180mcuD`; model = Sonnet 5.5; first message = the whole prompt file. I don't know which controls on your screen set these, and I won't guess at them.
+- **A mechanism I can actually see:** my tools now include `spawn_task`, which puts a "Suggested task" card in the Claude desktop app. According to its description, you can open the full prompt and start it with one click, locally or in the cloud. I haven't used it and don't know whether it lets you pick the environment and the source repo.
+- **Using the card is optional:** If you want it, say so and I'll queue the prompt as a card. If you launch the session another way, you can ignore this.
+
+Tell me how you normally start a cloud session (for example, from the desktop app, the browser, or the CLI). Then I'll write the steps for that, and I'll mark anything I haven't seen myself.
+
+## Turn 23 (2026-11-22 23:55 UTC)
+
+**User:**
+
+Browser, for a cloud session. Walk me through selecting repositories, model, and effort, possible changes to the gf180mcuD configuration, and where, EXACTLY, to get the prompt to paste. Don't forget to specify the repository.
+
+**Assistant:**
+
+I'll read the product documentation first, so I describe only what it says.
+
+*[mcp__claude-code-remote__read_documentation call.  
+mcp__claude-code-remote__read_documentation call.  
+mcp__claude-code-remote__read_documentation call.  
+Bash: Verify raw URL of the prompt file.]*
+
+**Assistant:**
+
+The documentation I have is thin on the session-start screen, so I split this into what is documented, what I have only your own README for, and what I don't know.
+
+## Where to get the prompt
+The prompt is one file, 49 lines, and the whole file is the message. This raw-text link returns HTTP 200 with the right content (I fetched it):
+
+```
+https://raw.githubusercontent.com/tatzelbrumm/claude-cloud-config/sudel_buecher/sudelbuecher/harness_tools/chipalooza_cloud_task_prompt.txt
+```
+
+Open it in a browser tab, select all (Ctrl+A), copy (Ctrl+C), and paste into the session's message box. Nothing in the file needs editing.
+
+## Repository, branch, environment
+- **Repository:** `tatzelbrumm/gf180mcu_ocd_chipalooza`. This is your fork, not Tim's `RTimothyEdwards/gf180mcu_ocd_chipalooza`.
+- **Branch:** `main`. It is `78edf00`, which you confirmed locally.
+- **Environment:** `gf180mcuD`.
+- The documentation says a session's repositories are chosen when it starts. If you want a different repository later, start a new session.
+
+## What I can't tell you
+- **Where the repository, branch, environment, model and effort controls are on the start screen,** and what they are called. I have no page describing that screen.
+- **A first start with no controls visible:** If you open the start screen and don't see a control for one of these, tell me what you do see.
+
+## Choices
+- **Model:** Sonnet 5.5.
+- **Effort:** If a control exists, I'd leave it at the default or pick a medium level. The run is mechanical, and a high setting spends quota on reasoning that `make` steps don't need. I can't say where, or whether, the browser offers this control.
+
+## Changes to the gf180mcuD environment
+None needed, as far as I can tell:
+- The network allowlist already has `github.com`, `api.github.com`, `release-assets.githubusercontent.com` and `objects.githubusercontent.com`, which the prompt's clone and pushes use.
+- Your pasted setup script is already in place.
+- Your own README says environment settings are under the caret after the session title, then "Edit cloud environment". That applies to an open session, and I haven't seen it myself.
+
+## GitHub access for pushes
+- The prompt's pushes go to your fork. The documentation says that if a push is refused, you connect your GitHub account at https://claude.ai/connect-github and install the Claude GitHub App on the repository from https://github.com/apps/claude/installations/select_target.
+- The session's first test push will show immediately whether this is in place.
+
+## Turn 24 (2026-11-22 23:59 UTC)
+
+**User:**
+
+Implicit assumption: Effort?
+Choose the model. Pick Sonnet 5.5.
+
+**Assistant:**
+
+You're right, and there are two separate problems.
+
+**"Pick Sonnet 5.5" contradicted what I said next.** I told you to choose a model in the same breath as saying I don't know where, or whether, the browser start screen offers that control. If it has none, the session runs on whatever your account's default is, and I can't change that from here.
+
+**"Effort" was an undefined word.** Here is what I mean:
+- Effort is a setting for how much reasoning the model does before it answers. My tools list five levels: low, medium, high, xhigh and max.
+- Higher levels are slower and use more of your quota.
+- For this run (mostly `make` steps and short log reads) I would not spend high effort. I'd take medium if the setting exists, and otherwise the default. I haven't measured that.
+- I don't know whether the browser start screen shows it.
+
+**A check that doesn't depend on the UI:** I'm making the session report which model it runs on. I'll put it into the prompt's step 0.
+
+*[Bash: Add model and effort report to the prompt.]*
+
+**Assistant:**
+
+The prompt now asks the session to name its model, and its effort if it can see it. This is in commit `c802655`, and the raw link is unchanged. If the first report shows an unexpected model, the screen had no control for it, or the control was left at its default. You'll see the real model in the first minutes either way.
+
+I should not have written "pick Sonnet 5.5" as a step. Better wording: "if the start screen shows a model control, Sonnet 5.5 is what I'd choose, and if it shows an effort control, medium is what I'd choose; if it shows neither, leave them alone."
+
+## Turn 25 (2026-11-23 00:02 UTC)
+
+**User:**
+
+*[1 image(s) attached to this message; not reproduced here.]*
+
+You flooded the feed with slop. 
+Sonnet 5.5 Medium. Medium is the effort. I want a simple answer what effort you recommend.
+Also: add claude-code-config to gf180mcu_ocd_chipalooza in the repository list?
+
+**Assistant:**
+
+Keep Medium. That is my recommendation.
+
+Everything in your screenshot is right: environment `gf180mcuD`, repository `gf180mcu_ocd_chipalooza`, branch `main`, Sonnet 5.5.
+
+**Adding `claude-cloud-config` to the repository list: no, not needed.**
+- The prompt clones the `sudel_buecher` branch itself over public read access, so the tools and notes are already covered.
+- Adding it would only matter if logs should go straight into `sudel_buecher`. That also needs a prompt change and an extra push permission, so I'd skip it for this first run.
+
+The "Auto" next to the model is a permission mode, and I don't know what it does for pushes. The test push at the start of the run will show whether the session can push to the fork.
+
+## Turn 26 (2026-11-23 00:06 UTC)
+
+**User:**
+
+I still see /var/tmp/runs in the prompt text. WILL YOU EXPORT LOG FILES TO A REPOSITORY OUTSIDE YOUR LOCAL CLOUD VIRTUAL MACHINE ASAP?
+
+**Assistant:**
+
+Yes. The prompt already pushes logs after every step, but `/var/tmp/runs` is only a staging directory. A single long step, such as `drc-final`, could still run for hours with its log only in the container. I'm closing that gap with a background pusher that runs the whole session.
+
+*[Bash: Add background log pusher, test, update prompt.  
+Bash: Rebuild chat log, commit and push everything.]*
 
 ---
 
-*[End of the export: the last record on the live path is 8a81926b-4058-4b3c-9fa1-2a8c3ee3c996 (2026-11-22 23:32 UTC). Later turns are not included.]*
+*[End of the export: the last record on the live path is 8740703a-7d79-4d1c-9f05-777d35ab678c (2026-11-23 00:06 UTC). Later turns are not included.]*
