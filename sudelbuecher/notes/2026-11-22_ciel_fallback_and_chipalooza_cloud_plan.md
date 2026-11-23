@@ -82,3 +82,12 @@ session had already sent the PDK-copy fix). 5. Keep the working tree and export 
 lifted; the prompt does NOT include it (the transcript holds the reasoning; the verbatim chat log, built by script without reasoning,
 is the record). 7. No pull request: prepare files in the tatzelbrumm repo; the user files PRs and issues.
 The prompt's PUSH PERMISSION block (commit following this note) was rewritten accordingly.
+
+## Update 2026-11-23 ~02:05 UTC: iovdd/iovss pad pins (agent result)
+The 452 `iovdd/iovss not in the pad cell definition` LVS errors come from the padframe verilog template, which kept IHP pad pin names
+(`.iovdd/.iovss/.vdd/.vss`; GF pads have DVDD DVSS VDD VSS; mapping iovdd->DVDD, iovss->DVSS, vdd->VDD, vss->VSS, confidence high per the
+agent). It is NOT limited to `gf180mcu_ocd_io__cor`. An Opus 5.5 (Medium) subagent prepared `harness_tools/fixes/pad_pins/`:
+`pad_pins.patch` (template + regenerated `verilog/gl/gf180mcu_padframe.v`), `lvs_scripts.patch` (drops IHP `flatten gf180mcu_SecondaryProtection`
+lines, PDK spice fallback), `ANALYSIS.md`, logs. Patches apply on `78edf00` (checked). Agent's own LVS run: pin errors 452 -> 0, padframe 189/189
+devices, still "Netlists do not match" (ground domains vss3v3/vss5v0, README issue). Suspected separate bug: `gen_padframe_template.tcl` lines
+1076-1077 label two dvss pads `vdd5v0`. Not yet applied or rerun in the cloud build.

@@ -1,0 +1,148 @@
+verify.log -- pad pin name fix for gf180mcu_ocd_chipalooza (base 78edf00)
+Tools: netgen 1.5.332 (local), python3; PDK_ROOT=/foss/pdks PDK=gf180mcuD
+
+== 1. Regeneration is reproducible (unmodified template, scratch copy work/)
+$ mv verilog/gl/gf180mcu_padframe.v verilog/gl/chipalooza_frame_wrapper.v scripts/gen_padframe.tcl ../base/ && python3 scripts/parse_config.py && git status --short
+Done with generating ... all files ; git status: clean (outputs byte-identical to the committed ones)
+
+== 2. Template edit + regeneration
+$ python3 -I tools/rename_pad_pins.py scripts/gf180mcu_padframe_template.v
+scripts/gf180mcu_padframe_template.v: 352 pin connections renamed   (88 pad instances/arrays x 4 pins)
++ splitter: gf180mcu_ocd_Split200 (.iovdd,.iovss,.vssl) -> gf180mcu_ocd_io__brk5 (.VSS(vss3v3))
+$ rm verilog/gl/gf180mcu_padframe.v verilog/gl/chipalooza_frame_wrapper.v scripts/gen_padframe.tcl && python3 scripts/parse_config.py
+$ git diff --stat
+ scripts/gf180mcu_padframe_template.v | 714 +++++++++++++++++------------------
+ verilog/gl/gf180mcu_padframe.v       | 714 +++++++++++++++++------------------
+ 2 files changed, 714 insertions(+), 714 deletions(-)
+(chipalooza_frame_wrapper.v and gen_padframe.tcl regenerate unchanged)
+$ git apply --check pad_pins.patch ; git apply --check lvs_scripts.patch   (on /home/user/tatzelbrumm/gf180mcu_ocd_chipalooza): OK
+
+== 3. Static check: every gf180mcu_ocd_* instance vs PDK verilog port list (case-sensitive)
+### check_pad_pins.py on ORIGINAL verilog/gl/gf180mcu_padframe.v (78edf00)
+1 power-net patterns (cell, pin->net): count
+1 instances per cell: {'gf180mcu_ocd_Split200': 1, 'gf180mcu_ocd_io__asig_5p0': 40, 'gf180mcu_ocd_io__bi_24t': 13, 'gf180mcu_ocd_io__cor': 4, 'gf180mcu_ocd_io__dvdd': 3, 'gf180mcu_ocd_io__dvss': 6, 'gf180mcu_ocd_io__fill1': 2, 'gf180mcu_ocd_io__fill5': 2, 'gf180mcu_ocd_io__in_c': 4, 'gf180mcu_ocd_io__vdd': 7, 'gf180mcu_ocd_io__vss': 7}
+1 UNKNOWN CELL gf180mcu_ocd_Split200 splitter
+  ... (17 more MISMATCH lines, one per instance/array; RESULT: FAIL for the original)
+### check_pad_pins.py on PATCHED regenerated verilog/gl/gf180mcu_padframe.v
+instances per cell: {'gf180mcu_ocd_io__asig_5p0': 40, 'gf180mcu_ocd_io__bi_24t': 13, 'gf180mcu_ocd_io__brk5': 1, 'gf180mcu_ocd_io__cor': 4, 'gf180mcu_ocd_io__dvdd': 3, 'gf180mcu_ocd_io__dvss': 6, 'gf180mcu_ocd_io__fill1': 2, 'gf180mcu_ocd_io__fill5': 2, 'gf180mcu_ocd_io__in_c': 4, 'gf180mcu_ocd_io__vdd': 7, 'gf180mcu_ocd_io__vss': 7}
+power-net patterns (cell, pin->net): count
+   40  gf180mcu_ocd_io__asig_5p0  DVDD=vdd5v0 DVSS=vss5v0 VDD=vdd3v3 VSS=vss3v3
+    4  gf180mcu_ocd_io__bi_24t  DVDD=vdd5v0 DVSS=vss5v0 VDD=vdd3v3 VSS=vss3v3
+    9  gf180mcu_ocd_io__bi_24t  DVDD=vdd5v0 DVSS=vss5v0 VDD=vddd VSS=vss3v3
+    1  gf180mcu_ocd_io__brk5  VSS=vss3v3
+    2  gf180mcu_ocd_io__cor  DVDD=vdd5v0 DVSS=vss5v0 VDD=vdd3v3 VSS=vss3v3
+    2  gf180mcu_ocd_io__cor  DVDD=vdd5v0 DVSS=vss5v0 VDD=vddd VSS=vss3v3
+    2  gf180mcu_ocd_io__dvdd  DVDD=vdd5v0 DVSS=vss5v0 VDD=vdd3v3 VSS=vss3v3
+    1  gf180mcu_ocd_io__dvdd  DVDD=vdd5v0 DVSS=vss5v0 VDD=vddd VSS=vss3v3
+    6  gf180mcu_ocd_io__dvss  DVDD=vdd5v0 DVSS=vss5v0 VDD=vdd3v3 VSS=vss3v3
+    1  gf180mcu_ocd_io__fill1  DVDD=vdd5v0 DVSS=vss5v0 VDD=vdd3v3 VSS=vss3v3
+    1  gf180mcu_ocd_io__fill1  DVDD=vdd5v0 DVSS=vss5v0 VDD=vddd VSS=vss3v3
+    1  gf180mcu_ocd_io__fill5  DVDD=vdd5v0 DVSS=vss5v0 VDD=vdd3v3 VSS=vss3v3
+    1  gf180mcu_ocd_io__fill5  DVDD=vdd5v0 DVSS=vss5v0 VDD=vddd VSS=vss3v3
+    4  gf180mcu_ocd_io__in_c  DVDD=vdd5v0 DVSS=vss5v0 VDD=vddd VSS=vss3v3
+    5  gf180mcu_ocd_io__vdd  DVDD=vdd5v0 DVSS=vss5v0 VDD=vdd3v3 VSS=vss3v3
+    2  gf180mcu_ocd_io__vdd  DVDD=vdd5v0 DVSS=vss5v0 VDD=vddd VSS=vss3v3
+    6  gf180mcu_ocd_io__vss  DVDD=vdd5v0 DVSS=vss5v0 VDD=vdd3v3 VSS=vss3v3
+    1  gf180mcu_ocd_io__vss  DVDD=vdd5v0 DVSS=vss5v0 VDD=vddd VSS=vss3v3
+RESULT: PASS (0 problem instances)
+
+== 4. netgen read check (PDK sc + PDK io spice + netlists_lvs.v + gf180mcu_padframe.v), tcl in netgen_run/
+  orig: 'not in cell definition' errors: 452; implicit-pin notes in gf180mcu_padframe: 452; Split200 placeholder: 1
+  patched: 'not in cell definition' errors: 0; implicit-pin notes in gf180mcu_padframe: 0; Split200 placeholder: 0
+  (cloud lvs-top2.log had: 452 errors, 452 implicit-pin notes, Split200 placeholder at line 1302)
+
+== 5. Full top-level LVS on a scratch copy of the cloud output tree (/var/tmp/tree -> lvstree/), both patches applied
+   TEST-ONLY change not in any patch: the local PDK has no gf180mcu_ocd_ip_sram/cdl/*.cdl, so the SRAM was read from
+   libs.ref/gf180mcu_ocd_ip_sram/spice/gf180mcu_ocd_ip_sram__sram1024x8m8wm1.spice instead (the SRAM is a black box anyway).
+$ cd lvstree/validate && PDK_ROOT=/foss/pdks PDK=gf180mcuD ./run_lvs_ocd_chipalooza.sh   (about 1 minute)
+  'not in cell definition' errors: 0; implicit-pin notes in gf180mcu_padframe: 0
+  netgen now runs to the end (cloud run aborted at 'flatten class ... gf180mcu_SecondaryProtection').
+  gf180mcu_padframe after flattening/merging (log lines 5508-5545):
+    Circuit 1 contains 251 nets,    Circuit 2 contains 252 nets. *** MISMATCH ***
+    
+      Flattening non-matched subcircuits gf180mcu_padframe gf180mcu_padframe
+    
+    Circuit contains 252 nets, and 96 disconnected pins.
+    
+    Circuit 1 contains 189 devices, Circuit 2 contains 189 devices.
+  -> device classes and counts now agree (189/189); net counts differ by 1, all in the supply nets. Net mismatch fragments (comp.out ~6437-6505):
+    Number of nets: 251 **Mismatch**                                             |Number of nets: 252 **Mismatch**                                             
+    -----------------------------------------------------------------------------------------------------------------------------------------------------------
+    NET mismatches: Class fragments follow (with fanout counts):
+    Circuit 1: gf180mcu_padframe                                                 |Circuit 2: gf180mcu_padframe                                                 
+    -----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Net: VSUBS                                                                   |Net: vss3v3                                                                  
+      cap_nmos_06v0/1 = 1                                                        |  gf180mcu_ocd_io__cor/VSS = 4                                               
+      cap_nmos_06v0/2 = 11                                                       |  gf180mcu_ocd_io__brk5/VSS = 2                                              
+      gf180mcu_ocd_io__dvss/DVSS = 6                                             |  gf180mcu_ocd_io__bi_24t/VSS = 13                                           
+      gf180mcu_ocd_io__dvss/DVDD = 6                                             |  gf180mcu_ocd_io__in_c/VSS = 4                                              
+      gf180mcu_ocd_io__dvss/VDD = 6                                              |  diode_nd2ps_06v0/anode = 2                                                 
+      gf180mcu_ocd_io__dvss/VSS = 6                                              |  cap_nmos_06v0/2 = 9                                                        
+      gf180mcu_ocd_io__asig_5p0/DVSS = 40                                        |  nfet_06v0/(1|3) = 28                                                       
+      gf180mcu_ocd_io__asig_5p0/DVDD = 40                                        |  nfet_06v0/4 = 28                                                           
+      gf180mcu_ocd_io__asig_5p0/VDD = 40                                         |  gf180mcu_ocd_io__asig_5p0/VSS = 40                                         
+      gf180mcu_ocd_io__asig_5p0/VSS = 40                                         |  gf180mcu_ocd_io__dvss/VSS = 6                                              
+      gf180mcu_ocd_io__bi_24t/VSS = 13                                           |  gf180mcu_ocd_io__vss/VSS = 7                                               
+      ppolyf_u/(1|2) = 7                                                         |  constant_block/vss = 17                                                    
+      ppolyf_u/3 = 7                                                             |                                                                             
+      nfet_06v0/(1|3) = 43                                                       |                                                                             
+      nfet_06v0/4 = 36                                                           |                                                                             
+      pfet_06v0/(1|3) = 21                                                       |                                                                             
+      pfet_06v0/4 = 21                                                           |                                                                             
+      diode_nd2ps_06v0/anode = 2                                                 |                                                                             
+      diode_nd2ps_06v0/cathode = 1                                               |                                                                             
+      gf180mcu_ocd_io__vss/VSS = 7                                               |                                                                             
+      constant_block/vdd = 4                                                     |                                                                             
+      constant_block/vss = 17                                                    |                                                                             
+      gf180mcu_ocd_io__cor/VSS = 4                                               |                                                                             
+      gf180mcu_ocd_io__bi_24t/DVSS = 4                                           |                                                                             
+      gf180mcu_ocd_io__bi_24t/DVDD = 4                                           |                                                                             
+      gf180mcu_ocd_io__bi_24t/VDD = 4                                            |                                                                             
+      gf180mcu_ocd_io__cor/VDD = 2                                               |                                                                             
+      gf180mcu_ocd_io__cor/DVSS = 2                                              |                                                                             
+      gf180mcu_ocd_io__cor/DVDD = 2                                              |                                                                             
+      gf180mcu_ocd_io__brk5/VSS = 2                                              |                                                                             
+      gf180mcu_ocd_io__in_c/VSS = 4                                              |                                                                             
+      gf180mcu_ocd_io__vss/DVSS = 6                                              |                                                                             
+      gf180mcu_ocd_io__vss/DVDD = 6                                              |                                                                             
+      gf180mcu_ocd_io__vss/VDD = 6                                               |                                                                             
+                                                                                 |                                                                             
+    Net: pad_clk/DVSS                                                            |Net: vss5v0                                                                  
+      gf180mcu_ocd_io__bi_24t/DVSS = 9                                           |  gf180mcu_ocd_io__cor/DVSS = 4                                              
+      gf180mcu_ocd_io__vss/DVSS = 1                                              |  gf180mcu_ocd_io__bi_24t/DVSS = 13                                          
+      cap_nmos_06v0/2 = 2                                                        |  gf180mcu_ocd_io__in_c/DVSS = 4                                             
+      nfet_06v0/(1|3) = 4                                                        |  diode_nd2ps_06v0/anode = 1                                                 
+      nfet_06v0/4 = 4                                                            |  cap_nmos_06v0/2 = 4                                                        
+      diode_nd2ps_06v0/anode = 1                                                 |  nfet_06v0/(1|3) = 12                                                       
+      gf180mcu_ocd_io__cor/DVSS = 2                                              |  nfet_06v0/4 = 12                                                           
+      gf180mcu_ocd_io__in_c/DVSS = 4                                             |  gf180mcu_ocd_io__asig_5p0/DVSS = 40                                        
+                                                                                 |  gf180mcu_ocd_io__dvss/DVSS = 6                                             
+                                                                                 |  gf180mcu_ocd_io__vss/DVSS = 7                                              
+                                                                                 |                                                                             
+    Net: vdd5v0                                                                  |Net: vdd5v0                                                                  
+      gf180mcu_ocd_io__bi_24t/DVDD = 9                                           |  gf180mcu_ocd_io__bi_24t/DVDD = 13                                          
+      gf180mcu_ocd_io__vss/DVDD = 1                                              |  gf180mcu_ocd_io__vss/DVDD = 7                                              
+      ppolyf_u/(1|2) = 1                                                         |  ppolyf_u/(1|2) = 3                                                         
+      ppolyf_u/3 = 1                                                             |  ppolyf_u/3 = 3                                                             
+      nfet_06v0/(1|3) = 1                                                        |  nfet_06v0/(1|3) = 3                                                        
+      pfet_06v0/(1|3) = 3                                                        |  pfet_06v0/(1|3) = 9                                                        
+      pfet_06v0/4 = 3                                                            |  pfet_06v0/4 = 9                                                            
+      diode_nd2ps_06v0/cathode = 1                                               |  diode_nd2ps_06v0/cathode = 1                                               
+      cap_nmos_06v0/1 = 1                                                        |  cap_nmos_06v0/1 = 1                                                        
+      gf180mcu_ocd_io__cor/DVDD = 2                                              |  gf180mcu_ocd_io__cor/DVDD = 4                                              
+      gf180mcu_ocd_io__in_c/DVDD = 4                                             |  gf180mcu_ocd_io__in_c/DVDD = 4                                             
+                                                                                 |  gf180mcu_ocd_io__dvss/DVDD = 6                                             
+                                                                                 |  gf180mcu_ocd_io__asig_5p0/DVDD = 40                                        
+                                                                                 |                                                                             
+    Net: vddd                                                                    |Net: vddd                                                                    
+      gf180mcu_ocd_io__cor/VDD = 2                                               |  gf180mcu_ocd_io__cor/VDD = 2                                               
+      gf180mcu_ocd_io__bi_24t/VDD = 9                                            |  gf180mcu_ocd_io__bi_24t/VDD = 9                                            
+      gf180mcu_ocd_io__in_c/VDD = 4                                              |  gf180mcu_ocd_io__in_c/VDD = 4                                              
+      diode_nd2ps_06v0/cathode = 1                                               |  diode_nd2ps_06v0/cathode = 1                                               
+  top level:
+    5931:Pins vss3v3 and vss5v0 are shorted in cell gf180mcu_ocd_chipalooza (1)
+    5939:Final result: 
+    Circuit 1 contains 1717 nets,    Circuit 2 contains 1816 nets. *** MISMATCH ***
+  black boxes:
+    and their contents were not compared:
+      Circuit (0): constant_block gf180mcu_ocd_io__fill5 gf180mcu_ocd_io__brk5
