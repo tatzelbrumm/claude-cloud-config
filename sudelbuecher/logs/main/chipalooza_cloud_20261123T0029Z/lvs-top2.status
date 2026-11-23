@@ -1,2 +1,0 @@
-START 01:41:50 bash -c cd validate && ./run_lvs_ocd_chipalooza_spice.sh
-END 01:41:53 rc=0 seconds=3

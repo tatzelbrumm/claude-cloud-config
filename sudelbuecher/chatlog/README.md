@@ -14,10 +14,6 @@ One link and one sentence per log. Rules and tools: `CLAUDE.md` at the root of t
   message was absent. The transcript's trailing records without a `uuid` (title, last-prompt) were cut off first, because
   the builder starts the live path at the last record.
 
-- [2026-11-23 Sonnet 5.5, Chipalooza cloud build](2026-11-23_sonnet_chipalooza_cloud_build.md): the cloud session that ran the
-  harness build chain in the gf180mcuD environment. Built inside that session by `session_chatlog.sh` from its own transcript
-  and pushed to the fork's `chipalooza_logs` branch (refreshed from fork commit `ffe669f`, 02:23 UTC); it covers the session up
-  to its last rebuild, so later turns of that session are not in it. Its step logs: `../logs/main/chipalooza_cloud_20261123T0029Z/`.
 
 ## Pending
 

@@ -58,7 +58,7 @@ The environment's Setup field cannot be edited by the assistant's tool (limit 10
 - The chat log tools now find the last record that has a `uuid` themselves and handle user messages with images.
 
 ## Update 2026-11-23 ~01:10 UTC: first cloud build (summary by the assistant, from the session's REPORT.md and logs)
-Logs: `../logs/main/chipalooza_cloud_20261123T0029Z/`; its chat log: `../chatlog/2026-11-23_sonnet_chipalooza_cloud_build.md`.
+Logs: the fork's branch `chipalooza_logs`, `run-20261123T0029Z/`; its chat log: the fork's branch `chipalooza_logs`, `run-20261123T0029Z/chatlog.md`.
 - `make setup` fails: `scripts/setup.sh` does not exist in the harness repo (Makefile target dead). The prompt now initialises the
   three submodules instead (they are empty in a fresh clone).
 - Pad check passes (17 pads, 0 empty). Steps check ... gds-final, extract-sch-top, extract-top finished (extract-top 1621 s).
@@ -95,6 +95,13 @@ devices, still "Netlists do not match" (ground domains vss3v3/vss5v0, README iss
 ## State at ~02:25 UTC
 Cloud build logs refreshed from the fork (`logs/main/chipalooza_cloud_20261123T0029Z/`, 46 files; fork `chipalooza_logs` at ffe669f). The cloud session's
 own fixes and issue/PR drafts (from branch `chipalooza_artifacts`, commit 48d76fc, 02:08 UTC) are filed in
-`../harness_tools/fixes/cloud_session_fixes/` (top-cell rename patch, `lvs_sram_spice_path.patch`, `ISSUE*.md`, `PR*.md`, an applied-changes patch and its copy of
+the fork's branch `chipalooza_artifacts`, `fixes/` (top-cell rename patch, `lvs_sram_spice_path.patch`, `ISSUE*.md`, `PR*.md`, an applied-changes patch and its copy of
 `pad_pins`). The pad pin fix of the planning session's Opus agent is in `../harness_tools/fixes/pad_pins/`. Big artifacts (final GDS pack, whole-tree tarball,
 prefill/slot GDS, `old_final_unrenamed_topcell.gds.gz`, `results/`) stay on the fork's `chipalooza_artifacts` branch only.
+
+## Relinquished 2026-11-23 ~02:45 UTC
+On the user's instruction the planning session gave up its copies of the harness build task's own files (step logs, `REPORT.md`, the cloud session's chat log, the
+cloud session's fixes and drafts): 61 were byte-identical to files in the task's repository, one differed only because the task has a newer version. They are
+in the fork `tatzelbrumm/gf180mcu_ocd_chipalooza`, branches `chipalooza_logs` and `chipalooza_artifacts`, under the task's control. Kept here: the planning session's
+own agent's output `harness_tools/fixes/pad_pins/` as one unit (the task's repository lacks 7 of its files: `verify.log`, the patched LVS log and comparison output, the
+regenerated files and the two helper scripts), this note, the planning session's chat log, `logs/multi-pdk/` and `harness_tools/`.

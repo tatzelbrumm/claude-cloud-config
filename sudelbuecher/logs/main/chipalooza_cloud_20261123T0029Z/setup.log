@@ -1,3 +1,0 @@
-./scripts/setup.sh
-make: ./scripts/setup.sh: No such file or directory
-make: *** [Makefile:68: setup] Error 127

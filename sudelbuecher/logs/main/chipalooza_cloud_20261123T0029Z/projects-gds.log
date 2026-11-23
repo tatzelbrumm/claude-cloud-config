@@ -1,8 +1,0 @@
-./scripts/get_project_gds.sh 
-Reading slot wrapper placements from magic ...
-  frame offset in the top level:  26 26 microns
-
-
-No project assigned:  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
-
-Wrote scripts/user_projects.tcl (0 project(s) placed).
