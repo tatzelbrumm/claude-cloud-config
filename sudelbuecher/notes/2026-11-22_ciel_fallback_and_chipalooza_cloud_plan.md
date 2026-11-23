@@ -38,3 +38,21 @@ The environment's Setup field cannot be edited by the assistant's tool (limit 10
   and `gds_unpack.sh`; `cell_hashes.py` for per-cell comparison. Tested only on the slot GDS files (12 to 210 KB).
   Git LFS and the Artifact tool (15 MB) do not fit; the push of a new branch needs the user's explicit permission.
 - Task prompt: `../harness_tools/chipalooza_cloud_task_prompt.md`.
+
+## Update 2026-11-23: prompt review and launch
+- The cloud task prompt (`../harness_tools/chipalooza_cloud_task_prompt.txt`, 67 lines) was reviewed against the harness README/Makefile
+  and rewritten. Errors found in the first version: shell variables lost between Bash calls (now `/var/tmp/env.sh`), "working tree
+  stays clean" (false), wrong step order (README: wrappers, symbols, gds-slots, then user-id; clean-config and projects-gds were
+  missing), exit codes lost behind `tee` (now `run_step.sh`), GDS compressed twice with `xz -9e` (now once, `-6`), a vague pad
+  check (now `pad_abutment_check.tcl`), and "No chat log" (the user asked for one: `chatlog_tools/session_chatlog.sh`).
+- Logs leave the container: `push_logs.sh` (append-only commits to branch `chipalooza_logs` of the fork), `push_logs_loop.sh` every
+  120 s, `run_step.sh` after each step; GDS chunks go to `chipalooza_artifacts` (one force-pushed parentless commit). The session
+  tests push access to both branches before any long step. Pusher overhead: about 1 s per push on a local repo with a 6.7 MB log,
+  0.01 s when nothing changed; not measured against GitHub.
+- Pad views: in this container (PDK e7a6777 by ciel) all 17 `gf180mcu_ocd_io__*` cells give an abutment box on the first call
+  (`pad_abutment_check.tcl`). The installed `gf180mcuD.magicrc` lists `gf180mcu_fd_io` before `gf180mcu_ocd_io` and `gf180mcu_as_sc_mcu7t3v3`
+  before `gf180mcu_ocd_io` (Belal's advice: those two at the top); its effect on the harness is untested.
+- Session settings of the launch (from the user's screenshot): environment gf180mcuD, repository tatzelbrumm/gf180mcu_ocd_chipalooza,
+  branch main, Sonnet 5.5, effort Medium, mode Auto. The user pasted the prompt and launched it at about 00:30 UTC. Whether the
+  session can push to the fork was unknown at that time (its first step tests it).
+- The chat log tools now find the last record that has a `uuid` themselves and handle user messages with images.

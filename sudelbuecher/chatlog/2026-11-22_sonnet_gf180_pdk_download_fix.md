@@ -2,10 +2,11 @@
 SPDX-FileCopyrightText: 2026 Christoph Maier
 SPDX-License-Identifier: Apache-2.0
 -->
-# gf180mcuD PDK download fix and Chipalooza cloud-build planning (2026-11-22)
+# gf180mcuD PDK download fix and Chipalooza cloud-build planning (2026-11-22/23)
 
-- **Session:** Claude Code cloud session (https://claude.ai/code/session_01XU3KH6BPQEnxokPoJbRoLa), model Sonnet 5.5.
-- **Branches:** `multi-pdk` (fast-forwarded into `main`), notes `sudel_buecher`.
+
+- **Session:** Claude Code cloud session `59b1e8ca-e904-5908-a4b6-726109b52a9f`, model Sonnet 5.5. Rebuilt 2026-11-23 UTC.
+- **Branches:** the harness fork, branch main; the logs on its branch chipalooza_logs.
 - **What is verbatim:** Christoph's messages (as **User**) and the assistant's visible replies, as written.
   - Tool calls appear as `*[ ]*` summaries: action and observable result only (errors and refusals noted).
   - Messages that did not come from Christoph are labeled: subagent reports, background-task notices, and the
@@ -15,7 +16,6 @@ SPDX-License-Identifier: Apache-2.0
   transcript, along the live path of `parentUuid`, and checked by script (`verify_chatlog.py`): every message and reply
   present verbatim, and no 40-character window of the reasoning in the file.
 - **Times:** UTC. Christoph's clock (Europe/Berlin) is one hour ahead.
-- **Covers:** the session from its first message up to the last record that existed when the log was last rebuilt (see the end note); later turns are added by rebuilding.
 
 ## Turn 1 (2026-11-22 22:31 UTC)
 
@@ -1565,6 +1565,230 @@ Yes. The prompt already pushes logs after every step, but `/var/tmp/runs` is onl
 *[Bash: Add background log pusher, test, update prompt.  
 Bash: Rebuild chat log, commit and push everything.]*
 
+**Assistant:**
+
+Yes. The logs go to a repository outside the container, and they go early and often. Both changes are pushed to `sudel_buecher` as commit `46782cf`.
+
+**What the prompt does now**
+- **Where the files live:** `/var/tmp/runs` is only a staging directory. Logs are written there first, and the repository is where they stay.
+- **Background pusher:** At the start of the session, after a successful test push, the prompt starts `push_logs_loop.sh` in the background. Every 2 minutes it pushes anything new in `/var/tmp/runs` to the branch `chipalooza_logs` in your fork. A step that runs for hours therefore has its log in the repository within minutes. If a push fails, the loop reports it and retries.
+- **Fixed pushes:** The pushes after every step and the final report push are unchanged.
+- **Test result:** I tested the loop against a local bare repo. A log that grew between pushes arrived with both lines. I haven't tested it against GitHub.
+
+`/var/tmp/runs` still appears in the prompt text, and that is intended. The prompt now says so.
+
+**This session's own logs**
+- **Chat log:** I rebuilt it through 2026-11-23 00:06 UTC. It has 26 user turns, and all 65 texts were found with none of the reasoning in the file. This reply and anything after it are not in it yet.
+- **Setup log:** I filed the failed setup log earlier, under `logs/multi-pdk/`, with its `MANIFEST.tsv` row.
+
+**What could still go wrong:** If the session has no push access to your fork, the test push fails and the session stops, with the error, before it starts any long step.
+
+## Turn 27 (2026-11-23 00:07 UTC)
+
+**User:**
+
+how much overhead does the log pusher produce?
+how can we check that the session HAS push access to my fork?
+
+*[Bash: Measure log pusher time and memory.  
+Bash: Time pusher iterations with a 6.7 MB log.  
+Bash: Add skip-if-unchanged to pusher and test.]*
+
+**Assistant:**
+
+Next, the push check in the prompt, which should test both branches at the start.
+
+*[Bash: Add artifacts-branch push test to prompt and commit.]*
+
+**Assistant:**
+
+**Overhead of the log pusher**
+- **Local measurements:** With a 6.7 MB log, one push took about 1 second here, and a run with nothing changed took 0.15 seconds. These timings were against a local repo, not GitHub, so over the network expect a few seconds per push.
+- **Cost on the cloud machine:** The pusher runs `git`, `cp` and `sha256sum`, so CPU and memory use are negligible next to Magic and KLayout on 4 CPUs.
+- **Change I just made:** When no log file has changed since the last successful push, the script now exits in 0.01 seconds without touching the network. An idle loop therefore costs nothing.
+- **What grows:** Each push that does change a log adds a commit and re-sends the changed file. Appended text logs should compress well as deltas, but I couldn't verify that against GitHub. In the local test, a 6.7 MB random log pushed four times grew the repo to 21 MB, and random data doesn't delta. Real logs should do better. At the 2-minute interval, the worst case is about 30 commits an hour while a step is writing output.
+
+**Checking that the session has push access to your fork**
+The only real check is a write from inside the session. I can't test it from here, because my attach with push access was refused. So the prompt now tests both branches at the start:
+1. A test push of a log file to `chipalooza_logs` (appending commits).
+2. A test force-push of a tiny file to `chipalooza_artifacts`, which also proves force-push is allowed.
+3. If either fails, the session stops and reports the exact error, before it starts any long step.
+
+I tested the artifacts check against a local bare repo and it printed `pushed to`. Both changes are pushed to `sudel_buecher` (commit `00a245c`). The raw prompt link is unchanged.
+
+If you want a check before you even start a session, open the Claude app's page in your GitHub account settings and see whether the fork is among its repositories. I haven't seen that page and can't say whether it proves the session's access.
+
+## Turn 28 (2026-11-23 00:11 UTC)
+
+**User:**
+
+you're making implicit assumptions where the Claude app's page in —where are my GitHub account settings???— are.
+
+**Assistant:**
+
+I wrote that without giving a location. Here are the real addresses, and I haven't opened any of these pages myself.
+
+- **GitHub account settings:** `https://github.com/settings/installations`. Sign in to GitHub first. It lists the GitHub Apps installed on your account, and each entry has a Configure button.
+- **The Claude app entry:** The Claude GitHub App is the one in my instructions at `https://github.com/apps/claude/installations/select_target`. That link starts an install and lets you pick the account. Its page for repository access (all repositories or selected ones) is the place to check whether `gf180mcu_ocd_chipalooza` is included.
+- **Connecting your account to Claude:** My instructions also name `https://claude.ai/connect-github`.
+
+I can't tell you what those pages look like or what labels they use. Only the test push inside the session tells you whether the session can push to your fork, so this check is optional. If the app turns out not to cover the fork, you add it there before starting the session.
+
+## Turn 29 (2026-11-23 00:17 UTC)
+
+**User:**
+
+Ok, Repository access, only select repositories. 
+Which do I have to add?
+
+**Assistant:**
+
+Add only `tatzelbrumm/gf180mcu_ocd_chipalooza`, your fork. It is the session's source repository and the target of every push in the prompt.
+
+You probably don't have to add anything. When I listed the repositories this account can reach, that repo was already there with push access ("can_push": true), so it is likely already covered. Look at the list on that page first, and add it only if it is missing.
+
+`claude-cloud-config` is not required for this run. The prompt reads it anonymously because it is public. It is almost certainly already on the list, since this session works in it.
+
+## Turn 30 (2026-11-23 00:21 UTC)
+
+**User:**
+
+Once again: Medium effort?
+
+**Assistant:**
+
+Yes, Medium. Keep it. The run is mostly `make` steps and reading log tails, so higher effort would cost more quota without making the build any better.
+
+If a step fails and needs real diagnosis, don't raise the effort on this session. Start a second session on the failing step with its log. Use Opus 5.5 there, and Medium is still fine to begin with.
+
+## Turn 31 (2026-11-23 00:22 UTC)
+
+**User:**
+
+51 lines of chipalooza_cloud_task_prompt.txt
+WHY NO CHAT LOG?
+
+**Assistant:**
+
+That "No chat log." line is my mistake. I took it from the `CLAUDE.md` rule that says never create a chat log unless you explicitly ask. You have asked for chat logs throughout, so the rule didn't apply to this task. I'm replacing it with a step that builds the log automatically.
+
+*[Bash: Patch tools to find last record with uuid.  
+Bash: Write session chat log wrapper and test it.  
+Bash: Tidy header, wire chat log into prompt, commit.]*
+
+**Assistant:**
+
+The header still has a leftover placeholder on its Session line. I'm fixing that.
+
+*[Bash: Fix header placeholder and commit.]*
+
+**User (mid-turn, 2026-11-23 00:23 UTC):**
+
+Check whether you fucked up other details in the prompt.
+
+**Assistant:**
+
+I'm reviewing the whole prompt line by line, then checking each claim against the repo.
+
+*[Bash: Print the full prompt for review.  
+Bash: Read Makefile step order and README steps 4-9.]*
+
+**Assistant:**
+
+Reading the prompt against the repo's README and Makefile turned up several real mistakes. I'm checking the pad test, which I can run here, before rewriting the prompt.
+
+*[Bash: Inspect installed pad library for abutment test.  
+Bash: Try the pad abutment check in Magic here.  
+Bash: See how the harness uses instance list abutment.  
+Bash: Run the abutment check the way the harness does.  
+Bash: Diagnose the empty abutment result on one pad.  
+Bash: See how the harness sets the initial box.]*
+
+**Assistant:**
+
+Status: checking the pad test I wrote. It fails because my script never sets a box, so the "all 17 empty" result is my script's fault and not a finding.
+
+*[Bash: Retry abutment test with an initial box.  
+Bash: Write and run the full 17-pad abutment check.]*
+
+**Assistant:**
+
+The ciel-installed PDK passes all 17 pads, with abutment boxes on the first call. Next I'm writing the step runner the prompt was missing, and fixing the compression setting.
+
+*[Bash: Write and test step runner; set xz level.]*
+
+**Assistant:**
+
+Now I'm rewriting the prompt with all the fixes.
+
+*[Bash: Write corrected prompt, update docs, commit and push.]*
+
+**Assistant:**
+
+I found and fixed these mistakes in the prompt (commit `940585e`). The raw link is the same; the file now has 67 lines.
+
+**What was wrong**
+1. **Shell variables would not survive:** Each Bash call starts a fresh shell, so `$SB`, `$PUSH_URL` and the rest would be empty after the first command. The bootstrap now writes `/var/tmp/env.sh`, and every command begins by sourcing it.
+2. **"Working tree stays clean" was false:** The build rewrites tracked files. The rule now says never to edit tracked files by hand and never to commit or push the working tree.
+3. **Wrong step order:**
+   - I had `user-id` before `wrappers`, but the README order is `wrappers`, `symbols`, `gds-slots`, then `user-id`.
+   - I had left out `clean-config` and `projects-gds`.
+   - I had included `make drc`, which isn't in the README flow.
+   - The pad-view check came before the `make setup` it depended on.
+   - The prompt now follows the README order: clean-config, config, padframe, wrappers, symbols, gds-slots, user-id, projects-gds, gds-prefill, gds-final, drc-final, extract-sch-top, extract-top, lvs-top. `projects-gds` may fail for lack of projects, and the session reports that and continues.
+4. **Lost exit codes:** `tee` would have hidden the real exit code of each step. New `run_step.sh` runs a step in the background and records its log, exit code and seconds. It pushes the logs when the step ends.
+5. **Compression ran twice, and too slowly:** The prompt compressed the GDS once to measure and again to pack, with `xz -9e`, which was also capped by memory. The measurement now uses a 200 MB sample, packing runs once, and the default is `xz -6`.
+6. **A vague pad check:** I'd told the session to check the pad abutment boxes without giving a script. I wrote `pad_abutment_check.tcl` and ran it here. All 17 `gf180mcu_ocd_io__*` pads give an abutment box on the first call in the ciel-installed PDK. My first draft showed all 17 empty, which was my script's fault.
+7. **The hash step could block the push:** It now runs after the GDS is packed and pushed, with a one-hour limit.
+8. **No liveness check:** The prompt now checks that both branches exist on the remote and that the background pusher is running.
+
+**What the pad test showed:** In the installed `gf180mcuD.magicrc`, `gf180mcu_fd_io` is listed before `gf180mcu_ocd_io`. Belal advised putting `gf180mcu_ocd_io` and `gf180mcu_as_sc_mcu7t3v3` at the top. The prompt only reports this order and changes nothing. I haven't tested whether the order matters, since the full build hasn't run.
+
+**Not verified**
+- `projects-gds` behaviour with 18 empty slots.
+- Whether a `nohup ... &` job survives between tool calls in a cloud session.
+- Any of the build steps on the cloud machine.
+
+## Turn 32 (2026-11-23 00:27 UTC)
+
+**User:**
+
+pasted 67 lines of prompt into the new session launcher.
+
+*[Bash: Check whether the cloud session pushed its branches.]*
+
+**Assistant:**
+
+Neither branch exists on your fork yet. That is expected if the session has only just started. I can read the fork anonymously, so I can check from here.
+
+**What to expect in the first minutes**
+1. The session clones `sudel_buecher` and writes `/var/tmp/env.sh`.
+2. It runs the three push tests. Success means `chipalooza_logs` and `chipalooza_artifacts` appear on the fork within a few minutes.
+3. It prints the environment check: `/foss/pdks gf180mcuD`, Magic 8.3.706, the library list, and its model and effort. You said Sonnet 5.5, Medium.
+
+**What to tell me** if one of these happens:
+- The session stops with a push error. Paste me the exact text. The likely cause is no push access for the session, and I'd check the GitHub App's repository access with you.
+- `PDK_FAILED` or `PDK_LIB_MISSING` appears in the setup log tail. That means the new setup script didn't produce the PDK.
+- The session asks you for a permission it shouldn't need.
+
+**Checking yourself**
+```bash
+git fetch tatzelfork
+git branch -r | grep chipalooza_
+git log --oneline tatzelfork/chipalooza_logs
+```
+
+Tell me when you want me to look again, and I'll rerun the check from here. I won't poll on my own.
+
+## Turn 33 (2026-11-23 00:28 UTC)
+
+**User:**
+
+clear for takeoff. 
+update the chatlog and other logs.
+
+*[Bash: Rebuild chat log with the session wrapper.]*
+
 ---
 
-*[End of the export: the last record on the live path is 8740703a-7d79-4d1c-9f05-777d35ab678c (2026-11-23 00:06 UTC). Later turns are not included.]*
+*[End of the export: the last record on the live path is 3f637c54-9bf4-4be8-b779-3a12e993a52b (2026-11-23 00:28 UTC). Later turns are not included.]*
