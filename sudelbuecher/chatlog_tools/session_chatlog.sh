@@ -15,8 +15,9 @@ sid=$(basename "$src" .jsonl); h=$(mktemp)
 sed "s|^# <Session title>.*|# $title|; /^<!-- Template for the header/d; s|^- \*\*Branches:\*\*.*|- **Branches:** the harness fork, branch main; the logs on its branch chipalooza_logs.|" "$here/header.md" > "$h"
 python3 - "$h" "$sid" "$model" "$(date -u +%Y-%m-%d)" <<'PY'
 import sys; p,sid,model,d=sys.argv[1:]
+import re
 s=open(p).read()
-s=s.replace("- **Session:** ","- **Session:** Claude Code cloud session `%s`, model %s. Rebuilt %s UTC. "%(sid,model,d),1)
+s=re.sub(r"^- \*\*Session:\*\*.*$","- **Session:** Claude Code cloud session `%s`, model %s. Rebuilt %s UTC."%(sid,model,d),s,count=1,flags=re.M)
 open(p,'w').write(s)
 PY
 python3 "$here/build_chatlog.py" "$t" "$out" "$h" | head -1
