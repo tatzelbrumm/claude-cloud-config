@@ -79,6 +79,7 @@ pushed.
 | `tools/BUILDINFO` | the exact source commits, compiler, date (also inside the archive) |
 | `sources/sources-iic2026.10.tar.xz` | the sources of those commits (`git archive`), plus OpenVAF's `Cargo.lock` after `cargo update` |
 | `recipe/setup-build-from-source.sh` | the setup script that compiled them |
+| `recipe/build-xyce.sh` | builds Xyce 7.10.0 (Trilinos 12.12.1, ADMS) like IIC-OSIC-TOOLS 2026.11, and the IHP sg13g2 Xyce plugins; about 25 min, not yet in an archive |
 
 | tool | version |
 |---|---|
