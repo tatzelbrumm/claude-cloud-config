@@ -30,7 +30,8 @@ sudel_buecher, never a chat log unless I ask).
 - sky130A and gf180mcuD: the PDK versions of 2026.11 (read from the tag). [CHANGE IF YOU DISAGREE]
 - Xyce goes in, as its own archive next to the tool archive (GitHub refuses files over 100 MB). Build it like
   `_build/images/xyce/scripts/install.sh` of the tag (MPI, the serial user_plugin step included), with ADMS from
-  `_build/images/base/scripts/72_install_adms.sh`. The ihp-sg13g2 setup builds the PDK's Xyce plugins
+  `_build/images/base/scripts/72_install_adms.sh`. A tested script that does exactly this, plugins included, is
+  `recipe/build-xyce.sh` (branch `claude/friendly-heisenberg-jf99v2` until merged): about 25 min on 4 cores. The ihp-sg13g2 setup builds the PDK's Xyce plugins
   (Xyce_Plugin_PSP103_VA.so, Xyce_Plugin_r3_cmc.so) with `libs.tech/verilog-a/adms-compile-va.sh`, or ships them
   prebuilt if building them breaks the five-minute limit. [CHANGE IF YOU DISAGREE]
 - The new environment: parts/pdk-ihp-sg13g2.sh, script setup-ihp-sg13g2.sh, environment variables PDK_ROOT=/foss/pdks,
